@@ -1,2 +1,81 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# User-specific files
+.vs/
+.vs2019/
+.vs2018/
+.vs2017/
+.vs2015/
+.vs2013/
+.idea/  # JetBrains IDE'leri için
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.user
+*.userosscache
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Dd]istro/
+[Dd]ebug-x86/
+[Dd]ebug-x64/
+[Dd]ebug-AnyCPU/
+[Dd]istro/
+[Dd]ebug-AnyCPU/
+
+# Uncomment if you have tests that use Xamarin or some build tools
+#bin/
+#obj/
+
+# Ignore packages directory (used for NuGet packages)
+packages/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Ignore build output folder for .NET Core projects
+bin/
+obj/
+
+# JetBrains Rider files
+.idea/
+
+# VS Code settings folder
+.vscode/
+
+# Windows Forms specific (if you use designer files with resources)
+# Ignore Designer and Form Designer files
+*Designer.cs
+*Designer.vb
+Form1.cs
+Form1.Designer.cs
+
+# User settings
+*.user
+*.suo
+
+# Ignore VS-specific temporary files
+*.dbmdl
+*.bak
+*.backup
+GYMProject/obj/Debug/net8.0-windows/GYMProject.AssemblyInfo.cs
+GYMProject/obj/Debug/net8.0-windows/GYMProject.AssemblyInfo.cs
+GYMProject/obj/Debug/net8.0-windows/GYMProject.AssemblyInfo.cs
+GYMProject/obj/Debug/net8.0-windows/GYMProject.AssemblyInfoInputs.cache
+GYMProject/obj/Debug/net8.0-windows/GYMProject.assets.cache
+GYMProject/obj/GYMProject.csproj.nuget.dgspec.json
+GYMProject/obj/GYMProject.csproj.nuget.g.props
+GYMProject/obj/project.assets.json
+GYMProject/obj/project.nuget.cache
