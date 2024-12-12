@@ -74,7 +74,7 @@ namespace GYMProject
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-
+                    
                     // Member tablosuna veri ekleme
                     string insertMemberQuery = @"
                 INSERT INTO Member (FirstName, LastName, Gender, Age, PhoneNumber, Email, Address, Role)
