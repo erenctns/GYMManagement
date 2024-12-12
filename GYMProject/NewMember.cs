@@ -49,16 +49,19 @@ namespace GYMProject
                 }
 
                 decimal membershipPrice = 0;
-
+                DateTime startDate = DateTime.Now;
+                DateTime endDate = startDate;
                 // MembershipType'a göre fiyat belirleme
                 switch (membershipTypeComboBox.SelectedItem.ToString())
                 {
                     case "Month":
                         membershipPrice = 1000; // 1 aylık fiyat
+                        endDate = startDate.AddMonths(1); // 1 ay ekle
                         break;
 
                     case "Year":
                         membershipPrice = 9000; // 1 yıllık fiyat
+                        endDate = startDate.AddYears(1);
                         break;
 
                     default:
@@ -74,9 +77,9 @@ namespace GYMProject
 
                     // Member tablosuna veri ekleme
                     string insertMemberQuery = @"
-                INSERT INTO Member (FirstName, LastName, Gender, Age, PhoneNumber, Email, Address)
+                INSERT INTO Member (FirstName, LastName, Gender, Age, PhoneNumber, Email, Address, Role)
                 OUTPUT INSERTED.MemberID
-                VALUES (@FirstName, @LastName, @Gender, @Age, @PhoneNumber, @Email, @Address)";
+                VALUES (@FirstName, @LastName, @Gender, @Age, @PhoneNumber, @Email, @Address, @Role)";
 
                     using (SqlCommand command = new SqlCommand(insertMemberQuery, connection))
                     {
@@ -87,25 +90,28 @@ namespace GYMProject
                         command.Parameters.AddWithValue("@PhoneNumber", phoneNumberTextBox.Text);
                         command.Parameters.AddWithValue("@Email", emailTextBox.Text);
                         command.Parameters.AddWithValue("@Address", addressTextBox.Text);
+                        command.Parameters.AddWithValue("@Role", roleComboBox.SelectedItem.ToString());
+
 
                         int memberId = (int)command.ExecuteScalar(); // MemberID'yi al
 
                         // Membership tablosuna veri ekleme
                         string insertMembershipQuery = @"
-                    INSERT INTO Membership (MemberID, MembershipType, Price)
-                    VALUES (@MemberID, @MembershipType, @Price)";
+INSERT INTO Membership (MemberID, MembershipType, Price, StartDate, EndDate)
+VALUES (@MemberID, @MembershipType, @Price, @StartDate, @EndDate)";
 
                         using (SqlCommand membershipCommand = new SqlCommand(insertMembershipQuery, connection))
                         {
                             membershipCommand.Parameters.AddWithValue("@MemberID", memberId);
                             membershipCommand.Parameters.AddWithValue("@MembershipType", membershipTypeComboBox.SelectedItem.ToString());
                             membershipCommand.Parameters.AddWithValue("@Price", membershipPrice);
+                            membershipCommand.Parameters.AddWithValue("@StartDate", startDate);
+                            membershipCommand.Parameters.AddWithValue("@EndDate", endDate);
 
                             membershipCommand.ExecuteNonQuery(); // Membership verisi ekle
                         }
-
                         // userAuth tablosuna veri ekleme (kullanıcı adı ve şifre)
-                        string username = $"{firstNameTextBox.Text.ToLower()}_{lastNameTextBox.Text.ToLower()}_{memberId}";
+                        string username = $"{firstNameTextBox.Text.ToLower()}{memberId}";
                         string password = username; // Şifreyi kullanıcı adına eşit yapıyoruz, ihtiyaç duyarsanız farklı bir şifreleme metodu kullanabilirsiniz.
 
                         string insertAuthQuery = @"

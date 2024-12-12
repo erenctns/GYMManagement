@@ -30,6 +30,7 @@
         {
             tickButton = new Button();
             label1 = new Label();
+            amountLabel1 = new Label();
             SuspendLayout();
             // 
             // tickButton
@@ -50,15 +51,26 @@
             label1.Size = new Size(0, 15);
             label1.TabIndex = 3;
             // 
+            // amountLabel1
+            // 
+            amountLabel1.AutoSize = true;
+            amountLabel1.Location = new Point(335, 190);
+            amountLabel1.Name = "amountLabel1";
+            amountLabel1.Size = new Size(38, 15);
+            amountLabel1.TabIndex = 4;
+            amountLabel1.Text = "label2";
+            // 
             // Payment
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(amountLabel1);
             Controls.Add(label1);
             Controls.Add(tickButton);
             Name = "Payment";
             Text = "Payment";
+            Load += Payment_Load_1;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -68,5 +80,6 @@
         private Label amountLabel;
         private Button tickButton;
         private Label label1;
+        private Label amountLabel1;
     }
 }
