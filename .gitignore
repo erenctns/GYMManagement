@@ -10,3 +10,4 @@ GYMProject/obj/Debug/net8.0-windows/GYMProject.AssemblyInfo.cs
 .vs/GYMProject/DesignTimeBuild/.dtbcache.v2
 GYMProject/obj/Debug/net8.0-windows/GYMProject.csproj.AssemblyReference.cache
 GYMProject/obj/Debug/net8.0-windows/GYMProject.AssemblyInfo.cs
+*.vsidx
