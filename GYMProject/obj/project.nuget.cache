@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rWC1OIY1FCk=",
+  "dgSpecHash": "C9iu33uW9LA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ensar\\Desktop\\GYMProjeSon\\GYMProject\\GYMProject.csproj",
+  "projectFilePath": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\GYMProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ensar\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\ensar\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

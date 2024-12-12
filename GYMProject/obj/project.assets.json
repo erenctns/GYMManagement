@@ -1693,11 +1693,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ensar\\Desktop\\GYMProjeSon\\GYMProject\\GYMProject.csproj",
+      "projectUniqueName": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\GYMProject.csproj",
       "projectName": "GYMProject",
-      "projectPath": "C:\\Users\\ensar\\Desktop\\GYMProjeSon\\GYMProject\\GYMProject.csproj",
+      "projectPath": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\GYMProject.csproj",
       "packagesPath": "C:\\Users\\ensar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ensar\\Desktop\\GYMProjeSon\\GYMProject\\obj\\",
+      "outputPath": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
