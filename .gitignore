@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+.vs/GYMProject/DesignTimeBuild/.dtbcache.v2
+.vs/GYMProject/FileContentIndex/f0326f56-265d-419a-9ce1-0d4165e3ca43.vsidx
+=======
 .vs/GYMProject/FileContentIndex/02fbac48-92ce-4fb8-8837-722a05ee87c2.vsidx
 .vs/GYMProject/FileContentIndex/14f41321-2c85-488f-bab1-92c95fab1aba.vsidx
 .vs/GYMProject/FileContentIndex/d6fe2719-14e4-4c2c-acc5-99e5339f06dd.vsidx
@@ -11,3 +15,4 @@ GYMProject/obj/Debug/net8.0-windows/GYMProject.AssemblyInfo.cs
 GYMProject/obj/Debug/net8.0-windows/GYMProject.csproj.AssemblyReference.cache
 GYMProject/obj/Debug/net8.0-windows/GYMProject.AssemblyInfo.cs
 *.vsidx
+>>>>>>> celo
