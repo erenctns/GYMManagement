@@ -4,6 +4,9 @@
     <Compile Update="AnaEkranAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Equipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Giris.cs">
       <SubType>Form</SubType>
     </Compile>

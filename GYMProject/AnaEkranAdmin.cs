@@ -23,5 +23,11 @@
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           Equipment equipmentForm = new Equipment();
+            equipmentForm.Show();
+        }
     }
 }
