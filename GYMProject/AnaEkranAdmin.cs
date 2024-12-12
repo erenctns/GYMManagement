@@ -23,5 +23,12 @@
         {
 
         }
+
+        private void memberListButton_Click(object sender, EventArgs e)
+        {
+            MemberList memberListForm = new MemberList();
+            memberListForm.Show();
+            
+        }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             newMemberButton = new Button();
+            memberListButton = new Button();
             SuspendLayout();
             // 
             // newMemberButton
@@ -41,11 +42,22 @@
             newMemberButton.UseVisualStyleBackColor = true;
             newMemberButton.Click += newMemberButton_Click;
             // 
+            // memberListButton
+            // 
+            memberListButton.Location = new Point(270, 31);
+            memberListButton.Name = "memberListButton";
+            memberListButton.Size = new Size(129, 23);
+            memberListButton.TabIndex = 1;
+            memberListButton.Text = "View Members";
+            memberListButton.UseVisualStyleBackColor = true;
+            memberListButton.Click += memberListButton_Click;
+            // 
             // AnaEkranAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(memberListButton);
             Controls.Add(newMemberButton);
             Name = "AnaEkranAdmin";
             Text = "AnaEkranAdmin";
@@ -56,5 +68,6 @@
         #endregion
 
         private Button newMemberButton;
+        private Button memberListButton;
     }
 }

@@ -165,3 +165,4 @@ C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\obj\Debug\net8.0-windows
 C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.pdb
 C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.genruntimeconfig.cache
 C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\obj\Debug\net8.0-windows\ref\GYMProject.dll
+C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.MemberList.resources

@@ -7,6 +7,9 @@
     <Compile Update="Giris.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="MemberList.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="NewMember.cs">
       <SubType>Form</SubType>
     </Compile>
