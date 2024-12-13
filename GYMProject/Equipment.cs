@@ -32,7 +32,7 @@ namespace GYMProject
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open(); // Bağlantıyı açmayı deneyin
-                    MessageBox.Show("You logged in Equipment Page");
+                    
                     // Veri çekme işlemi
                     SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
                     DataTable dataTable = new DataTable();
@@ -64,19 +64,19 @@ namespace GYMProject
                             treadmillQuantity.Text = quantity;
                             treadmillCondition.Text = condition;
                         }
-                        else if(equipmentName =="Stationary Bike")
+                        else if (equipmentName == "Stationary Bike")
                         {
                             stationaryBikeName.Text = equipmentName;
                             stationaryBikeQuantity.Text = quantity;
                             stationaryBikeCondition.Text = condition;
                         }
-                        else if(equipmentName == "Rowing Machine")
+                        else if (equipmentName == "Rowing Machine")
                         {
                             rowingMachineName.Text = equipmentName;
                             rowingMachineQuantity.Text = quantity;
                             rowingMachineCondition.Text = condition;
                         }
-                        else if(equipmentName =="Elliptical Trainer")
+                        else if (equipmentName == "Elliptical Trainer")
                         {
                             ellipticalTrainerName.Text = equipmentName;
                             ellipticalTrainerQuantity.Text = quantity;
@@ -100,7 +100,7 @@ namespace GYMProject
                             kettlebellSetQuantity.Text = quantity;
                             kettlebellSetCondition.Text = condition;
                         }
-                        else if(equipmentName == "Lat Pulldown Machine")
+                        else if (equipmentName == "Lat Pulldown Machine")
                         {
                             latpullDownMachineName.Text = equipmentName;
                             latpullDownMachineQuantity.Text = quantity;
@@ -114,6 +114,18 @@ namespace GYMProject
             {
                 MessageBox.Show("Veri yüklenirken bir hata oluştu: " + ex.Message);
             }
+        }
+
+        private void updateEquipmentsButton_Click(object sender, EventArgs e)
+        {
+            UpdateEquipmentForm updateEquipment = new UpdateEquipmentForm();
+            updateEquipment.Show();
+        }
+
+        private void refreshDbButton_Click(object sender, EventArgs e)
+        {
+            Equipment_Load(sender, e);
+            MessageBox.Show("Database Refreshed");
         }
     }
 }

@@ -64,6 +64,8 @@
             latpullDownMachineQuantity = new Label();
             latpullDownMachineCondition = new Label();
             dumbbellPictureBox = new PictureBox();
+            updateEquipmentsButton = new Button();
+            refreshDbButton = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -390,11 +392,33 @@
             dumbbellPictureBox.TabIndex = 40;
             dumbbellPictureBox.TabStop = false;
             // 
+            // updateEquipmentsButton
+            // 
+            updateEquipmentsButton.Location = new Point(385, 622);
+            updateEquipmentsButton.Name = "updateEquipmentsButton";
+            updateEquipmentsButton.Size = new Size(163, 29);
+            updateEquipmentsButton.TabIndex = 41;
+            updateEquipmentsButton.Text = "Update Equipments";
+            updateEquipmentsButton.UseVisualStyleBackColor = true;
+            updateEquipmentsButton.Click += updateEquipmentsButton_Click;
+            // 
+            // refreshDbButton
+            // 
+            refreshDbButton.Location = new Point(630, 622);
+            refreshDbButton.Name = "refreshDbButton";
+            refreshDbButton.Size = new Size(147, 29);
+            refreshDbButton.TabIndex = 42;
+            refreshDbButton.Text = "Refresh Database";
+            refreshDbButton.UseVisualStyleBackColor = true;
+            refreshDbButton.Click += refreshDbButton_Click;
+            // 
             // Equipment
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1174, 694);
+            Controls.Add(refreshDbButton);
+            Controls.Add(updateEquipmentsButton);
             Controls.Add(dumbbellPictureBox);
             Controls.Add(latpullDownMachineCondition);
             Controls.Add(latpullDownMachineQuantity);
@@ -483,5 +507,7 @@
         private Label latpullDownMachineQuantity;
         private Label latpullDownMachineCondition;
         private PictureBox dumbbellPictureBox;
+        private Button updateEquipmentsButton;
+        private Button refreshDbButton;
     }
 }
