@@ -24,11 +24,10 @@
 
         }
 
-        private void memberListButton_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            MemberList memberListForm = new MemberList();
-            memberListForm.Show();
-            
+           Equipment equipmentForm = new Equipment();
+            equipmentForm.Show();
         }
     }
 }

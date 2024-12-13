@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GYMProject
 {
-    //Vallllo  oyna
+    //Vallllo  oyna çabuk
     internal class FileName
     {
     }
