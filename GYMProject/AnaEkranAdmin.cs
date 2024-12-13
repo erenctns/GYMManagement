@@ -36,5 +36,11 @@
             Equipment equipmentForm = new Equipment();
             equipmentForm.Show();
         }
+
+        private void newTrainerButton_Click(object sender, EventArgs e)
+        {
+            NewTrainer newTrainerForm = new NewTrainer();
+            newTrainerForm.Show();
+        }
     }
 }
