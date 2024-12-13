@@ -27,9 +27,12 @@ namespace GYMProject
             this.Size = new Size(1200, 600);
             // Veritabanından verileri yükle ve DataGridView'e bağla
             LoadMemberData();
+            AddDeleteButtonColumn();
+        
+        // Form boyutunu DataGridView'e göre ayarla
+        //AdjustFormSizeToDataGridView();
+        dataGridView1.CellContentClick += dataGridView1_CellContentClick;
 
-            // Form boyutunu DataGridView'e göre ayarla
-            //AdjustFormSizeToDataGridView();
         }
 
         private void LoadMemberData()
@@ -37,7 +40,7 @@ namespace GYMProject
             try
             {
                 // Veritabanı bağlantı dizesi
-                string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GymDB;Integrated Security=True;Encrypt=False";
+                string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
 
                 // SQL sorgusu
                 string query = @"
@@ -72,9 +75,81 @@ namespace GYMProject
             }
         }
 
+       
+        private void DeleteMember(int memberId)
+        {
+            try
+            {
+                // Veritabanı bağlantı dizesi
+                string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
 
+                // Silme sorgusu
+                string query = "DELETE FROM Member WHERE MemberID = @MemberID";
+
+                // Veritabanı bağlantısı
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Parametreyi ekle
+                        command.Parameters.AddWithValue("@MemberID", memberId);
+
+                        // Silme işlemini gerçekleştir
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        // Eğer herhangi bir satır silindiyse, başarılı olundu
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Üye başarıyla silindi.");
+                            // Verileri yeniden yükle
+                            LoadMemberData();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Silme işlemi başarısız oldu.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Hata: {ex.Message}");
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Tıklanan hücre bir buton hücresi mi?
+            if (dataGridView1.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            {
+                // Butonun "Sil" olup olmadığını kontrol et
+                if (dataGridView1.Columns[e.ColumnIndex].Name == "Delete")
+                {
+                    // İlgili satırdaki verileri al
+                    DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
+
+                    // MemberID'yi al
+                    int memberId = Convert.ToInt32(selectedRow.Cells["MemberID"].Value);
+
+                    // Kullanıcıyı silmek için bir metod çağır
+                    DeleteMember(memberId);
+                }
+            }
+        }
+        private void AddDeleteButtonColumn()
+        {
+            DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn();
+            deleteButtonColumn.Name = "Delete";
+            deleteButtonColumn.HeaderText = "Sil";
+            deleteButtonColumn.Text = "Sil";
+            deleteButtonColumn.UseColumnTextForButtonValue = true;
+            dataGridView1.Columns.Add(deleteButtonColumn);
+        }
         private void StyleDataGridView()
         {
+
             // DataGridView'i formun tamamını kaplamasını sağlamak
             dataGridView1.Dock = DockStyle.Fill; // DataGridView'in formu tamamen doldurmasını sağlar
 
