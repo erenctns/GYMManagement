@@ -1848,23 +1848,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\emree\\.nuget\\packages\\": {},
+    "C:\\Users\\ensar\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\emree\\OneDrive\\Belgeler\\GitHub\\GYMManagement\\GYMProject\\GYMProject.csproj",
+      "projectUniqueName": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\GYMProject.csproj",
       "projectName": "GYMProject",
-      "projectPath": "C:\\Users\\emree\\OneDrive\\Belgeler\\GitHub\\GYMManagement\\GYMProject\\GYMProject.csproj",
-      "packagesPath": "C:\\Users\\emree\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\emree\\OneDrive\\Belgeler\\GitHub\\GYMManagement\\GYMProject\\obj\\",
+      "projectPath": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\GYMProject.csproj",
+      "packagesPath": "C:\\Users\\ensar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\emree\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ensar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1873,7 +1873,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
