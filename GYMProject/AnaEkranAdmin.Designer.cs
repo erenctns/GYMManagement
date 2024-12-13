@@ -29,39 +29,36 @@
         private void InitializeComponent()
         {
             newMemberButton = new Button();
-            equipmentButton = new Button();
+            memberListButton = new Button();
             SuspendLayout();
             // 
             // newMemberButton
             // 
-            newMemberButton.Location = new Point(47, 41);
-            newMemberButton.Margin = new Padding(3, 4, 3, 4);
+            newMemberButton.Location = new Point(41, 31);
             newMemberButton.Name = "newMemberButton";
-            newMemberButton.Size = new Size(135, 31);
+            newMemberButton.Size = new Size(118, 23);
             newMemberButton.TabIndex = 0;
             newMemberButton.Text = "New Member";
             newMemberButton.UseVisualStyleBackColor = true;
             newMemberButton.Click += newMemberButton_Click;
             // 
-            // equipmentButton
+            // memberListButton
             // 
-            equipmentButton.Location = new Point(47, 103);
-            equipmentButton.Margin = new Padding(3, 4, 3, 4);
-            equipmentButton.Name = "equipmentButton";
-            equipmentButton.Size = new Size(135, 31);
-            equipmentButton.TabIndex = 1;
-            equipmentButton.Text = "Equipments";
-            equipmentButton.UseVisualStyleBackColor = true;
-            equipmentButton.Click += button1_Click;
+            memberListButton.Location = new Point(270, 31);
+            memberListButton.Name = "memberListButton";
+            memberListButton.Size = new Size(129, 23);
+            memberListButton.TabIndex = 1;
+            memberListButton.Text = "View Members";
+            memberListButton.UseVisualStyleBackColor = true;
+            memberListButton.Click += memberListButton_Click;
             // 
             // AnaEkranAdmin
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
-            Controls.Add(equipmentButton);
+            ClientSize = new Size(800, 450);
+            Controls.Add(memberListButton);
             Controls.Add(newMemberButton);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "AnaEkranAdmin";
             Text = "AnaEkranAdmin";
             Load += AnaEkranAdmin_Load;
@@ -71,6 +68,6 @@
         #endregion
 
         private Button newMemberButton;
-        private Button equipmentButton;
+        private Button memberListButton;
     }
 }
