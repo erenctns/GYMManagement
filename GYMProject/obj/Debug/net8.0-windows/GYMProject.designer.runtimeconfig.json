@@ -13,7 +13,7 @@
     ],
     "additionalProbingPaths": [
       "C:\\Users\\ensar\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\emree\\.nuget\\packages",
+      "C:\\Users\\ensar\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {
