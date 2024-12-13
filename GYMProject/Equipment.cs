@@ -20,10 +20,10 @@ namespace GYMProject
         }
         private void Equipment_Load(object sender, EventArgs e)
         {
-            // Veritabanı bağlantı dizesi
+            
             string connectionString = "Data Source=DESKTOP-FAT5F5N\\SQLEXPRESS01;Initial Catalog=GymDB;Integrated Security=True;Encrypt=False";
 
-            // SQL sorgusu
+            // SQL sorgu
             string query = "SELECT EquipmentID, EquipmentName, Quantity, Condition FROM Equipment";
 
             try
