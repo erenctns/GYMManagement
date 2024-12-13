@@ -29,48 +29,63 @@
         private void InitializeComponent()
         {
             newMemberButton = new Button();
+            memberListButton = new Button();
             equipmentButton = new Button();
-            memberList = new Button();
+            newTrainerButton = new Button();
             SuspendLayout();
             // 
             // newMemberButton
             // 
-            newMemberButton.Location = new Point(41, 31);
+            newMemberButton.Location = new Point(47, 41);
+            newMemberButton.Margin = new Padding(3, 4, 3, 4);
             newMemberButton.Name = "newMemberButton";
-            newMemberButton.Size = new Size(118, 23);
+            newMemberButton.Size = new Size(135, 31);
             newMemberButton.TabIndex = 0;
             newMemberButton.Text = "New Member";
             newMemberButton.UseVisualStyleBackColor = true;
             newMemberButton.Click += newMemberButton_Click;
             // 
+            // memberListButton
+            // 
+            memberListButton.Location = new Point(47, 158);
+            memberListButton.Margin = new Padding(3, 4, 3, 4);
+            memberListButton.Name = "memberListButton";
+            memberListButton.Size = new Size(135, 31);
+            memberListButton.TabIndex = 1;
+            memberListButton.Text = "View Members";
+            memberListButton.UseVisualStyleBackColor = true;
+            memberListButton.Click += memberListButton_Click;
+            // 
             // equipmentButton
             // 
-            equipmentButton.Location = new Point(41, 77);
+            equipmentButton.Location = new Point(47, 97);
             equipmentButton.Name = "equipmentButton";
-            equipmentButton.Size = new Size(118, 23);
-            equipmentButton.TabIndex = 1;
+            equipmentButton.Size = new Size(135, 29);
+            equipmentButton.TabIndex = 2;
             equipmentButton.Text = "Equipments";
             equipmentButton.UseVisualStyleBackColor = true;
-            equipmentButton.Click += button1_Click;
+            equipmentButton.Click += equipmentButton_Click;
             // 
-            // memberList
+            // newTrainerButton
             // 
-            memberList.Location = new Point(41, 118);
-            memberList.Name = "memberList";
-            memberList.Size = new Size(118, 23);
-            memberList.TabIndex = 2;
-            memberList.Text = "View Members";
-            memberList.UseVisualStyleBackColor = true;
-            memberList.Click += memberList_Click;
+            newTrainerButton.Location = new Point(47, 221);
+            newTrainerButton.Name = "newTrainerButton";
+            newTrainerButton.Size = new Size(135, 29);
+            newTrainerButton.TabIndex = 3;
+            newTrainerButton.Text = "New Trainer";
+            newTrainerButton.UseVisualStyleBackColor = true;
+            newTrainerButton.Click += newTrainerButton_Click;
             // 
             // AnaEkranAdmin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(memberList);
+            ClientSize = new Size(914, 600);
+            Controls.Add(newTrainerButton);
             Controls.Add(equipmentButton);
+            Controls.Add(memberListButton);
             Controls.Add(newMemberButton);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "AnaEkranAdmin";
             Text = "AnaEkranAdmin";
             Load += AnaEkranAdmin_Load;
@@ -80,7 +95,8 @@
         #endregion
 
         private Button newMemberButton;
+        private Button memberListButton;
         private Button equipmentButton;
-        private Button memberList;
+        private Button newTrainerButton;
     }
 }
