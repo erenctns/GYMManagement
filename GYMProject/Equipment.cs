@@ -32,7 +32,7 @@ namespace GYMProject
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open(); // Bağlantıyı açmayı deneyin
-                    MessageBox.Show("Bağlantı başarılı!");
+                    MessageBox.Show("You logged in Equipment Page");
                     // Veri çekme işlemi
                     SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
                     DataTable dataTable = new DataTable();
@@ -63,6 +63,48 @@ namespace GYMProject
                             treadmillName.Text = equipmentName;
                             treadmillQuantity.Text = quantity;
                             treadmillCondition.Text = condition;
+                        }
+                        else if(equipmentName =="Stationary Bike")
+                        {
+                            stationaryBikeName.Text = equipmentName;
+                            stationaryBikeQuantity.Text = quantity;
+                            stationaryBikeCondition.Text = condition;
+                        }
+                        else if(equipmentName == "Rowing Machine")
+                        {
+                            rowingMachineName.Text = equipmentName;
+                            rowingMachineQuantity.Text = quantity;
+                            rowingMachineCondition.Text = condition;
+                        }
+                        else if(equipmentName =="Elliptical Trainer")
+                        {
+                            ellipticalTrainerName.Text = equipmentName;
+                            ellipticalTrainerQuantity.Text = quantity;
+                            ellipticalTrainerCondition.Text = condition;
+                        }
+                        else if (equipmentName == "Smith Machine")
+                        {
+                            smitchMachineName.Text = equipmentName;
+                            smithMachineQuantity.Text = quantity;
+                            smithMachineCondition.Text = condition;
+                        }
+                        else if (equipmentName == "Dumbbell Set")
+                        {
+                            dumbbellSetName.Text = equipmentName;
+                            dumbbellSetQuantity.Text = quantity;
+                            dumbbellSetCondition.Text = condition;
+                        }
+                        else if (equipmentName == "Kettlebell Set")
+                        {
+                            kettlebellSetName.Text = equipmentName;
+                            kettlebellSetQuantity.Text = quantity;
+                            kettlebellSetCondition.Text = condition;
+                        }
+                        else if(equipmentName == "Lat Pulldown Machine")
+                        {
+                            latpullDownMachineName.Text = equipmentName;
+                            latpullDownMachineQuantity.Text = quantity;
+                            latpullDownMachineCondition.Text = condition;
                         }
                         // Diğer ekipmanlar için de aynı şekilde devam edebilirsiniz
                     }
