@@ -173,3 +173,4 @@ C:\Users\erenc\OneDrive\Desktop\gitProje\GYMManagement\GYMProject\bin\Debug\net8
 C:\Users\erenc\OneDrive\Desktop\gitProje\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.genruntimeconfig.cache
 C:\Users\erenc\OneDrive\Desktop\gitProje\GYMManagement\GYMProject\obj\Debug\net8.0-windows\ref\GYMProject.dll
 C:\Users\erenc\OneDrive\Desktop\gitProje\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.UpdateEquipmentForm.resources
+C:\Users\erenc\OneDrive\Desktop\gitProje\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.MemberList.resources

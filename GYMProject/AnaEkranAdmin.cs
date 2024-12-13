@@ -28,7 +28,13 @@
         {
             MemberList memberListForm = new MemberList();
             memberListForm.Show();
-            
+
+        }
+
+        private void equipmentButton_Click(object sender, EventArgs e)
+        {
+            Equipment equipmentForm = new Equipment();
+            equipmentForm.Show();
         }
     }
 }
