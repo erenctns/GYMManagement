@@ -166,3 +166,11 @@ C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\obj\Debug\net8.0-windows
 C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.genruntimeconfig.cache
 C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\obj\Debug\net8.0-windows\ref\GYMProject.dll
 C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.MemberList.resources
+C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.Equipment.resources
+C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.UpdateEquipmentForm.resources
