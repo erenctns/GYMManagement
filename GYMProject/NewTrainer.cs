@@ -39,7 +39,7 @@ namespace GYMProject
             }
 
             // SQL bağlantısı
-            string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+            string connectionString = "Data Source=DESKTOP-FAT5F5N\\SQLEXPRESS01;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
 
             // Yeni kayıt ekleme sorgusu
             string insertQuery = @"INSERT INTO Trainer (FirstName, LastName, Gender, Age, PhoneNumber, Email, Specialization)
@@ -95,8 +95,10 @@ namespace GYMProject
             specializationComboBox.SelectedIndex = -1;
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
-
+        }
     }
-    
+
 }

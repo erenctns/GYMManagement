@@ -138,7 +138,7 @@ namespace GYMProject
         {
             try
             {
-                string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+                string connectionString = "Data Source=DESKTOP-FAT5F5N\\SQLEXPRESS01;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
                 string query = "SELECT TrainerID, FirstName + ' ' + LastName AS FullName, Specialization FROM Trainer";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -163,7 +163,7 @@ namespace GYMProject
         {
             try
             {
-                string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+                string connectionString = "Data Source=DESKTOP-FAT5F5N\\SQLEXPRESS01;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
                 string query = "SELECT ClassID, Name, Schedule, ClassType, FirstName + ' ' + LastName AS TrainerName FROM Class INNER JOIN Trainer ON Class.TrainerID = Trainer.TrainerID";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -234,7 +234,7 @@ namespace GYMProject
 
             try
             {
-                string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+                string connectionString = "Data Source=DESKTOP-FAT5F5N\\SQLEXPRESS01;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
                 string query = "INSERT INTO Class (Name, Schedule, TrainerID, ClassType) VALUES (@Name, @Schedule, @TrainerID, @ClassType)";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -282,7 +282,7 @@ namespace GYMProject
                     {
                         try
                         {
-                            string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+                            string connectionString = "Data Source=DESKTOP-FAT5F5N\\SQLEXPRESS01;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
                             string query = "DELETE FROM Class WHERE ClassID = @ClassID";
 
                             using (SqlConnection connection = new SqlConnection(connectionString))

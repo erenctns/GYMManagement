@@ -40,7 +40,7 @@ namespace GYMProject
             try
             {
                 // Veritabanı bağlantı dizesi
-                string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+                string connectionString = "Data Source=DESKTOP-FAT5F5N\\SQLEXPRESS01;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
 
                 // SQL sorgusu
                 string query = @"

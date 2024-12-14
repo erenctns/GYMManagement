@@ -43,13 +43,15 @@
             specializationComboBox = new ComboBox();
             specializationLabel = new Label();
             saveButton = new Button();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)ageCounter).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // firstNameLabel
             // 
             firstNameLabel.AutoSize = true;
-            firstNameLabel.Location = new Point(31, 65);
+            firstNameLabel.Location = new Point(82, 38);
             firstNameLabel.Name = "firstNameLabel";
             firstNameLabel.Size = new Size(80, 20);
             firstNameLabel.TabIndex = 0;
@@ -57,32 +59,32 @@
             // 
             // firstNameTextBox
             // 
-            firstNameTextBox.Location = new Point(120, 62);
+            firstNameTextBox.Location = new Point(208, 35);
             firstNameTextBox.Name = "firstNameTextBox";
-            firstNameTextBox.Size = new Size(125, 27);
+            firstNameTextBox.Size = new Size(231, 27);
             firstNameTextBox.TabIndex = 1;
             // 
             // lastNameLabel
             // 
             lastNameLabel.AutoSize = true;
-            lastNameLabel.Location = new Point(359, 65);
+            lastNameLabel.Location = new Point(82, 86);
             lastNameLabel.Name = "lastNameLabel";
             lastNameLabel.Size = new Size(79, 20);
             lastNameLabel.TabIndex = 2;
-            lastNameLabel.Text = "Last Nmae";
+            lastNameLabel.Text = "Last Name";
             // 
             // lastNameTextBox
             // 
-            lastNameTextBox.Location = new Point(463, 62);
+            lastNameTextBox.Location = new Point(207, 83);
             lastNameTextBox.Name = "lastNameTextBox";
-            lastNameTextBox.Size = new Size(125, 27);
+            lastNameTextBox.Size = new Size(231, 27);
             lastNameTextBox.TabIndex = 3;
             // 
             // genderComboBox
             // 
             genderComboBox.FormattingEnabled = true;
             genderComboBox.Items.AddRange(new object[] { "Male", "Female" });
-            genderComboBox.Location = new Point(132, 172);
+            genderComboBox.Location = new Point(207, 134);
             genderComboBox.Name = "genderComboBox";
             genderComboBox.Size = new Size(125, 28);
             genderComboBox.TabIndex = 4;
@@ -90,7 +92,7 @@
             // genderLabel
             // 
             genderLabel.AutoSize = true;
-            genderLabel.Location = new Point(31, 180);
+            genderLabel.Location = new Point(82, 137);
             genderLabel.Name = "genderLabel";
             genderLabel.Size = new Size(57, 20);
             genderLabel.TabIndex = 5;
@@ -98,15 +100,15 @@
             // 
             // ageCounter
             // 
-            ageCounter.Location = new Point(463, 170);
+            ageCounter.Location = new Point(208, 179);
             ageCounter.Name = "ageCounter";
-            ageCounter.Size = new Size(125, 27);
+            ageCounter.Size = new Size(71, 27);
             ageCounter.TabIndex = 6;
             // 
             // ageLabel
             // 
             ageLabel.AutoSize = true;
-            ageLabel.Location = new Point(359, 172);
+            ageLabel.Location = new Point(82, 181);
             ageLabel.Name = "ageLabel";
             ageLabel.Size = new Size(36, 20);
             ageLabel.TabIndex = 7;
@@ -115,7 +117,7 @@
             // phoneNumberLabel
             // 
             phoneNumberLabel.AutoSize = true;
-            phoneNumberLabel.Location = new Point(31, 290);
+            phoneNumberLabel.Location = new Point(82, 227);
             phoneNumberLabel.Name = "phoneNumberLabel";
             phoneNumberLabel.Size = new Size(108, 20);
             phoneNumberLabel.TabIndex = 8;
@@ -124,7 +126,7 @@
             // emailLabel
             // 
             emailLabel.AutoSize = true;
-            emailLabel.Location = new Point(359, 290);
+            emailLabel.Location = new Point(82, 280);
             emailLabel.Name = "emailLabel";
             emailLabel.Size = new Size(50, 20);
             emailLabel.TabIndex = 9;
@@ -132,31 +134,31 @@
             // 
             // phoneNumberTextBox
             // 
-            phoneNumberTextBox.Location = new Point(157, 283);
+            phoneNumberTextBox.Location = new Point(208, 224);
             phoneNumberTextBox.Name = "phoneNumberTextBox";
-            phoneNumberTextBox.Size = new Size(125, 27);
+            phoneNumberTextBox.Size = new Size(231, 27);
             phoneNumberTextBox.TabIndex = 10;
             // 
             // emailTextBox
             // 
-            emailTextBox.Location = new Point(463, 287);
+            emailTextBox.Location = new Point(208, 277);
             emailTextBox.Name = "emailTextBox";
-            emailTextBox.Size = new Size(125, 27);
+            emailTextBox.Size = new Size(231, 27);
             emailTextBox.TabIndex = 11;
             // 
             // specializationComboBox
             // 
             specializationComboBox.FormattingEnabled = true;
             specializationComboBox.Items.AddRange(new object[] { "Fitness", "Yoga", "Kick Box" });
-            specializationComboBox.Location = new Point(774, 177);
+            specializationComboBox.Location = new Point(208, 323);
             specializationComboBox.Name = "specializationComboBox";
-            specializationComboBox.Size = new Size(151, 28);
+            specializationComboBox.Size = new Size(125, 28);
             specializationComboBox.TabIndex = 12;
             // 
             // specializationLabel
             // 
             specializationLabel.AutoSize = true;
-            specializationLabel.Location = new Point(655, 185);
+            specializationLabel.Location = new Point(83, 326);
             specializationLabel.Name = "specializationLabel";
             specializationLabel.Size = new Size(102, 20);
             specializationLabel.TabIndex = 13;
@@ -164,7 +166,7 @@
             // 
             // saveButton
             // 
-            saveButton.Location = new Point(385, 420);
+            saveButton.Location = new Point(218, 426);
             saveButton.Name = "saveButton";
             saveButton.Size = new Size(94, 29);
             saveButton.TabIndex = 14;
@@ -172,31 +174,43 @@
             saveButton.UseVisualStyleBackColor = true;
             saveButton.Click += saveButton_Click;
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(firstNameLabel);
+            panel1.Controls.Add(saveButton);
+            panel1.Controls.Add(firstNameTextBox);
+            panel1.Controls.Add(specializationLabel);
+            panel1.Controls.Add(lastNameLabel);
+            panel1.Controls.Add(specializationComboBox);
+            panel1.Controls.Add(lastNameTextBox);
+            panel1.Controls.Add(emailTextBox);
+            panel1.Controls.Add(genderComboBox);
+            panel1.Controls.Add(phoneNumberTextBox);
+            panel1.Controls.Add(genderLabel);
+            panel1.Controls.Add(emailLabel);
+            panel1.Controls.Add(ageCounter);
+            panel1.Controls.Add(phoneNumberLabel);
+            panel1.Controls.Add(ageLabel);
+            panel1.Location = new Point(195, 44);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(513, 478);
+            panel1.TabIndex = 15;
+            panel1.Paint += panel1_Paint;
+            // 
             // NewTrainer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.background;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(958, 556);
-            Controls.Add(saveButton);
-            Controls.Add(specializationLabel);
-            Controls.Add(specializationComboBox);
-            Controls.Add(emailTextBox);
-            Controls.Add(phoneNumberTextBox);
-            Controls.Add(emailLabel);
-            Controls.Add(phoneNumberLabel);
-            Controls.Add(ageLabel);
-            Controls.Add(ageCounter);
-            Controls.Add(genderLabel);
-            Controls.Add(genderComboBox);
-            Controls.Add(lastNameTextBox);
-            Controls.Add(lastNameLabel);
-            Controls.Add(firstNameTextBox);
-            Controls.Add(firstNameLabel);
+            Controls.Add(panel1);
             Name = "NewTrainer";
             Text = "NewTrainer";
             ((System.ComponentModel.ISupportInitialize)ageCounter).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -216,5 +230,6 @@
         private ComboBox specializationComboBox;
         private Label specializationLabel;
         private Button saveButton;
+        private Panel panel1;
     }
 }
