@@ -118,11 +118,10 @@ C:\Users\emree\OneDrive\Belgeler\GitHub\GYMManagement\GYMProject\bin\Debug\net8.
 C:\Users\emree\OneDrive\Belgeler\GitHub\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.Equipment.resources
 C:\Users\emree\OneDrive\Belgeler\GitHub\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.MemberList.resources
 C:\Users\emree\OneDrive\Belgeler\GitHub\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.UpdateEquipmentForm.resources
+C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\bin\Debug\net8.0-windows\GYMProject.dll
 C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\bin\Debug\net8.0-windows\GYMProject.exe
 C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\bin\Debug\net8.0-windows\GYMProject.deps.json
 C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\bin\Debug\net8.0-windows\GYMProject.runtimeconfig.json
-C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\bin\Debug\net8.0-windows\GYMProject.dll
-C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\bin\Debug\net8.0-windows\GYMProject.pdb
 C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\bin\Debug\net8.0-windows\Azure.Core.dll
 C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\bin\Debug\net8.0-windows\Azure.Identity.dll
 C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
@@ -187,4 +186,5 @@ C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\obj\Debug\net8.0-windows
 C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\obj\Debug\net8.0-windows\refint\GYMProject.dll
 C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.pdb
 C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.genruntimeconfig.cache
+C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\bin\Debug\net8.0-windows\GYMProject.pdb
 C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\obj\Debug\net8.0-windows\ref\GYMProject.dll
