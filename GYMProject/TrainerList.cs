@@ -57,7 +57,7 @@ namespace GYMProject
         {
             try
             {
-                string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+                string connectionString = "Data Source=DESKTOP-FAT5F5N\\SQLEXPRESS01;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
 
                 string query = @"
                     SELECT 
@@ -83,7 +83,7 @@ namespace GYMProject
         {
             try
             {
-                string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+                string connectionString = "Data Source=DESKTOP-FAT5F5N\\SQLEXPRESS01;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
 
                 string query = "DELETE FROM Trainer WHERE TrainerID = @TrainerID";
 
