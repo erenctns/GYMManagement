@@ -40,7 +40,7 @@ namespace GYMProject
             try
             {
                 // Veritabanı bağlantı dizesi
-                string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+                string connectionString = "Data Source=EMREEROGLU\\SQLEXPRESS;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
 
                 // SQL sorgusu
                 string query = @"
@@ -81,7 +81,7 @@ namespace GYMProject
             try
             {
                 // Veritabanı bağlantı dizesi
-                string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+                string connectionString = "Data Source=EMREEROGLU\\SQLEXPRESS;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
 
                 // Silme sorgusu
                 string query = "DELETE FROM Member WHERE MemberID = @MemberID";

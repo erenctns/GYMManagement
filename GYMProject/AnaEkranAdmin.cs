@@ -35,5 +35,17 @@
             MemberList memberListForm = new MemberList();
             memberListForm.Show();
         }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            Giris girisForm = new Giris();
+            this.Hide();
+            girisForm.Show();
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

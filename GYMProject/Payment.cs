@@ -8,21 +8,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace GYMProject
 {
     public partial class Payment : Form
     {
         public int MemberID { get; set; } // MemberID'yi tutacak özellik
-
         public decimal? MembershipAmount { get; set; } // MembershipAmount'u decimal olarak tutalım
+        public string FullName { get; set; } // Full Name özelliği
+        public string Email { get; set; } // Email özelliği
+        public string MembershipType { get; set; } // Membership Type özelliği
+        public DateTime PaymentDate { get; set; } // Bugünün tarihini tutacak özellik
+
 
         // Yapıcı metot, MemberID'yi alacak
-        public Payment(int memberId, decimal? membershipAmount)
+        public Payment(int memberId, decimal? membershipAmount, string fullName, string email, string membershipType)
         {
             InitializeComponent();
-            this.MemberID = memberId; // MemberID'yi al ve property'ye ata
-            this.MembershipAmount = membershipAmount; // MembershipAmount değerini al ve property'ye ata
+            this.MemberID = memberId;
+            this.MembershipAmount = membershipAmount;
+            this.FullName = fullName;
+            this.Email = email;
+            this.MembershipType = membershipType;
+            this.PaymentDate = DateTime.Now;
         }
 
         private void Payment_Load(object sender, EventArgs e)
@@ -31,14 +40,40 @@ namespace GYMProject
         }
         private void Payment_Load_1(object sender, EventArgs e)
         {
+            fullNameLabel.Text = "Full Name:";
+            fullnameLabelValue.Text = FullName;
+
+            emailLabel.Text = "Email:";
+            emailValueLabel.Text = Email;
+
+            membershipTypeLabel.Text = "Membership Type:";
+            membershipTypeLabelValue.Text = MembershipType;
+
+            paymentDateLabel.Text = "Date:";
+            string todayDate = DateTime.Now.ToString("dd/MM/yyyy"); 
+            paymentDateLabelValue.Text = todayDate;
+
+            // Tüm label'ların yazılarını sola hizalamak için
+            fullNameLabel.TextAlign = ContentAlignment.MiddleLeft;
+            fullnameLabelValue.TextAlign = ContentAlignment.MiddleLeft;
+            emailLabel.TextAlign = ContentAlignment.MiddleLeft;
+            emailValueLabel.TextAlign = ContentAlignment.MiddleLeft;
+            membershipTypeLabel.TextAlign = ContentAlignment.MiddleLeft;
+            membershipTypeLabelValue.TextAlign = ContentAlignment.MiddleLeft;
+            amountLabel1.TextAlign = ContentAlignment.MiddleLeft;
+            paymentDateLabelValue.TextAlign = ContentAlignment.MiddleLeft;
+        
+
             // MembershipAmount değeri varsa label'a yazdır
             if (MembershipAmount.HasValue)
             {
-                amountLabel1.Text = $"Membership Amount: {MembershipAmount.Value} TL";
+                amountLabel1.Text = "Total Amount:";
+                amountLabelVaule1.Text = MembershipAmount.Value + "TL";
             }
             else
             {
-                amountLabel1.Text = "Membership Amount: 0 TL"; // Eğer değer yoksa, varsayılan bir değer göster
+                amountLabel1.Text = "Total Amount:"; // Eğer değer yoksa, varsayılan bir değer göster
+                amountLabelVaule1.Text = "0 TL";
             }
         }
 
@@ -47,7 +82,7 @@ namespace GYMProject
             try
             {
                 // SQL bağlantısı ve komutları
-                using (var connection = new SqlConnection("Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False"))
+                using (var connection = new SqlConnection("Data Source=EMREEROGLU\\SQLEXPRESS;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False"))
                 {
                     connection.Open();
 
