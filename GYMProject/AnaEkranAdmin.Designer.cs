@@ -33,6 +33,9 @@
             memberList = new Button();
             LogOutButton = new Button();
             exitbutton = new Button();
+            newTrainerButton = new Button();
+            viewTrainersButton = new Button();
+            classesButton = new Button();
             SuspendLayout();
             // 
             // newMemberButton
@@ -106,6 +109,36 @@
             exitbutton.UseVisualStyleBackColor = true;
             exitbutton.Click += button1_Click_2;
             // 
+            // newTrainerButton
+            // 
+            newTrainerButton.Location = new Point(36, 138);
+            newTrainerButton.Name = "newTrainerButton";
+            newTrainerButton.Size = new Size(167, 48);
+            newTrainerButton.TabIndex = 5;
+            newTrainerButton.Text = "New Trainer";
+            newTrainerButton.UseVisualStyleBackColor = true;
+            newTrainerButton.Click += newTrainerButton_Click;
+            // 
+            // viewTrainersButton
+            // 
+            viewTrainersButton.Location = new Point(247, 138);
+            viewTrainersButton.Name = "viewTrainersButton";
+            viewTrainersButton.Size = new Size(175, 48);
+            viewTrainersButton.TabIndex = 6;
+            viewTrainersButton.Text = "View Trainers";
+            viewTrainersButton.UseVisualStyleBackColor = true;
+            viewTrainersButton.Click += viewTrainersButton_Click;
+            // 
+            // classesButton
+            // 
+            classesButton.Location = new Point(467, 138);
+            classesButton.Name = "classesButton";
+            classesButton.Size = new Size(175, 48);
+            classesButton.TabIndex = 7;
+            classesButton.Text = "Classes";
+            classesButton.UseVisualStyleBackColor = true;
+            classesButton.Click += classesButton_Click;
+            // 
             // AnaEkranAdmin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -113,6 +146,9 @@
             BackgroundImage = Properties.Resources.background;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(914, 600);
+            Controls.Add(classesButton);
+            Controls.Add(viewTrainersButton);
+            Controls.Add(newTrainerButton);
             Controls.Add(exitbutton);
             Controls.Add(LogOutButton);
             Controls.Add(memberList);
@@ -132,5 +168,8 @@
         private Button memberList;
         private Button LogOutButton;
         private Button exitbutton;
+        private Button newTrainerButton;
+        private Button viewTrainersButton;
+        private Button classesButton;
     }
 }

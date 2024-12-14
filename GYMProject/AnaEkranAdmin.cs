@@ -14,8 +14,11 @@
         }
 
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+
+            Equipment equipmentForm = new Equipment();
+            equipmentForm.Show();
 
         }
 
@@ -24,17 +27,23 @@
 
         }
 
-        private void memberListButton_Click(object sender, EventArgs e)
+        private void memberList_Click(object sender, EventArgs e)
         {
             MemberList memberListForm = new MemberList();
             memberListForm.Show();
 
         }
-
-        private void equipmentButton_Click(object sender, EventArgs e)
+   
+        private void LogOutButton_Click(object sender, EventArgs e)
         {
-            Equipment equipmentForm = new Equipment();
-            equipmentForm.Show();
+            Giris girisForm = new Giris();
+            this.Hide();
+            girisForm.Show();
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void newTrainerButton_Click(object sender, EventArgs e)
@@ -53,18 +62,6 @@
         {
             Class classForm = new Class();
             classForm.Show();
-        }
-
-        private void LogOutButton_Click(object sender, EventArgs e)
-        {
-            Giris girisForm = new Giris();
-            this.Hide();
-            girisForm.Show();
-        }
-
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
