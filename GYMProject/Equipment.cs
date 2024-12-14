@@ -19,10 +19,13 @@ namespace GYMProject
             InitializeComponent();
             this.Load += new EventHandler(Equipment_Load);
         }
+
+        private List<Label> targetLabels;
+
         private void Equipment_Load(object sender, EventArgs e)
         {
-            
-            string connectionString = "Data Source=DESKTOP-FAT5F5N\\SQLEXPRESS01;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+
+            string connectionString = "Data Source=EMREEROGLU\\SQLEXPRESS;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
 
             // SQL sorgu
             string query = "SELECT EquipmentID, EquipmentName, Quantity, Condition FROM Equipment";
@@ -33,7 +36,7 @@ namespace GYMProject
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open(); // Bağlantıyı açmayı deneyin
-                    
+
                     // Veri çekme işlemi
                     SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
                     DataTable dataTable = new DataTable();
@@ -115,6 +118,11 @@ namespace GYMProject
             {
                 MessageBox.Show("Veri yüklenirken bir hata oluştu: " + ex.Message);
             }
+
+
+
+            targetLabels = new List<Label> { dumbbellCondition, treadmillCondition, stationaryBikeCondition, ellipticalTrainerCondition, smithMachineCondition, rowingMachineCondition, dumbbellSetCondition, kettlebellSetCondition, latpullDownMachineCondition };
+            UpdateTargetLabelColors();
         }
 
         private void updateEquipmentsButton_Click(object sender, EventArgs e)
@@ -127,6 +135,34 @@ namespace GYMProject
         {
             Equipment_Load(sender, e);
             MessageBox.Show("Database Refreshed");
+        }
+
+        private void dumbbellSetQuantity_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void UpdateTargetLabelColors()
+        {
+            foreach (Label label in targetLabels)
+            {
+                if (label.Text == "Good")
+                {
+                    label.ForeColor = Color.Green; // Text rengi yeşil
+                }
+                else if (label.Text == "Needs Repair")
+                {
+                    label.ForeColor = Color.Gold; // Text rengi sarı
+                }
+                else if (label.Text == "Broken")
+                {
+                    label.ForeColor = Color.Red; // Text rengi kırmızı
+                }
+            }
+        }
+
+        private void dumbbellSetCondition_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

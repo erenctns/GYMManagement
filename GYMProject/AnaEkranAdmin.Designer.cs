@@ -29,86 +29,96 @@
         private void InitializeComponent()
         {
             newMemberButton = new Button();
-            memberListButton = new Button();
             equipmentButton = new Button();
-            newTrainerButton = new Button();
-            viewTrainersButton = new Button();
-            classesButton = new Button();
+            memberList = new Button();
+            LogOutButton = new Button();
+            exitbutton = new Button();
             SuspendLayout();
             // 
             // newMemberButton
             // 
-            newMemberButton.Location = new Point(41, 31);
+            newMemberButton.BackgroundImage = Properties.Resources.add_group__1_;
+            newMemberButton.BackgroundImageLayout = ImageLayout.None;
+            newMemberButton.Location = new Point(36, 37);
+            newMemberButton.Margin = new Padding(3, 4, 3, 4);
             newMemberButton.Name = "newMemberButton";
-            newMemberButton.Size = new Size(118, 23);
+            newMemberButton.Size = new Size(167, 70);
             newMemberButton.TabIndex = 0;
             newMemberButton.Text = "New Member";
+            newMemberButton.TextAlign = ContentAlignment.MiddleRight;
             newMemberButton.UseVisualStyleBackColor = true;
             newMemberButton.Click += newMemberButton_Click;
             // 
-            // memberListButton
-            // 
-            memberListButton.Location = new Point(41, 118);
-            memberListButton.Name = "memberListButton";
-            memberListButton.Size = new Size(118, 23);
-            memberListButton.TabIndex = 1;
-            memberListButton.Text = "View Members";
-            memberListButton.UseVisualStyleBackColor = true;
-            memberListButton.Click += memberListButton_Click;
-            // 
             // equipmentButton
             // 
-            equipmentButton.Location = new Point(41, 73);
-            equipmentButton.Margin = new Padding(3, 2, 3, 2);
+            equipmentButton.BackgroundImage = Properties.Resources.gym;
+            equipmentButton.BackgroundImageLayout = ImageLayout.None;
+            equipmentButton.ImageAlign = ContentAlignment.MiddleLeft;
+            equipmentButton.Location = new Point(467, 37);
+            equipmentButton.Margin = new Padding(3, 4, 3, 4);
             equipmentButton.Name = "equipmentButton";
-            equipmentButton.Size = new Size(118, 22);
-            equipmentButton.TabIndex = 2;
+            equipmentButton.Size = new Size(175, 70);
+            equipmentButton.TabIndex = 1;
             equipmentButton.Text = "Equipments";
+            equipmentButton.TextAlign = ContentAlignment.MiddleRight;
             equipmentButton.UseVisualStyleBackColor = true;
-            equipmentButton.Click += equipmentButton_Click;
+            equipmentButton.Click += button1_Click;
             // 
-            // newTrainerButton
+            // memberList
             // 
-            newTrainerButton.Location = new Point(41, 166);
-            newTrainerButton.Margin = new Padding(3, 2, 3, 2);
-            newTrainerButton.Name = "newTrainerButton";
-            newTrainerButton.Size = new Size(118, 22);
-            newTrainerButton.TabIndex = 3;
-            newTrainerButton.Text = "New Trainer";
-            newTrainerButton.UseVisualStyleBackColor = true;
-            newTrainerButton.Click += newTrainerButton_Click;
+            memberList.BackgroundImage = Properties.Resources.file;
+            memberList.BackgroundImageLayout = ImageLayout.None;
+            memberList.Location = new Point(247, 37);
+            memberList.Margin = new Padding(3, 4, 3, 4);
+            memberList.Name = "memberList";
+            memberList.Size = new Size(175, 70);
+            memberList.TabIndex = 2;
+            memberList.Text = "View Members";
+            memberList.TextAlign = ContentAlignment.MiddleRight;
+            memberList.UseVisualStyleBackColor = true;
+            memberList.Click += memberList_Click;
             // 
-            // viewTrainersButton
+            // LogOutButton
             // 
-            viewTrainersButton.Location = new Point(41, 211);
-            viewTrainersButton.Name = "viewTrainersButton";
-            viewTrainersButton.Size = new Size(118, 23);
-            viewTrainersButton.TabIndex = 4;
-            viewTrainersButton.Text = "View Trainers";
-            viewTrainersButton.UseVisualStyleBackColor = true;
-            viewTrainersButton.Click += viewTrainersButton_Click;
+            LogOutButton.BackgroundImage = Properties.Resources.logout;
+            LogOutButton.BackgroundImageLayout = ImageLayout.None;
+            LogOutButton.ImageAlign = ContentAlignment.MiddleLeft;
+            LogOutButton.Location = new Point(613, 515);
+            LogOutButton.Name = "LogOutButton";
+            LogOutButton.Size = new Size(149, 73);
+            LogOutButton.TabIndex = 3;
+            LogOutButton.Text = "Log Out";
+            LogOutButton.TextAlign = ContentAlignment.MiddleRight;
+            LogOutButton.UseVisualStyleBackColor = true;
+            LogOutButton.Click += LogOutButton_Click;
             // 
-            // classesButton
+            // exitbutton
             // 
-            classesButton.Location = new Point(41, 260);
-            classesButton.Name = "classesButton";
-            classesButton.Size = new Size(118, 23);
-            classesButton.TabIndex = 5;
-            classesButton.Text = "Classes";
-            classesButton.UseVisualStyleBackColor = true;
-            classesButton.Click += classesButton_Click;
+            exitbutton.BackgroundImage = Properties.Resources.exit;
+            exitbutton.BackgroundImageLayout = ImageLayout.None;
+            exitbutton.ImageAlign = ContentAlignment.MiddleLeft;
+            exitbutton.Location = new Point(784, 515);
+            exitbutton.Name = "exitbutton";
+            exitbutton.Size = new Size(118, 73);
+            exitbutton.TabIndex = 4;
+            exitbutton.Text = "Exit";
+            exitbutton.TextAlign = ContentAlignment.MiddleRight;
+            exitbutton.UseVisualStyleBackColor = true;
+            exitbutton.Click += button1_Click_2;
             // 
             // AnaEkranAdmin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(classesButton);
-            Controls.Add(viewTrainersButton);
-            Controls.Add(newTrainerButton);
+            BackgroundImage = Properties.Resources.background;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(914, 600);
+            Controls.Add(exitbutton);
+            Controls.Add(LogOutButton);
+            Controls.Add(memberList);
             Controls.Add(equipmentButton);
-            Controls.Add(memberListButton);
             Controls.Add(newMemberButton);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "AnaEkranAdmin";
             Text = "AnaEkranAdmin";
             Load += AnaEkranAdmin_Load;
@@ -118,10 +128,9 @@
         #endregion
 
         private Button newMemberButton;
-        private Button memberListButton;
         private Button equipmentButton;
-        private Button newTrainerButton;
-        private Button viewTrainersButton;
-        private Button classesButton;
+        private Button memberList;
+        private Button LogOutButton;
+        private Button exitbutton;
     }
 }

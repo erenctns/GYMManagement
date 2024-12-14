@@ -14,7 +14,7 @@ namespace GYMProject
     public partial class UpdateEquipmentForm : Form
     {
         // Veritabanı bağlantı dizesi
-        private string connectionString = "Data Source=DESKTOP-FAT5F5N\\SQLEXPRESS01;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+        private string connectionString = "Data Source=EMREEROGLU\\SQLEXPRESS;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
 
         public UpdateEquipmentForm()
         {
@@ -52,17 +52,18 @@ namespace GYMProject
                 // Girdi kontrolü
                 if (string.IsNullOrEmpty(selectedEquipment))
                 {
-                    MessageBox.Show("Lütfen ekipman seçin!");
+                    MessageBox.Show("Lütfen ekipman seçin!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                     return;
                 }
                 if (newQuantity <= 0)
                 {
-                    MessageBox.Show("Lütfen geçerli bir miktar girin!");
+                    MessageBox.Show("Lütfen geçerli bir miktar girin!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 if (string.IsNullOrEmpty(newCondition))
                 {
-                    MessageBox.Show("Lütfen durum seçin!");
+                    MessageBox.Show("Lütfen durum seçin!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -80,12 +81,14 @@ namespace GYMProject
                     if (rowsAffected > 0)
                     {
                         // Güncelleme başarılı, önce mesaj göster, sonra formu kapat
-                        MessageBox.Show("Ekipman başarıyla güncellendi!");
+                        MessageBox.Show("Ekipman başarıyla güncellendi!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                         this.Close(); // Formu kapat
                     }
                     else
                     {
-                        MessageBox.Show("Güncelleme başarısız oldu!");
+                        MessageBox.Show("Güncelleme başarısız oldu!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     }
                 }
             }
