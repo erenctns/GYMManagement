@@ -57,7 +57,7 @@
             equipmentButton.BackgroundImage = Properties.Resources.gym;
             equipmentButton.BackgroundImageLayout = ImageLayout.None;
             equipmentButton.ImageAlign = ContentAlignment.MiddleLeft;
-            equipmentButton.Location = new Point(467, 37);
+            equipmentButton.Location = new Point(673, 37);
             equipmentButton.Margin = new Padding(3, 4, 3, 4);
             equipmentButton.Name = "equipmentButton";
             equipmentButton.Size = new Size(175, 70);
@@ -71,7 +71,7 @@
             // 
             memberList.BackgroundImage = Properties.Resources.file;
             memberList.BackgroundImageLayout = ImageLayout.None;
-            memberList.Location = new Point(247, 37);
+            memberList.Location = new Point(356, 37);
             memberList.Margin = new Padding(3, 4, 3, 4);
             memberList.Name = "memberList";
             memberList.Size = new Size(175, 70);
@@ -111,31 +111,40 @@
             // 
             // newTrainerButton
             // 
-            newTrainerButton.Location = new Point(36, 138);
+            newTrainerButton.BackgroundImage = Properties.Resources.soccer_player;
+            newTrainerButton.BackgroundImageLayout = ImageLayout.None;
+            newTrainerButton.Location = new Point(36, 174);
             newTrainerButton.Name = "newTrainerButton";
-            newTrainerButton.Size = new Size(167, 48);
+            newTrainerButton.Size = new Size(167, 70);
             newTrainerButton.TabIndex = 5;
             newTrainerButton.Text = "New Trainer";
+            newTrainerButton.TextAlign = ContentAlignment.MiddleRight;
             newTrainerButton.UseVisualStyleBackColor = true;
             newTrainerButton.Click += newTrainerButton_Click;
             // 
             // viewTrainersButton
             // 
-            viewTrainersButton.Location = new Point(247, 138);
+            viewTrainersButton.BackgroundImage = Properties.Resources.coach;
+            viewTrainersButton.BackgroundImageLayout = ImageLayout.None;
+            viewTrainersButton.Location = new Point(356, 174);
             viewTrainersButton.Name = "viewTrainersButton";
-            viewTrainersButton.Size = new Size(175, 48);
+            viewTrainersButton.Size = new Size(175, 70);
             viewTrainersButton.TabIndex = 6;
             viewTrainersButton.Text = "View Trainers";
+            viewTrainersButton.TextAlign = ContentAlignment.MiddleRight;
             viewTrainersButton.UseVisualStyleBackColor = true;
             viewTrainersButton.Click += viewTrainersButton_Click;
             // 
             // classesButton
             // 
-            classesButton.Location = new Point(467, 138);
+            classesButton.BackgroundImage = Properties.Resources.timetable;
+            classesButton.BackgroundImageLayout = ImageLayout.None;
+            classesButton.Location = new Point(673, 174);
             classesButton.Name = "classesButton";
-            classesButton.Size = new Size(175, 48);
+            classesButton.Size = new Size(175, 70);
             classesButton.TabIndex = 7;
-            classesButton.Text = "Classes";
+            classesButton.Text = "Classes      ";
+            classesButton.TextAlign = ContentAlignment.MiddleRight;
             classesButton.UseVisualStyleBackColor = true;
             classesButton.Click += classesButton_Click;
             // 

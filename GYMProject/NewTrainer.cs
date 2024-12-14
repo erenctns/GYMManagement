@@ -95,8 +95,10 @@ namespace GYMProject
             specializationComboBox.SelectedIndex = -1;
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
-
+        }
     }
-    
+
 }

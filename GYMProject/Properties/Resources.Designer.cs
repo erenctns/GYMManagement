@@ -83,6 +83,16 @@ namespace GYMProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap coach {
+            get {
+                object obj = ResourceManager.GetObject("coach", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dumbbells {
             get {
                 object obj = ResourceManager.GetObject("dumbbells", resourceCulture);
@@ -243,9 +253,29 @@ namespace GYMProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap soccer_player {
+            get {
+                object obj = ResourceManager.GetObject("soccer-player", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap stationarybike {
             get {
                 object obj = ResourceManager.GetObject("stationarybike", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap timetable {
+            get {
+                object obj = ResourceManager.GetObject("timetable", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
