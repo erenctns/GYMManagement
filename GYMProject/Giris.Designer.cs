@@ -41,42 +41,45 @@ namespace GYMProject
             // 
             // userNameTextBox
             // 
-            userNameTextBox.Location = new Point(265, 163);
+            userNameTextBox.Location = new Point(303, 217);
+            userNameTextBox.Margin = new Padding(3, 4, 3, 4);
             userNameTextBox.Name = "userNameTextBox";
-            userNameTextBox.Size = new Size(100, 23);
+            userNameTextBox.Size = new Size(114, 27);
             userNameTextBox.TabIndex = 0;
             userNameTextBox.TextChanged += userNameTextBox_TextChanged;
             // 
             // passwordTextBox
             // 
-            passwordTextBox.Location = new Point(265, 237);
+            passwordTextBox.Location = new Point(303, 316);
+            passwordTextBox.Margin = new Padding(3, 4, 3, 4);
             passwordTextBox.Name = "passwordTextBox";
-            passwordTextBox.Size = new Size(100, 23);
+            passwordTextBox.Size = new Size(114, 27);
             passwordTextBox.TabIndex = 1;
             // 
             // userNameLabel
             // 
             userNameLabel.AutoSize = true;
-            userNameLabel.Location = new Point(268, 121);
+            userNameLabel.Location = new Point(306, 161);
             userNameLabel.Name = "userNameLabel";
-            userNameLabel.Size = new Size(60, 15);
+            userNameLabel.Size = new Size(75, 20);
             userNameLabel.TabIndex = 2;
             userNameLabel.Text = "Username";
             // 
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
-            passwordLabel.Location = new Point(272, 208);
+            passwordLabel.Location = new Point(311, 277);
             passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new Size(57, 15);
+            passwordLabel.Size = new Size(70, 20);
             passwordLabel.TabIndex = 3;
             passwordLabel.Text = "Password";
             // 
             // loginButton
             // 
-            loginButton.Location = new Point(276, 295);
+            loginButton.Location = new Point(315, 393);
+            loginButton.Margin = new Padding(3, 4, 3, 4);
             loginButton.Name = "loginButton";
-            loginButton.Size = new Size(75, 23);
+            loginButton.Size = new Size(86, 31);
             loginButton.TabIndex = 4;
             loginButton.Text = "Login";
             loginButton.UseVisualStyleBackColor = true;
@@ -84,14 +87,17 @@ namespace GYMProject
             // 
             // Giris
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackgroundImage = Properties.Resources.background;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(914, 600);
             Controls.Add(loginButton);
             Controls.Add(passwordLabel);
             Controls.Add(userNameLabel);
             Controls.Add(passwordTextBox);
             Controls.Add(userNameTextBox);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Giris";
             Text = "Form1";
             ResumeLayout(false);
