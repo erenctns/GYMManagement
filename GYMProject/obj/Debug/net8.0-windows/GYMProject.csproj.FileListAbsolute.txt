@@ -258,3 +258,8 @@ C:\Users\erenc\OneDrive\Desktop\gitProje\GYMManagement\GYMProject\obj\Debug\net8
 C:\Users\erenc\OneDrive\Desktop\gitProje\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.pdb
 C:\Users\erenc\OneDrive\Desktop\gitProje\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.genruntimeconfig.cache
 C:\Users\erenc\OneDrive\Desktop\gitProje\GYMManagement\GYMProject\obj\Debug\net8.0-windows\ref\GYMProject.dll
+C:\Users\emree\OneDrive\Belgeler\GitHub\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.Class.resources
+C:\Users\emree\OneDrive\Belgeler\GitHub\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.NewTrainer.resources
+C:\Users\emree\OneDrive\Belgeler\GitHub\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.Properties.Resources.resources
+C:\Users\emree\OneDrive\Belgeler\GitHub\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.TrainerList.resources
+C:\Users\emree\OneDrive\Belgeler\GitHub\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.TrainerSchedule.resources
