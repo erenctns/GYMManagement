@@ -12,7 +12,8 @@ namespace GYMProject
         private TextBox textBoxName;
         private ComboBox comboBoxTrainer;
         private ComboBox comboBoxClassType;
-        private DateTimePicker dateTimePickerSchedule;
+        private DateTimePicker datePicker;
+        private DateTimePicker timePicker;
         private Button buttonAddClass;
         private DataGridView dataGridClasses;
 
@@ -28,139 +29,99 @@ namespace GYMProject
             this.Size = new System.Drawing.Size(1200, 600);
             this.StartPosition = FormStartPosition.CenterScreen;
 
-            // Class Name
-            Label labelName = new Label
+            // Panel for Class Form (to center align controls)
+            Panel panelForm = new Panel
             {
-                Text = "Class Name:",
-                Location = new Point(20, 20),
-                AutoSize = true
-            };
-            textBoxName = new TextBox
-            {
-                Location = new Point(150, 20),
-                Width = 300
+                Size = new Size(500, 250), // Fixed size
+                Location = new Point((this.ClientSize.Width - 500) / 2, 20), // Center align
+                Anchor = AnchorStyles.Top,
             };
 
-            // Date and Time
-            Label labelSchedule = new Label
+            // Class Name
+            Label labelName = new Label { Text = "Class Name:", Location = new Point(10, 10), AutoSize = true };
+            textBoxName = new TextBox { Location = new Point(150, 10), Width = 300 };
+
+            // Date and Time Section
+            Label labelDate = new Label { Text = "Date:", Location = new Point(10, 50), AutoSize = true };
+            datePicker = new DateTimePicker
             {
-                Text = "Date and Time:",
-                Location = new Point(20, 60),
-                AutoSize = true
+                Location = new Point(150, 50),
+                Width = 140,
+                Format = DateTimePickerFormat.Short,  // Short format (only Date)
+                ShowUpDown = false,
+                CustomFormat = "yyyy-MM-dd",  // Custom format for date
             };
-            dateTimePickerSchedule = new DateTimePicker
+
+            Label labelTime = new Label { Text = "Time:", Location = new Point(300, 50), AutoSize = true };
+            timePicker = new DateTimePicker
             {
-                Location = new Point(150, 60),
-                Width = 300,
-                Format = DateTimePickerFormat.Custom,
-                CustomFormat = "yyyy-MM-dd HH:mm",
-                ShowUpDown = true,
-                Font = new Font("Arial", 12, FontStyle.Bold), // Larger and bolder font style
-                CalendarFont = new Font("Arial", 10, FontStyle.Regular),
-                BackColor = Color.White,
-                ForeColor = Color.Black,
-                Margin = new Padding(10)
+                Location = new Point(350, 50),
+                Width = 140,
+                Format = DateTimePickerFormat.Custom,  // Time format
+                CustomFormat = "HH:mm",  // 24-hour time format
+                ShowUpDown = true  // Use up/down buttons for time
             };
 
             // Trainer Selection
-            Label labelTrainer = new Label
-            {
-                Text = "Trainer:",
-                Location = new Point(20, 100),
-                AutoSize = true
-            };
-            comboBoxTrainer = new ComboBox
-            {
-                Location = new Point(150, 100),
-                Width = 300,
-                DropDownStyle = ComboBoxStyle.DropDownList
-            };
+            Label labelTrainer = new Label { Text = "Trainer:", Location = new Point(10, 90), AutoSize = true };
+            comboBoxTrainer = new ComboBox { Location = new Point(150, 90), Width = 300, DropDownStyle = ComboBoxStyle.DropDownList };
 
             // Class Type
-            Label labelClassType = new Label
-            {
-                Text = "Class Type:",
-                Location = new Point(20, 140),
-                AutoSize = true
-            };
+            Label labelClassType = new Label { Text = "Class Type:", Location = new Point(10, 130), AutoSize = true };
             comboBoxClassType = new ComboBox
             {
-                Location = new Point(150, 140),
+                Location = new Point(150, 130),
                 Width = 300,
                 DropDownStyle = ComboBoxStyle.DropDownList
             };
             comboBoxClassType.Items.AddRange(new[] { "Fitness", "Yoga", "Kick Box" });
 
             // Add Button
-            buttonAddClass = new Button
-            {
-                Text = "Add Class",
-                Location = new Point(150, 200),
-                Width = 100
-            };
+            buttonAddClass = new Button { Text = "Add Class", Location = new Point(200, 180), Width = 100 };
             buttonAddClass.Click += ButtonAddClass_Click;
+
+            // Add controls to the form panel
+            panelForm.Controls.Add(labelName);
+            panelForm.Controls.Add(textBoxName);
+            panelForm.Controls.Add(labelDate);
+            panelForm.Controls.Add(datePicker);
+            panelForm.Controls.Add(labelTime);
+            panelForm.Controls.Add(timePicker);
+            panelForm.Controls.Add(labelTrainer);
+            panelForm.Controls.Add(comboBoxTrainer);
+            panelForm.Controls.Add(labelClassType);
+            panelForm.Controls.Add(comboBoxClassType);
+            panelForm.Controls.Add(buttonAddClass);
 
             // DataGridView
             dataGridClasses = new DataGridView
             {
-                Location = new Point(20, 250),
-                Size = new Size(740, 250),
+                Location = new Point(0, panelForm.Bottom + 20),
+                Size = new Size(this.ClientSize.Width, 250), // Fill the screen width
+                Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right,
                 AutoGenerateColumns = false,
-                AllowUserToAddRows = false
+                AllowUserToAddRows = false,
+                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill, // Adjust columns to fill space
             };
 
-            dataGridClasses.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                HeaderText = "Class Name",
-                DataPropertyName = "Name",
-                Width = 150
-            });
-            dataGridClasses.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                HeaderText = "Date and Time",
-                DataPropertyName = "Schedule",
-                Width = 150
-            });
-            dataGridClasses.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                HeaderText = "Class Type",
-                DataPropertyName = "ClassType",
-                Width = 150
-            });
-            dataGridClasses.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                HeaderText = "Trainer Name",
-                DataPropertyName = "TrainerName",
-                Width = 150
-            });
+            // Add Columns
+            dataGridClasses.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Class Name", DataPropertyName = "Name" });
+            dataGridClasses.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Date and Time", DataPropertyName = "Schedule" });
+            dataGridClasses.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Class Type", DataPropertyName = "ClassType" });
+            dataGridClasses.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Trainer Name", DataPropertyName = "TrainerName" });
 
-            // Delete button
+            // Delete Button
             DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn
             {
                 HeaderText = "Delete",
                 Text = "Delete",
                 UseColumnTextForButtonValue = true,
-                Width = 100,
-                Name = "Delete" // Explicitly set the 'Name' property
             };
-
             dataGridClasses.Columns.Add(deleteButtonColumn);
 
-            // Add event for clicking the DataGridView
-            dataGridClasses.CellClick += DataGridClasses_CellClick;
-
-            // Add controls to the form
-            this.Controls.Add(labelName);
-            this.Controls.Add(textBoxName);
-            this.Controls.Add(labelSchedule);
-            this.Controls.Add(dateTimePickerSchedule);
-            this.Controls.Add(labelTrainer);
-            this.Controls.Add(comboBoxTrainer);
-            this.Controls.Add(labelClassType);
-            this.Controls.Add(comboBoxClassType);
-            this.Controls.Add(buttonAddClass);
+            // Add to the Form
+            this.Controls.Add(panelForm);
             this.Controls.Add(dataGridClasses);
-
             this.Load += ClassForm_Load;
         }
 
@@ -209,17 +170,19 @@ namespace GYMProject
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
 
-                    // Add the ClassID column explicitly if it's not present
-                    if (!dataGridClasses.Columns.Contains("ClassID"))
+                    // ClassID column addition (if not already added)
+                    if (dataGridClasses.Columns["ClassID"] == null)
                     {
                         dataGridClasses.Columns.Add(new DataGridViewTextBoxColumn
                         {
+                            Name = "ClassID", // Column name
                             HeaderText = "ClassID",
                             DataPropertyName = "ClassID",
-                            Visible = false // You can hide this column since it's just for reference
+                            Visible = false // Hidden column
                         });
                     }
 
+                    // Bind data to DataGridView
                     dataGridClasses.DataSource = dataTable;
                 }
             }
@@ -232,7 +195,14 @@ namespace GYMProject
         private void ButtonAddClass_Click(object sender, EventArgs e)
         {
             string className = textBoxName.Text.Trim();
-            DateTime schedule = dateTimePickerSchedule.Value;
+            DateTime scheduleDate = datePicker.Value;  // Get selected date
+            DateTime scheduleTime = timePicker.Value;  // Get selected time
+
+            // Combine Date and Time
+            DateTime fullSchedule = new DateTime(
+                scheduleDate.Year, scheduleDate.Month, scheduleDate.Day,
+                scheduleTime.Hour, scheduleTime.Minute, 0);  // Combine date and time
+
             int trainerId = (int)comboBoxTrainer.SelectedValue;
             string classType = comboBoxClassType.SelectedItem.ToString();
 
@@ -258,7 +228,7 @@ namespace GYMProject
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@Name", className);
-                        command.Parameters.AddWithValue("@Schedule", schedule);
+                        command.Parameters.AddWithValue("@Schedule", fullSchedule);  // Use combined DateTime
                         command.Parameters.AddWithValue("@TrainerID", trainerId);
                         command.Parameters.AddWithValue("@ClassType", classType);
 
@@ -280,7 +250,8 @@ namespace GYMProject
             textBoxName.Clear();
             comboBoxTrainer.SelectedIndex = 0;
             comboBoxClassType.SelectedIndex = 0;
-            dateTimePickerSchedule.Value = DateTime.Now;
+            datePicker.Value = DateTime.Now;
+            timePicker.Value = DateTime.Now;
         }
 
         private void DataGridClasses_CellClick(object sender, DataGridViewCellEventArgs e)

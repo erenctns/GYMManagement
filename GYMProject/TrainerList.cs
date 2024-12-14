@@ -11,43 +11,43 @@ namespace GYMProject
         public TrainerList()
         {
             InitializeComponent();
-            this.Load += new EventHandler(TrainerList_Load); // Load olayına TrainerList_Load metodunu bağlama
+            this.Load += new EventHandler(TrainerList_Load); // Attach the TrainerList_Load method to the Load event
         }
 
         private void TrainerList_Load(object sender, EventArgs e)
         {
             this.Size = new Size(1200, 600);
 
-            // Eğer olay zaten bağlanmışsa tekrar bağlanma
+            // If the event is already attached, don't attach it again
             dataGridView1.CellContentClick -= dataGridView1_CellContentClick;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
 
-            // Veritabanından verileri yükle ve DataGridView'e bağla
+            // Load data from the database and bind it to the DataGridView
             LoadTrainerData();
             AddActionButtons();
 
-            // DataGridView stillerini uygula
+            // Apply DataGridView styles
             StyleDataGridView();
         }
 
         private void AddActionButtons()
         {
-            // Silme butonu ekle
+            // Add delete button
             DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn
             {
                 Name = "Delete",
-                HeaderText = "Sil",
-                Text = "Sil",
+                HeaderText = "Delete",
+                Text = "Delete",
                 UseColumnTextForButtonValue = true
             };
             dataGridView1.Columns.Add(deleteButtonColumn);
 
-            // Görüntüleme butonu ekle
+            // Add view button
             DataGridViewButtonColumn viewButtonColumn = new DataGridViewButtonColumn
             {
                 Name = "View",
-                HeaderText = "Görüntüle",
-                Text = "Görüntüle",
+                HeaderText = "View",
+                Text = "View",
                 UseColumnTextForButtonValue = true
             };
             dataGridView1.Columns.Add(viewButtonColumn);
@@ -75,7 +75,7 @@ namespace GYMProject
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Hata: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message}");
             }
         }
 
@@ -98,19 +98,19 @@ namespace GYMProject
 
                         if (rowsAffected > 0)
                         {
-                            MessageBox.Show("Eğitmen başarıyla silindi.");
+                            MessageBox.Show("Trainer deleted successfully.");
                             LoadTrainerData();
                         }
                         else
                         {
-                            MessageBox.Show("Silme işlemi başarısız oldu.");
+                            MessageBox.Show("Delete operation failed.");
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Hata: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message}");
             }
         }
 
@@ -129,9 +129,9 @@ namespace GYMProject
                     DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
                     int trainerId = Convert.ToInt32(selectedRow.Cells["TrainerID"].Value);
 
-                    // TrainerSchedule formunu aç
+                    // Open the TrainerSchedule form
                     TrainerSchedule scheduleForm = new TrainerSchedule(trainerId);
-                    scheduleForm.Show(); // Formu bir kez aç
+                    scheduleForm.Show(); // Open the form once
                 }
             }
         }
@@ -155,10 +155,21 @@ namespace GYMProject
             dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Bold);
 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // Expand columns to fill space
+
             foreach (DataGridViewColumn column in dataGridView1.Columns)
             {
                 column.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+                if (column.Name == "Email") // Set minimum width for specific columns
+                {
+                    column.MinimumWidth = 200;
+                }
+                else if (column.Name == "PhoneNumber")
+                {
+                    column.MinimumWidth = 150;
+                }
             }
 
             dataGridView1.BorderStyle = BorderStyle.None;
