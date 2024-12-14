@@ -71,7 +71,7 @@
             lastNameLabel.Name = "lastNameLabel";
             lastNameLabel.Size = new Size(79, 20);
             lastNameLabel.TabIndex = 2;
-            lastNameLabel.Text = "Last Nmae";
+            lastNameLabel.Text = "Last Name";
             // 
             // lastNameTextBox
             // 

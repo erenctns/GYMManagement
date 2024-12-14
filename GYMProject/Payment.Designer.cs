@@ -110,7 +110,7 @@
             // membershipTypeLabelValue
             // 
             membershipTypeLabelValue.AutoSize = true;
-            membershipTypeLabelValue.Location = new Point(164, 157);
+            membershipTypeLabelValue.Location = new Point(149, 157);
             membershipTypeLabelValue.Name = "membershipTypeLabelValue";
             membershipTypeLabelValue.Size = new Size(50, 20);
             membershipTypeLabelValue.TabIndex = 14;
@@ -119,7 +119,7 @@
             // amountLabelVaule1
             // 
             amountLabelVaule1.AutoSize = true;
-            amountLabelVaule1.Location = new Point(164, 200);
+            amountLabelVaule1.Location = new Point(149, 200);
             amountLabelVaule1.Name = "amountLabelVaule1";
             amountLabelVaule1.Size = new Size(50, 20);
             amountLabelVaule1.TabIndex = 13;
@@ -128,7 +128,7 @@
             // emailValueLabel
             // 
             emailValueLabel.AutoSize = true;
-            emailValueLabel.Location = new Point(164, 115);
+            emailValueLabel.Location = new Point(129, 115);
             emailValueLabel.Name = "emailValueLabel";
             emailValueLabel.Size = new Size(50, 20);
             emailValueLabel.TabIndex = 12;
@@ -137,7 +137,7 @@
             // paymentDateLabelValue
             // 
             paymentDateLabelValue.AutoSize = true;
-            paymentDateLabelValue.Location = new Point(164, 25);
+            paymentDateLabelValue.Location = new Point(149, 25);
             paymentDateLabelValue.Name = "paymentDateLabelValue";
             paymentDateLabelValue.Size = new Size(50, 20);
             paymentDateLabelValue.TabIndex = 11;
@@ -146,7 +146,7 @@
             // fullnameLabelValue
             // 
             fullnameLabelValue.AutoSize = true;
-            fullnameLabelValue.Location = new Point(164, 71);
+            fullnameLabelValue.Location = new Point(149, 71);
             fullnameLabelValue.Name = "fullnameLabelValue";
             fullnameLabelValue.Size = new Size(50, 20);
             fullnameLabelValue.TabIndex = 10;
