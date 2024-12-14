@@ -113,9 +113,10 @@ namespace GYMProject
             // Delete Button
             DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn
             {
+                Name = "Delete",
                 HeaderText = "Delete",
                 Text = "Delete",
-                UseColumnTextForButtonValue = true,
+                UseColumnTextForButtonValue = true
             };
             dataGridClasses.Columns.Add(deleteButtonColumn);
 
@@ -123,6 +124,7 @@ namespace GYMProject
             this.Controls.Add(panelForm);
             this.Controls.Add(dataGridClasses);
             this.Load += ClassForm_Load;
+            dataGridClasses.CellClick += DataGridClasses_CellClick;
         }
 
         private void ClassForm_Load(object sender, EventArgs e)
@@ -170,19 +172,32 @@ namespace GYMProject
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
 
-                    // ClassID column addition (if not already added)
+                    // Kolonun varlığını kontrol et ve ekle
                     if (dataGridClasses.Columns["ClassID"] == null)
                     {
                         dataGridClasses.Columns.Add(new DataGridViewTextBoxColumn
                         {
-                            Name = "ClassID", // Column name
+                            Name = "ClassID",
                             HeaderText = "ClassID",
                             DataPropertyName = "ClassID",
-                            Visible = false // Hidden column
+                            Visible = false // Bu kolon görünmez olacak
                         });
                     }
 
-                    // Bind data to DataGridView
+                    // Silme butonu kolonu
+                    if (dataGridClasses.Columns["Delete"] == null)
+                    {
+                        DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn
+                        {
+                            Name = "Delete",
+                            HeaderText = "Delete",
+                            Text = "Delete",
+                            UseColumnTextForButtonValue = true
+                        };
+                        dataGridClasses.Columns.Add(deleteButtonColumn);
+                    }
+
+                    // DataGridView'a veri bağlama
                     dataGridClasses.DataSource = dataTable;
                 }
             }
@@ -256,8 +271,8 @@ namespace GYMProject
 
         private void DataGridClasses_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // If the "Delete" button is clicked
-            if (e.ColumnIndex == dataGridClasses.Columns["Delete"].Index)
+            // Eğer "Delete" butonuna tıklanmışsa
+            if (e.RowIndex >= 0 && e.ColumnIndex == dataGridClasses.Columns["Delete"].Index)
             {
                 var classID = dataGridClasses.Rows[e.RowIndex].Cells["ClassID"].Value;
                 if (classID != null)
@@ -278,7 +293,7 @@ namespace GYMProject
                                     command.Parameters.AddWithValue("@ClassID", classID);
                                     command.ExecuteNonQuery();
                                     MessageBox.Show("Class successfully deleted.");
-                                    LoadClassData(); // Update the class list
+                                    LoadClassData(); // Verileri tekrar yükleyerek güncelleme yap
                                 }
                             }
                         }
