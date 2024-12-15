@@ -4,7 +4,13 @@
     <Compile Update="AnaEkranAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="AnaEkranCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Class.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CustomerInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Equipment.cs">

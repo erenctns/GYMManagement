@@ -263,3 +263,5 @@ C:\Users\emree\OneDrive\Belgeler\GitHub\GYMManagement\GYMProject\obj\Debug\net8.
 C:\Users\emree\OneDrive\Belgeler\GitHub\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.Properties.Resources.resources
 C:\Users\emree\OneDrive\Belgeler\GitHub\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.TrainerList.resources
 C:\Users\emree\OneDrive\Belgeler\GitHub\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.TrainerSchedule.resources
+C:\Users\emree\OneDrive\Belgeler\GitHub\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.AnaEkranCustomer.resources
+C:\Users\emree\OneDrive\Belgeler\GitHub\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.CustomerInfo.resources
