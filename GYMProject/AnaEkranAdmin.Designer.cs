@@ -36,6 +36,7 @@
             newTrainerButton = new Button();
             viewTrainersButton = new Button();
             classesButton = new Button();
+            productButton = new Button();
             SuspendLayout();
             // 
             // newMemberButton
@@ -148,6 +149,16 @@
             classesButton.UseVisualStyleBackColor = true;
             classesButton.Click += classesButton_Click;
             // 
+            // productButton
+            // 
+            productButton.Location = new Point(36, 293);
+            productButton.Name = "productButton";
+            productButton.Size = new Size(167, 57);
+            productButton.TabIndex = 8;
+            productButton.Text = "Products";
+            productButton.UseVisualStyleBackColor = true;
+            productButton.Click += productButton_Click;
+            // 
             // AnaEkranAdmin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -155,6 +166,7 @@
             BackgroundImage = Properties.Resources.background;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(914, 600);
+            Controls.Add(productButton);
             Controls.Add(classesButton);
             Controls.Add(viewTrainersButton);
             Controls.Add(newTrainerButton);
@@ -180,5 +192,6 @@
         private Button newTrainerButton;
         private Button viewTrainersButton;
         private Button classesButton;
+        private Button productButton;
     }
 }
