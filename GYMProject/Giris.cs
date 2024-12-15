@@ -103,6 +103,7 @@ namespace GYMProject
             logoBox.BackColor = Color.Transparent;
             logoName1.BackColor = Color.Transparent;
             logoName2.BackColor = Color.Transparent;
+            
 
 
             passwordTextBox.PasswordChar = '*';

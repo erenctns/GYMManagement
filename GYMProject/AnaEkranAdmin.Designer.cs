@@ -36,6 +36,7 @@
             newTrainerButton = new Button();
             viewTrainersButton = new Button();
             classesButton = new Button();
+            showIncomeButton = new Button();
             SuspendLayout();
             // 
             // newMemberButton
@@ -148,6 +149,16 @@
             classesButton.UseVisualStyleBackColor = true;
             classesButton.Click += classesButton_Click;
             // 
+            // showIncomeButton
+            // 
+            showIncomeButton.Location = new Point(36, 305);
+            showIncomeButton.Name = "showIncomeButton";
+            showIncomeButton.Size = new Size(167, 70);
+            showIncomeButton.TabIndex = 8;
+            showIncomeButton.Text = "button1";
+            showIncomeButton.UseVisualStyleBackColor = true;
+            showIncomeButton.Click += showIncomeButton_Click;
+            // 
             // AnaEkranAdmin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -155,6 +166,7 @@
             BackgroundImage = Properties.Resources.background;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(914, 600);
+            Controls.Add(showIncomeButton);
             Controls.Add(classesButton);
             Controls.Add(viewTrainersButton);
             Controls.Add(newTrainerButton);
@@ -180,5 +192,6 @@
         private Button newTrainerButton;
         private Button viewTrainersButton;
         private Button classesButton;
+        private Button showIncomeButton;
     }
 }
