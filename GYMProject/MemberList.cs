@@ -28,19 +28,32 @@ namespace GYMProject
             // Veritabanından verileri yükle ve DataGridView'e bağla
             LoadMemberData();
             AddDeleteButtonColumn();
-        
-        // Form boyutunu DataGridView'e göre ayarla
-        //AdjustFormSizeToDataGridView();
-        dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            AddRegisterClassButtonColumn(); // Register Class butonunu ekle
+
+
+            // Form boyutunu DataGridView'e göre ayarla
+            //AdjustFormSizeToDataGridView();
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
 
         }
+
+        private void AddRegisterClassButtonColumn()
+        {
+            DataGridViewButtonColumn registerClassButton = new DataGridViewButtonColumn();
+            registerClassButton.Name = "RegisterClass";
+            registerClassButton.HeaderText = "Register Class";
+            registerClassButton.Text = "Register";
+            registerClassButton.UseColumnTextForButtonValue = true;
+            dataGridView1.Columns.Add(registerClassButton);
+        }
+
 
         private void LoadMemberData()
         {
             try
             {
                 // Veritabanı bağlantı dizesi
-                string connectionString = "Data Source=DESKTOP-FAT5F5N\\SQLEXPRESS01;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+                string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
 
                 // SQL sorgusu
                 string query = @"
@@ -81,7 +94,7 @@ namespace GYMProject
             try
             {
                 // Veritabanı bağlantı dizesi
-                string connectionString = "Data Source=DESKTOP-FAT5F5N\\SQLEXPRESS01;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+                string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
 
                 // Silme sorgusu
                 string query = "DELETE FROM Member WHERE MemberID = @MemberID";
@@ -121,20 +134,23 @@ namespace GYMProject
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Tıklanan hücre bir buton hücresi mi?
             if (dataGridView1.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
             {
-                // Butonun "Sil" olup olmadığını kontrol et
+                DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
+
                 if (dataGridView1.Columns[e.ColumnIndex].Name == "Delete")
                 {
-                    // İlgili satırdaki verileri al
-                    DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
-
-                    // MemberID'yi al
+                    int memberId = Convert.ToInt32(selectedRow.Cells["MemberID"].Value);
+                    DeleteMember(memberId);
+                }
+                else if (dataGridView1.Columns[e.ColumnIndex].Name == "RegisterClass")
+                {
+                    // İlgili MemberID'yi al
                     int memberId = Convert.ToInt32(selectedRow.Cells["MemberID"].Value);
 
-                    // Kullanıcıyı silmek için bir metod çağır
-                    DeleteMember(memberId);
+                    // Yeni RegisterClass formunu aç ve MemberID'yi ilet
+                    RegisterClass registerForm = new RegisterClass(memberId);
+                    registerForm.ShowDialog();
                 }
             }
         }

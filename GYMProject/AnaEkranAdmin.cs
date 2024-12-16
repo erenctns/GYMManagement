@@ -64,10 +64,6 @@
             classForm.Show();
         }
 
-        private void productButton_Click(object sender, EventArgs e)
-        {
-            Product productForm = new Product();
-            productForm.Show();
-        }
+       
     }
 }
