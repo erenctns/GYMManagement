@@ -33,7 +33,7 @@
             memberListForm.Show();
 
         }
-   
+
         private void LogOutButton_Click(object sender, EventArgs e)
         {
             Giris girisForm = new Giris();
@@ -62,6 +62,12 @@
         {
             Class classForm = new Class();
             classForm.Show();
+        }
+
+        private void productButton_Click(object sender, EventArgs e)
+        {
+            Product productForm = new Product();
+            productForm.Show();
         }
     }
 }
