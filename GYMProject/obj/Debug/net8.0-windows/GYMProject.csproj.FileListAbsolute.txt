@@ -267,3 +267,4 @@ C:\Users\erenc\OneDrive\Desktop\gitProje\GYMManagement\GYMProject\obj\Debug\net8
 C:\Users\erenc\OneDrive\Desktop\gitProje\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.Product.resources
 C:\Users\erenc\OneDrive\Desktop\gitProje\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.UpdateProduct.resources
 C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.PurchaseProduct.resources
+C:\Users\erenc\OneDrive\Desktop\gitProje\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.PurchaseProduct.resources
