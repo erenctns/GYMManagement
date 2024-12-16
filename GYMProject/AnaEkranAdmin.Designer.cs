@@ -36,15 +36,17 @@
             newTrainerButton = new Button();
             viewTrainersButton = new Button();
             classesButton = new Button();
+            productButton = new Button();
             SuspendLayout();
             // 
             // newMemberButton
             // 
             newMemberButton.BackgroundImage = Properties.Resources.add_group__1_;
             newMemberButton.BackgroundImageLayout = ImageLayout.None;
-            newMemberButton.Location = new Point(32, 28);
+            newMemberButton.Location = new Point(37, 37);
+            newMemberButton.Margin = new Padding(3, 4, 3, 4);
             newMemberButton.Name = "newMemberButton";
-            newMemberButton.Size = new Size(146, 52);
+            newMemberButton.Size = new Size(167, 69);
             newMemberButton.TabIndex = 0;
             newMemberButton.Text = "New Member";
             newMemberButton.TextAlign = ContentAlignment.MiddleRight;
@@ -56,9 +58,10 @@
             equipmentButton.BackgroundImage = Properties.Resources.gym;
             equipmentButton.BackgroundImageLayout = ImageLayout.None;
             equipmentButton.ImageAlign = ContentAlignment.MiddleLeft;
-            equipmentButton.Location = new Point(589, 28);
+            equipmentButton.Location = new Point(673, 37);
+            equipmentButton.Margin = new Padding(3, 4, 3, 4);
             equipmentButton.Name = "equipmentButton";
-            equipmentButton.Size = new Size(153, 52);
+            equipmentButton.Size = new Size(175, 69);
             equipmentButton.TabIndex = 1;
             equipmentButton.Text = "Equipments";
             equipmentButton.TextAlign = ContentAlignment.MiddleRight;
@@ -69,9 +72,10 @@
             // 
             memberList.BackgroundImage = Properties.Resources.file;
             memberList.BackgroundImageLayout = ImageLayout.None;
-            memberList.Location = new Point(312, 28);
+            memberList.Location = new Point(357, 37);
+            memberList.Margin = new Padding(3, 4, 3, 4);
             memberList.Name = "memberList";
-            memberList.Size = new Size(153, 52);
+            memberList.Size = new Size(175, 69);
             memberList.TabIndex = 2;
             memberList.Text = "View Members";
             memberList.TextAlign = ContentAlignment.MiddleRight;
@@ -83,10 +87,9 @@
             LogOutButton.BackgroundImage = Properties.Resources.logout;
             LogOutButton.BackgroundImageLayout = ImageLayout.None;
             LogOutButton.ImageAlign = ContentAlignment.MiddleLeft;
-            LogOutButton.Location = new Point(536, 386);
-            LogOutButton.Margin = new Padding(3, 2, 3, 2);
+            LogOutButton.Location = new Point(613, 515);
             LogOutButton.Name = "LogOutButton";
-            LogOutButton.Size = new Size(130, 55);
+            LogOutButton.Size = new Size(149, 73);
             LogOutButton.TabIndex = 3;
             LogOutButton.Text = "Log Out";
             LogOutButton.TextAlign = ContentAlignment.MiddleRight;
@@ -98,10 +101,9 @@
             exitbutton.BackgroundImage = Properties.Resources.exit;
             exitbutton.BackgroundImageLayout = ImageLayout.None;
             exitbutton.ImageAlign = ContentAlignment.MiddleLeft;
-            exitbutton.Location = new Point(686, 386);
-            exitbutton.Margin = new Padding(3, 2, 3, 2);
+            exitbutton.Location = new Point(784, 515);
             exitbutton.Name = "exitbutton";
-            exitbutton.Size = new Size(103, 55);
+            exitbutton.Size = new Size(118, 73);
             exitbutton.TabIndex = 4;
             exitbutton.Text = "Exit";
             exitbutton.TextAlign = ContentAlignment.MiddleRight;
@@ -112,10 +114,9 @@
             // 
             newTrainerButton.BackgroundImage = Properties.Resources.soccer_player;
             newTrainerButton.BackgroundImageLayout = ImageLayout.None;
-            newTrainerButton.Location = new Point(32, 130);
-            newTrainerButton.Margin = new Padding(3, 2, 3, 2);
+            newTrainerButton.Location = new Point(37, 173);
             newTrainerButton.Name = "newTrainerButton";
-            newTrainerButton.Size = new Size(146, 52);
+            newTrainerButton.Size = new Size(167, 69);
             newTrainerButton.TabIndex = 5;
             newTrainerButton.Text = "New Trainer";
             newTrainerButton.TextAlign = ContentAlignment.MiddleRight;
@@ -126,10 +127,9 @@
             // 
             viewTrainersButton.BackgroundImage = Properties.Resources.coach;
             viewTrainersButton.BackgroundImageLayout = ImageLayout.None;
-            viewTrainersButton.Location = new Point(312, 130);
-            viewTrainersButton.Margin = new Padding(3, 2, 3, 2);
+            viewTrainersButton.Location = new Point(357, 173);
             viewTrainersButton.Name = "viewTrainersButton";
-            viewTrainersButton.Size = new Size(153, 52);
+            viewTrainersButton.Size = new Size(175, 69);
             viewTrainersButton.TabIndex = 6;
             viewTrainersButton.Text = "View Trainers";
             viewTrainersButton.TextAlign = ContentAlignment.MiddleRight;
@@ -140,23 +140,33 @@
             // 
             classesButton.BackgroundImage = Properties.Resources.timetable;
             classesButton.BackgroundImageLayout = ImageLayout.None;
-            classesButton.Location = new Point(589, 130);
-            classesButton.Margin = new Padding(3, 2, 3, 2);
+            classesButton.Location = new Point(673, 173);
             classesButton.Name = "classesButton";
-            classesButton.Size = new Size(153, 52);
+            classesButton.Size = new Size(175, 69);
             classesButton.TabIndex = 7;
             classesButton.Text = "Classes      ";
             classesButton.TextAlign = ContentAlignment.MiddleRight;
             classesButton.UseVisualStyleBackColor = true;
             classesButton.Click += classesButton_Click;
             // 
+            // productButton
+            // 
+            productButton.Location = new Point(37, 290);
+            productButton.Name = "productButton";
+            productButton.Size = new Size(167, 53);
+            productButton.TabIndex = 8;
+            productButton.Text = "Products";
+            productButton.UseVisualStyleBackColor = true;
+            productButton.Click += productButton_Click;
+            // 
             // AnaEkranAdmin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.background;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
+            Controls.Add(productButton);
             Controls.Add(classesButton);
             Controls.Add(viewTrainersButton);
             Controls.Add(newTrainerButton);
@@ -165,6 +175,7 @@
             Controls.Add(memberList);
             Controls.Add(equipmentButton);
             Controls.Add(newMemberButton);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "AnaEkranAdmin";
             Text = "AnaEkranAdmin";
             Load += AnaEkranAdmin_Load;
@@ -181,5 +192,6 @@
         private Button newTrainerButton;
         private Button viewTrainersButton;
         private Button classesButton;
+        private Button productButton;
     }
 }
