@@ -3,8 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\updateequipmentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\updateequipmentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\anaekranadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\anaekranadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\giris.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\giris.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\memberlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\memberlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\newmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\newmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\newtrainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\newtrainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\trainerlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\trainerlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\trainerschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\trainerschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\registerclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\registerclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\classmembers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\classmembers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\gymproject\\anaekranadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -15,36 +63,8 @@
       "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\updateequipmentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\updateequipmentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\updateequipmentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\gymproject\\updateproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\updateproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\gymproject\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\updateproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\updateproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\gymproject\\newtrainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -71,36 +91,8 @@
       "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\trainerschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\newtrainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\newtrainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\anaekranadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\anaekranadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\trainerschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\trainerschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\trainerlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\trainerlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\newmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\newmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\memberlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\memberlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\giris.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\giris.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\giris.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -118,7 +110,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -126,44 +118,163 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NewTrainer.cs",
+              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\NewTrainer.cs",
+              "RelativeDocumentMoniker": "GYMProject\\NewTrainer.cs",
+              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\NewTrainer.cs",
+              "RelativeToolTip": "GYMProject\\NewTrainer.cs",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAYwCkAAACOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T15:33:27.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "NewMember.cs",
+              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\NewMember.cs",
+              "RelativeDocumentMoniker": "GYMProject\\NewMember.cs",
+              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\NewMember.cs",
+              "RelativeToolTip": "GYMProject\\NewMember.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAkwEgAAACSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T18:54:54.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MemberList.cs",
+              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\MemberList.cs",
+              "RelativeDocumentMoniker": "GYMProject\\MemberList.cs",
+              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\MemberList.cs",
+              "RelativeToolTip": "GYMProject\\MemberList.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGAAAACSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T13:44:38.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Giris.cs",
+              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Giris.cs",
+              "RelativeDocumentMoniker": "GYMProject\\Giris.cs",
+              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Giris.cs",
+              "RelativeToolTip": "GYMProject\\Giris.cs",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAowBgAAACOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T19:04:22.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Equipment.cs",
+              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Equipment.cs",
+              "RelativeDocumentMoniker": "GYMProject\\Equipment.cs",
+              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Equipment.cs",
+              "RelativeToolTip": "GYMProject\\Equipment.cs",
+              "ViewState": "AQIAAIsAAAAAAAAAAAAkwBsAAACOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T20:54:32.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AnaEkranAdmin.cs",
+              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\AnaEkranAdmin.cs",
+              "RelativeDocumentMoniker": "GYMProject\\AnaEkranAdmin.cs",
+              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\AnaEkranAdmin.cs",
+              "RelativeToolTip": "GYMProject\\AnaEkranAdmin.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T11:02:04.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "UpdateEquipmentForm.cs",
               "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\UpdateEquipmentForm.cs",
               "RelativeDocumentMoniker": "GYMProject\\UpdateEquipmentForm.cs",
               "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\UpdateEquipmentForm.cs",
               "RelativeToolTip": "GYMProject\\UpdateEquipmentForm.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFsAAAAVAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-13T10:22:17.363Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Product.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Product.cs",
-              "RelativeDocumentMoniker": "GYMProject\\Product.cs",
-              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Product.cs [Design]",
-              "RelativeToolTip": "GYMProject\\Product.cs [Design]",
+              "DocumentIndex": 7,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Payment.cs",
+              "RelativeDocumentMoniker": "GYMProject\\Payment.cs",
+              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Payment.cs",
+              "RelativeToolTip": "GYMProject\\Payment.cs",
+              "ViewState": "AQIAAFkAAAAAAAAAAAAUwFQAAACiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T09:09:06.588Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-12T19:05:03.007Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UpdateEquipmentForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\UpdateEquipmentForm.cs",
-              "RelativeDocumentMoniker": "GYMProject\\UpdateEquipmentForm.cs",
-              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\UpdateEquipmentForm.cs [Design]",
-              "RelativeToolTip": "GYMProject\\UpdateEquipmentForm.cs [Design]",
+              "DocumentIndex": 8,
+              "Title": "TrainerList.cs",
+              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\TrainerList.cs",
+              "RelativeDocumentMoniker": "GYMProject\\TrainerList.cs",
+              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\TrainerList.cs",
+              "RelativeToolTip": "GYMProject\\TrainerList.cs",
+              "ViewState": "AQIAAKkAAAAAAAAAAAAwwDsAAACSAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T16:30:19.116Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-14T13:46:05.537Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
+              "Title": "TrainerSchedule.cs",
+              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\TrainerSchedule.cs",
+              "RelativeDocumentMoniker": "GYMProject\\TrainerSchedule.cs",
+              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\TrainerSchedule.cs",
+              "RelativeToolTip": "GYMProject\\TrainerSchedule.cs",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAgwDcAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T13:46:28.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RegisterClass.cs",
+              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\RegisterClass.cs",
+              "RelativeDocumentMoniker": "GYMProject\\RegisterClass.cs",
+              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\RegisterClass.cs",
+              "RelativeToolTip": "GYMProject\\RegisterClass.cs",
+              "ViewState": "AQIAAKEAAAAAAAAAAAAswLUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T14:48:09.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ClassMembers.cs",
+              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\ClassMembers.cs",
+              "RelativeDocumentMoniker": "GYMProject\\ClassMembers.cs",
+              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\ClassMembers.cs",
+              "RelativeToolTip": "GYMProject\\ClassMembers.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBoAAACSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T14:47:54.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "AnaEkranAdmin.cs [Design]",
               "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\AnaEkranAdmin.cs",
               "RelativeDocumentMoniker": "GYMProject\\AnaEkranAdmin.cs",
@@ -175,51 +286,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AnaEkranAdmin.cs",
-              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\AnaEkranAdmin.cs",
-              "RelativeDocumentMoniker": "GYMProject\\AnaEkranAdmin.cs",
-              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\AnaEkranAdmin.cs",
-              "RelativeToolTip": "GYMProject\\AnaEkranAdmin.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAMwEgAAAABAAAA",
+              "DocumentIndex": 14,
+              "Title": "UpdateEquipmentForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\UpdateEquipmentForm.cs",
+              "RelativeDocumentMoniker": "GYMProject\\UpdateEquipmentForm.cs",
+              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\UpdateEquipmentForm.cs [Design]",
+              "RelativeToolTip": "GYMProject\\UpdateEquipmentForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T11:02:04.575Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Product.cs",
-              "RelativeDocumentMoniker": "GYMProject\\Product.cs",
-              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Product.cs",
-              "RelativeToolTip": "GYMProject\\Product.cs",
-              "ViewState": "AQIAAGsAAAAAAAAAAAAtwHsAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T09:40:02.463Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UpdateProduct.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\UpdateProduct.cs",
-              "RelativeDocumentMoniker": "GYMProject\\UpdateProduct.cs",
-              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\UpdateProduct.cs [Design]",
-              "RelativeToolTip": "GYMProject\\UpdateProduct.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T09:44:24.719Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Equipment.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Equipment.cs",
-              "RelativeDocumentMoniker": "GYMProject\\Equipment.cs",
-              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Equipment.cs [Design]",
-              "RelativeToolTip": "GYMProject\\Equipment.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T20:54:17.621Z"
+              "WhenOpened": "2024-12-14T16:30:19.116Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Bookmark",
@@ -227,100 +302,80 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Equipment.cs",
-              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Equipment.cs",
-              "RelativeDocumentMoniker": "GYMProject\\Equipment.cs",
-              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Equipment.cs",
-              "RelativeToolTip": "GYMProject\\Equipment.cs",
-              "ViewState": "AQIAAIUAAAAAAAAAAAA5wIgAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T20:54:32.503Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UpdateProduct.cs",
-              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\UpdateProduct.cs",
-              "RelativeDocumentMoniker": "GYMProject\\UpdateProduct.cs",
-              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\UpdateProduct.cs",
-              "RelativeToolTip": "GYMProject\\UpdateProduct.cs",
-              "ViewState": "AQIAAGcAAAAAAAAAAAAkwHsAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T09:55:05.279Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Class.cs",
               "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Class.cs",
               "RelativeDocumentMoniker": "GYMProject\\Class.cs",
               "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Class.cs",
               "RelativeToolTip": "GYMProject\\Class.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAAwCEAAAANAAAA",
+              "ViewState": "AQIAADABAAAAAAAAAADwvx0BAACaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-14T13:49:43.61Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
+              "Title": "Equipment.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Equipment.cs",
+              "RelativeDocumentMoniker": "GYMProject\\Equipment.cs",
+              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Equipment.cs [Design]",
+              "RelativeToolTip": "GYMProject\\Equipment.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T20:54:17.621Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "NewTrainer.cs [Design]",
               "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\NewTrainer.cs",
               "RelativeDocumentMoniker": "GYMProject\\NewTrainer.cs",
               "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\NewTrainer.cs [Design]",
               "RelativeToolTip": "GYMProject\\NewTrainer.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T15:33:37.058Z"
+              "WhenOpened": "2024-12-14T15:33:37.058Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "NewMember.cs [Design]",
               "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\NewMember.cs",
               "RelativeDocumentMoniker": "GYMProject\\NewMember.cs",
               "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\NewMember.cs [Design]",
               "RelativeToolTip": "GYMProject\\NewMember.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T15:34:09.039Z"
+              "WhenOpened": "2024-12-14T15:34:09.039Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "Payment.cs [Design]",
               "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Payment.cs",
               "RelativeDocumentMoniker": "GYMProject\\Payment.cs",
               "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Payment.cs [Design]",
               "RelativeToolTip": "GYMProject\\Payment.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T16:29:22.171Z"
+              "WhenOpened": "2024-12-14T16:29:22.171Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "TrainerList.cs [Design]",
               "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\TrainerList.cs",
               "RelativeDocumentMoniker": "GYMProject\\TrainerList.cs",
               "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\TrainerList.cs [Design]",
               "RelativeToolTip": "GYMProject\\TrainerList.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T15:29:56.199Z"
+              "WhenOpened": "2024-12-14T15:29:56.199Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "NewTrainer.cs",
-              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\NewTrainer.cs",
-              "RelativeDocumentMoniker": "GYMProject\\NewTrainer.cs",
-              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\NewTrainer.cs",
-              "RelativeToolTip": "GYMProject\\NewTrainer.cs",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAYwGEAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T15:33:27.751Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "Class.cs [Design]",
               "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Class.cs",
               "RelativeDocumentMoniker": "GYMProject\\Class.cs",
@@ -331,18 +386,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "TrainerSchedule.cs [Design]",
               "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\TrainerSchedule.cs",
               "RelativeDocumentMoniker": "GYMProject\\TrainerSchedule.cs",
               "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\TrainerSchedule.cs [Design]",
               "RelativeToolTip": "GYMProject\\TrainerSchedule.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T15:29:40.992Z"
+              "WhenOpened": "2024-12-14T15:29:40.992Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "AnaEkranAdmin.Designer.cs",
               "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\AnaEkranAdmin.Designer.cs",
               "RelativeDocumentMoniker": "GYMProject\\AnaEkranAdmin.Designer.cs",
@@ -355,79 +411,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "TrainerSchedule.cs",
-              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\TrainerSchedule.cs",
-              "RelativeDocumentMoniker": "GYMProject\\TrainerSchedule.cs",
-              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\TrainerSchedule.cs",
-              "RelativeToolTip": "GYMProject\\TrainerSchedule.cs",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAgwDAAAACSAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T13:46:28.892Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "TrainerList.cs",
-              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\TrainerList.cs",
-              "RelativeDocumentMoniker": "GYMProject\\TrainerList.cs",
-              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\TrainerList.cs",
-              "RelativeToolTip": "GYMProject\\TrainerList.cs",
-              "ViewState": "AQIAALIAAAAAAAAAAAAwwFwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T13:46:05.537Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Payment.cs",
-              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Payment.cs",
-              "RelativeDocumentMoniker": "GYMProject\\Payment.cs",
-              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Payment.cs",
-              "RelativeToolTip": "GYMProject\\Payment.cs",
-              "ViewState": "AQIAAGIAAAAAAAAAAAAUwFQAAACiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T19:05:03.007Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "NewMember.cs",
-              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\NewMember.cs",
-              "RelativeDocumentMoniker": "GYMProject\\NewMember.cs",
-              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\NewMember.cs",
-              "RelativeToolTip": "GYMProject\\NewMember.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAEgAAACSAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T18:54:54.449Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 23,
-              "Title": "MemberList.cs",
-              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\MemberList.cs",
-              "RelativeDocumentMoniker": "GYMProject\\MemberList.cs",
-              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\MemberList.cs",
-              "RelativeToolTip": "GYMProject\\MemberList.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAACSAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T13:44:38.595Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Giris.cs",
-              "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Giris.cs",
-              "RelativeDocumentMoniker": "GYMProject\\Giris.cs",
-              "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Giris.cs",
-              "RelativeToolTip": "GYMProject\\Giris.cs",
-              "ViewState": "AQIAAGgAAAAAAAAAAAAswBgAAACOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T19:04:22.247Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
               "Title": "Giris.Designer.cs",
               "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Giris.Designer.cs",
               "RelativeDocumentMoniker": "GYMProject\\Giris.Designer.cs",
@@ -435,11 +419,12 @@
               "RelativeToolTip": "GYMProject\\Giris.Designer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T20:46:02.83Z"
+              "WhenOpened": "2024-12-12T20:46:02.83Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 24,
               "Title": "FileName.cs",
               "DocumentMoniker": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\FileName.cs",
               "RelativeDocumentMoniker": "GYMProject\\FileName.cs",
@@ -447,7 +432,8 @@
               "RelativeToolTip": "GYMProject\\FileName.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T10:43:00.303Z"
+              "WhenOpened": "2024-12-12T10:43:00.303Z",
+              "EditorCaption": ""
             }
           ]
         }
