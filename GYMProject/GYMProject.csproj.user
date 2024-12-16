@@ -7,10 +7,16 @@
     <Compile Update="Class.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ClassMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Equipment.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="NewTrainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RegisterClass.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="TrainerList.cs">

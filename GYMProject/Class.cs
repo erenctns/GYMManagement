@@ -16,6 +16,7 @@ namespace GYMProject
         private DateTimePicker timePicker;
         private Button buttonAddClass;
         private DataGridView dataGridClasses;
+        private Button buttonViewMembers;
 
         public Class()
         {
@@ -80,6 +81,10 @@ namespace GYMProject
             buttonAddClass = new Button { Text = "Add Class", Location = new Point(200, 180), Width = 100 };
             buttonAddClass.Click += ButtonAddClass_Click;
 
+            // View Members Button
+            buttonViewMembers = new Button { Text = "View Members", Location = new Point(320, 180), Width = 100 };
+            buttonViewMembers.Click += ButtonViewMembers_Click;
+
             // Add controls to the form panel
             panelForm.Controls.Add(labelName);
             panelForm.Controls.Add(textBoxName);
@@ -92,6 +97,7 @@ namespace GYMProject
             panelForm.Controls.Add(labelClassType);
             panelForm.Controls.Add(comboBoxClassType);
             panelForm.Controls.Add(buttonAddClass);
+            panelForm.Controls.Add(buttonViewMembers);
 
             // DataGridView
             dataGridClasses = new DataGridView
@@ -105,6 +111,17 @@ namespace GYMProject
             };
 
             // Add Columns
+            if (dataGridClasses.Columns["ClassID"] == null)
+            {
+                dataGridClasses.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    Name = "ClassID",  // Name is ClassID for accessing
+                    HeaderText = "Class ID",
+                    DataPropertyName = "ClassID",
+                    Visible = false // ClassID hidden in DataGridView
+                });
+            }
+
             dataGridClasses.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Class Name", DataPropertyName = "Name" });
             dataGridClasses.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Date and Time", DataPropertyName = "Schedule" });
             dataGridClasses.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Class Type", DataPropertyName = "ClassType" });
@@ -119,6 +136,16 @@ namespace GYMProject
                 UseColumnTextForButtonValue = true
             };
             dataGridClasses.Columns.Add(deleteButtonColumn);
+
+            // View Members Button
+            DataGridViewButtonColumn viewMembersButtonColumn = new DataGridViewButtonColumn
+            {
+                Name = "ViewMembers",
+                HeaderText = "View Members",
+                Text = "View Members",
+                UseColumnTextForButtonValue = true
+            };
+            dataGridClasses.Columns.Add(viewMembersButtonColumn);
 
             // Add to the Form
             this.Controls.Add(panelForm);
@@ -138,7 +165,7 @@ namespace GYMProject
         {
             try
             {
-                string connectionString = "Data Source=DESKTOP-FAT5F5N\\SQLEXPRESS01;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+                string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
                 string query = "SELECT TrainerID, FirstName + ' ' + LastName AS FullName, Specialization FROM Trainer";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -163,7 +190,7 @@ namespace GYMProject
         {
             try
             {
-                string connectionString = "Data Source=DESKTOP-FAT5F5N\\SQLEXPRESS01;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+                string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
                 string query = "SELECT ClassID, Name, Schedule, ClassType, FirstName + ' ' + LastName AS TrainerName FROM Class INNER JOIN Trainer ON Class.TrainerID = Trainer.TrainerID";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -172,32 +199,7 @@ namespace GYMProject
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
 
-                    // Kolonun varlığını kontrol et ve ekle
-                    if (dataGridClasses.Columns["ClassID"] == null)
-                    {
-                        dataGridClasses.Columns.Add(new DataGridViewTextBoxColumn
-                        {
-                            Name = "ClassID",
-                            HeaderText = "ClassID",
-                            DataPropertyName = "ClassID",
-                            Visible = false // Bu kolon görünmez olacak
-                        });
-                    }
-
-                    // Silme butonu kolonu
-                    if (dataGridClasses.Columns["Delete"] == null)
-                    {
-                        DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn
-                        {
-                            Name = "Delete",
-                            HeaderText = "Delete",
-                            Text = "Delete",
-                            UseColumnTextForButtonValue = true
-                        };
-                        dataGridClasses.Columns.Add(deleteButtonColumn);
-                    }
-
-                    // DataGridView'a veri bağlama
+                    // Veriyi DataGridView'e yükle
                     dataGridClasses.DataSource = dataTable;
                 }
             }
@@ -234,7 +236,7 @@ namespace GYMProject
 
             try
             {
-                string connectionString = "Data Source=DESKTOP-FAT5F5N\\SQLEXPRESS01;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+                string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
                 string query = "INSERT INTO Class (Name, Schedule, TrainerID, ClassType) VALUES (@Name, @Schedule, @TrainerID, @ClassType)";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -263,46 +265,63 @@ namespace GYMProject
         private void ClearFormFields()
         {
             textBoxName.Clear();
-            comboBoxTrainer.SelectedIndex = 0;
-            comboBoxClassType.SelectedIndex = 0;
+            comboBoxTrainer.SelectedIndex = -1;
+            comboBoxClassType.SelectedIndex = -1;
             datePicker.Value = DateTime.Now;
             timePicker.Value = DateTime.Now;
         }
 
         private void DataGridClasses_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Eğer "Delete" butonuna tıklanmışsa
-            if (e.RowIndex >= 0 && e.ColumnIndex == dataGridClasses.Columns["Delete"].Index)
+            if (e.ColumnIndex == dataGridClasses.Columns["Delete"].Index)
             {
+                // "Delete" butonuna tıklanmışsa işlemler burada
                 var classID = dataGridClasses.Rows[e.RowIndex].Cells["ClassID"].Value;
-                if (classID != null)
-                {
-                    DialogResult result = MessageBox.Show("Are you sure you want to delete this class?", "Delete", MessageBoxButtons.YesNo);
-                    if (result == DialogResult.Yes)
-                    {
-                        try
-                        {
-                            string connectionString = "Data Source=DESKTOP-FAT5F5N\\SQLEXPRESS01;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
-                            string query = "DELETE FROM Class WHERE ClassID = @ClassID";
 
-                            using (SqlConnection connection = new SqlConnection(connectionString))
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this class?", "Delete Class", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    try
+                    {
+                        string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+                        string query = "DELETE FROM Class WHERE ClassID = @ClassID";
+
+                        using (SqlConnection connection = new SqlConnection(connectionString))
+                        {
+                            connection.Open();
+                            using (SqlCommand command = new SqlCommand(query, connection))
                             {
-                                connection.Open();
-                                using (SqlCommand command = new SqlCommand(query, connection))
-                                {
-                                    command.Parameters.AddWithValue("@ClassID", classID);
-                                    command.ExecuteNonQuery();
-                                    MessageBox.Show("Class successfully deleted.");
-                                    LoadClassData(); // Verileri tekrar yükleyerek güncelleme yap
-                                }
+                                command.Parameters.AddWithValue("@ClassID", classID);
+                                command.ExecuteNonQuery();
+                                MessageBox.Show("Class successfully deleted.");
+                                LoadClassData(); // Reload the data after deletion
                             }
                         }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show($"Error: {ex.Message}");
-                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error: {ex.Message}");
                     }
                 }
+            }
+            else if (e.ColumnIndex == dataGridClasses.Columns["ViewMembers"].Index)
+            {
+                // "View Members" butonuna tıklanmışsa işlemler burada
+                int classID = (int)dataGridClasses.Rows[e.RowIndex].Cells["ClassID"].Value;
+                ClassMembers classMembersForm = new ClassMembers(classID);
+                classMembersForm.Show();
+            }
+        }
+
+        // View Members Button Click event handler
+        private void ButtonViewMembers_Click(object sender, EventArgs e)
+        {
+            // View members related to the selected class
+            if (dataGridClasses.SelectedRows.Count > 0)
+            {
+                int selectedClassID = (int)dataGridClasses.SelectedRows[0].Cells["ClassID"].Value;
+                ClassMembers classMembersForm = new ClassMembers(selectedClassID);
+                classMembersForm.Show();
             }
         }
     }
