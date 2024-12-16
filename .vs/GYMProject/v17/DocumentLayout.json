@@ -19,7 +19,7 @@
       "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\erenc\\onedrive\\desktop\\gitproje\\gymmanagement\\gymproject\\updateproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\gymproject\\updateproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\updateproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -118,11 +118,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Document",
@@ -133,8 +137,7 @@
               "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Equipment.cs [Design]",
               "RelativeToolTip": "GYMProject\\Equipment.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T20:54:17.621Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-12T20:54:17.621Z"
             },
             {
               "$type": "Document",
@@ -145,8 +148,7 @@
               "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\UpdateProduct.cs [Design]",
               "RelativeToolTip": "GYMProject\\UpdateProduct.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T09:44:24.719Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-15T09:44:24.719Z"
             },
             {
               "$type": "Document",
@@ -196,8 +198,7 @@
               "RelativeToolTip": "GYMProject\\Equipment.cs",
               "ViewState": "AQIAAIUAAAAAAAAAAAA5wIgAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T20:54:32.503Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T20:54:32.503Z"
             },
             {
               "$type": "Document",
@@ -209,12 +210,7 @@
               "RelativeToolTip": "GYMProject\\UpdateProduct.cs",
               "ViewState": "AQIAAGcAAAAAAAAAAAAkwHsAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T09:55:05.279Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+              "WhenOpened": "2024-12-15T09:55:05.279Z"
             },
             {
               "$type": "Document",
@@ -238,8 +234,7 @@
               "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\AnaEkranAdmin.cs [Design]",
               "RelativeToolTip": "GYMProject\\AnaEkranAdmin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T15:10:32.606Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-14T15:10:32.606Z"
             },
             {
               "$type": "Document",
@@ -251,8 +246,7 @@
               "RelativeToolTip": "GYMProject\\AnaEkranAdmin.cs",
               "ViewState": "AQIAADMAAAAAAAAAAAAMwEUAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T11:02:04.575Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T11:02:04.575Z"
             },
             {
               "$type": "Document",
@@ -263,8 +257,7 @@
               "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\NewTrainer.cs [Design]",
               "RelativeToolTip": "GYMProject\\NewTrainer.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T15:33:37.058Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-14T15:33:37.058Z"
             },
             {
               "$type": "Document",
@@ -275,8 +268,7 @@
               "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\NewMember.cs [Design]",
               "RelativeToolTip": "GYMProject\\NewMember.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T15:34:09.039Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-14T15:34:09.039Z"
             },
             {
               "$type": "Document",
@@ -287,8 +279,7 @@
               "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\Payment.cs [Design]",
               "RelativeToolTip": "GYMProject\\Payment.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T16:29:22.171Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-14T16:29:22.171Z"
             },
             {
               "$type": "Document",
@@ -299,8 +290,7 @@
               "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\UpdateEquipmentForm.cs [Design]",
               "RelativeToolTip": "GYMProject\\UpdateEquipmentForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T16:30:19.116Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-14T16:30:19.116Z"
             },
             {
               "$type": "Document",
@@ -311,8 +301,7 @@
               "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\TrainerList.cs [Design]",
               "RelativeToolTip": "GYMProject\\TrainerList.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T15:29:56.199Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-14T15:29:56.199Z"
             },
             {
               "$type": "Document",
@@ -346,8 +335,7 @@
               "ToolTip": "C:\\Users\\erenc\\OneDrive\\Desktop\\gitProje\\GYMManagement\\GYMProject\\TrainerSchedule.cs [Design]",
               "RelativeToolTip": "GYMProject\\TrainerSchedule.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T15:29:40.992Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-14T15:29:40.992Z"
             },
             {
               "$type": "Document",
@@ -359,8 +347,7 @@
               "RelativeToolTip": "GYMProject\\AnaEkranAdmin.Designer.cs",
               "ViewState": "AQIAABYAAAAAAAAAAAAIwBYAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T15:07:38.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-14T15:07:38.553Z"
             },
             {
               "$type": "Document",
@@ -420,8 +407,7 @@
               "RelativeToolTip": "GYMProject\\MemberList.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAACSAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T13:44:38.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-13T13:44:38.595Z"
             },
             {
               "$type": "Document",
@@ -433,8 +419,7 @@
               "RelativeToolTip": "GYMProject\\Giris.cs",
               "ViewState": "AQIAAGgAAAAAAAAAAAAswBgAAACOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T19:04:22.247Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T19:04:22.247Z"
             },
             {
               "$type": "Document",
@@ -446,8 +431,7 @@
               "RelativeToolTip": "GYMProject\\Giris.Designer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T20:46:02.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T20:46:02.83Z"
             },
             {
               "$type": "Document",
@@ -459,8 +443,7 @@
               "RelativeToolTip": "GYMProject\\FileName.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T10:43:00.303Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T10:43:00.303Z"
             }
           ]
         }
