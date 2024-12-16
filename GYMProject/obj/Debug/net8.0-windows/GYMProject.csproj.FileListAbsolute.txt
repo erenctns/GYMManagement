@@ -264,3 +264,5 @@ C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\obj\Debug\net8.0-windows
 C:\Users\ensar\Desktop\GitYeni\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.UpdateProduct.resources
 C:\Users\erenc\OneDrive\Desktop\gitProje\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.ClassMembers.resources
 C:\Users\erenc\OneDrive\Desktop\gitProje\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.RegisterClass.resources
+C:\Users\erenc\OneDrive\Desktop\gitProje\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.Product.resources
+C:\Users\erenc\OneDrive\Desktop\gitProje\GYMManagement\GYMProject\obj\Debug\net8.0-windows\GYMProject.UpdateProduct.resources

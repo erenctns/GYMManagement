@@ -16,6 +16,9 @@
     <Compile Update="NewTrainer.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="RegisterClass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -38,6 +41,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UpdateProduct.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
