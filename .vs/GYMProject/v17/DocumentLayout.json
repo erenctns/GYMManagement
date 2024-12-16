@@ -3,24 +3,72 @@
   "WorkspaceRootPath": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\ensar\\desktop\\gityeni\\gymmanagement\\gymproject\\updateproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\updateproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\ensar\\desktop\\gityeni\\gymmanagement\\gymproject\\updateequipmentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\updateequipmentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\ensar\\desktop\\gityeni\\gymmanagement\\gymproject\\trainerschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\trainerschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\gymproject\\trainerschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\trainerschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\ensar\\desktop\\gityeni\\gymmanagement\\gymproject\\trainerlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\trainerlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\ensar\\desktop\\gityeni\\gymmanagement\\gymproject\\registerclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\registerclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\gymproject\\registerclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\registerclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\ensar\\desktop\\gityeni\\gymmanagement\\gymproject\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\ensar\\desktop\\gityeni\\gymmanagement\\gymproject\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\ensar\\desktop\\gityeni\\gymmanagement\\gymproject\\newtrainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\newtrainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\ensar\\desktop\\gityeni\\gymmanagement\\gymproject\\newmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\newmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\ensar\\desktop\\gityeni\\gymmanagement\\gymproject\\memberlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\memberlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\ensar\\desktop\\gityeni\\gymmanagement\\gymproject\\giris.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\giris.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\ensar\\desktop\\gityeni\\gymmanagement\\gymproject\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\ensar\\desktop\\gityeni\\gymmanagement\\gymproject\\classmembers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\classmembers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\ensar\\desktop\\gityeni\\gymmanagement\\gymproject\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\ensar\\desktop\\gityeni\\gymmanagement\\gymproject\\anaekranadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\anaekranadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\gymproject\\trainerschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\trainerschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\gymproject\\registerclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\registerclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\gymproject\\memberlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -31,10 +79,6 @@
       "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\classmembers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\ensar\\desktop\\gityeni\\gymmanagement\\gymproject\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\gymproject\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -43,16 +87,8 @@
       "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\anaekranadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\ensar\\desktop\\gityeni\\gymmanagement\\gymproject\\newmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\newmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\ensar\\desktop\\gityeni\\gymmanagement\\gymproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\ensar\\desktop\\gityeni\\gymmanagement\\gymproject\\giris.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\giris.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\gymproject\\trainerlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -95,95 +131,185 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UpdateProduct.cs",
+              "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\UpdateProduct.cs",
+              "RelativeDocumentMoniker": "GYMProject\\UpdateProduct.cs",
+              "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\UpdateProduct.cs",
+              "RelativeToolTip": "GYMProject\\UpdateProduct.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T15:50:49.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UpdateEquipmentForm.cs",
+              "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\UpdateEquipmentForm.cs",
+              "RelativeDocumentMoniker": "GYMProject\\UpdateEquipmentForm.cs",
+              "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\UpdateEquipmentForm.cs",
+              "RelativeToolTip": "GYMProject\\UpdateEquipmentForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T15:50:34.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TrainerList.cs",
+              "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\TrainerList.cs",
+              "RelativeDocumentMoniker": "GYMProject\\TrainerList.cs",
+              "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\TrainerList.cs",
+              "RelativeToolTip": "GYMProject\\TrainerList.cs",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAuwFUAAACEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T15:50:06.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\Product.cs",
+              "RelativeDocumentMoniker": "GYMProject\\Product.cs",
+              "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\Product.cs",
+              "RelativeToolTip": "GYMProject\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAACEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T15:49:25.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\Payment.cs",
+              "RelativeDocumentMoniker": "GYMProject\\Payment.cs",
+              "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\Payment.cs",
+              "RelativeToolTip": "GYMProject\\Payment.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAkwFQAAACUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T15:49:15.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "NewTrainer.cs",
+              "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\NewTrainer.cs",
+              "RelativeDocumentMoniker": "GYMProject\\NewTrainer.cs",
+              "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\NewTrainer.cs",
+              "RelativeToolTip": "GYMProject\\NewTrainer.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAowGAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T15:49:04.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MemberList.cs",
+              "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\MemberList.cs",
+              "RelativeDocumentMoniker": "GYMProject\\MemberList.cs",
+              "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\MemberList.cs",
+              "RelativeToolTip": "GYMProject\\MemberList.cs",
+              "ViewState": "AgIAAMsAAAAAAAAAAAAAwOQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T15:48:29.819Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Equipment.cs",
+              "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\Equipment.cs",
+              "RelativeDocumentMoniker": "GYMProject\\Equipment.cs",
+              "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\Equipment.cs",
+              "RelativeToolTip": "GYMProject\\Equipment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAACAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T15:48:00.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AnaEkranAdmin.cs [Tasar\u0131m]",
+              "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\AnaEkranAdmin.cs",
+              "RelativeDocumentMoniker": "GYMProject\\AnaEkranAdmin.cs",
+              "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\AnaEkranAdmin.cs [Tasar\u0131m]",
+              "RelativeToolTip": "GYMProject\\AnaEkranAdmin.cs [Tasar\u0131m]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T15:46:55.034Z",
+              "EditorCaption": " [Tasar\u0131m]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "TrainerSchedule.cs",
               "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\TrainerSchedule.cs",
               "RelativeDocumentMoniker": "GYMProject\\TrainerSchedule.cs",
               "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\TrainerSchedule.cs",
               "RelativeToolTip": "GYMProject\\TrainerSchedule.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAwwDAAAACEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-16T14:48:54.291Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RegisterClass.cs",
-              "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\RegisterClass.cs",
-              "RelativeDocumentMoniker": "GYMProject\\RegisterClass.cs",
-              "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\RegisterClass.cs",
-              "RelativeToolTip": "GYMProject\\RegisterClass.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T14:48:12.53Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "ClassMembers.cs",
               "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\ClassMembers.cs",
               "RelativeDocumentMoniker": "GYMProject\\ClassMembers.cs",
               "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\ClassMembers.cs",
               "RelativeToolTip": "GYMProject\\ClassMembers.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-16T14:47:10.041Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ClassMembers.cs [Tasar\u0131m]",
-              "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\ClassMembers.cs",
-              "RelativeDocumentMoniker": "GYMProject\\ClassMembers.cs",
-              "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\ClassMembers.cs [Tasar\u0131m]",
-              "RelativeToolTip": "GYMProject\\ClassMembers.cs [Tasar\u0131m]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T09:57:36.697Z",
-              "EditorCaption": " [Tasar\u0131m]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 16,
               "Title": "RegisterClass.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\RegisterClass.cs",
               "RelativeDocumentMoniker": "GYMProject\\RegisterClass.cs",
               "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\RegisterClass.cs [Tasar\u0131m]",
               "RelativeToolTip": "GYMProject\\RegisterClass.cs [Tasar\u0131m]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T09:38:45.549Z",
-              "EditorCaption": " [Tasar\u0131m]"
+              "WhenOpened": "2024-12-16T09:38:45.549Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "Class.cs",
               "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\Class.cs",
               "RelativeDocumentMoniker": "GYMProject\\Class.cs",
               "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\Class.cs",
               "RelativeToolTip": "GYMProject\\Class.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABYBAAAAAAAAAAAAwDEBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-16T14:46:23.959Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "NewMember.cs",
               "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\NewMember.cs",
               "RelativeDocumentMoniker": "GYMProject\\NewMember.cs",
               "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\NewMember.cs",
               "RelativeToolTip": "GYMProject\\NewMember.cs",
-              "ViewState": "AgIAAJIAAAAAAAAAAAAIwEgAAACSAAAAAAAAAA==",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAIwI8AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-12T13:25:03.892Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 20,
               "Title": "AnaEkranAdmin.cs",
               "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\AnaEkranAdmin.cs",
               "RelativeDocumentMoniker": "GYMProject\\AnaEkranAdmin.cs",
@@ -196,42 +322,78 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "RegisterClass.cs",
+              "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\RegisterClass.cs",
+              "RelativeDocumentMoniker": "GYMProject\\RegisterClass.cs",
+              "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\RegisterClass.cs",
+              "RelativeToolTip": "GYMProject\\RegisterClass.cs",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAcwJwAAACEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T14:48:12.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ClassMembers.cs [Tasar\u0131m]",
+              "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\ClassMembers.cs",
+              "RelativeDocumentMoniker": "GYMProject\\ClassMembers.cs",
+              "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\ClassMembers.cs [Tasar\u0131m]",
+              "RelativeToolTip": "GYMProject\\ClassMembers.cs [Tasar\u0131m]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T09:57:36.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "TrainerSchedule.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\TrainerSchedule.cs",
               "RelativeDocumentMoniker": "GYMProject\\TrainerSchedule.cs",
               "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\TrainerSchedule.cs [Tasar\u0131m]",
               "RelativeToolTip": "GYMProject\\TrainerSchedule.cs [Tasar\u0131m]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T20:27:42.018Z",
-              "EditorCaption": " [Tasar\u0131m]"
+              "WhenOpened": "2024-12-13T20:27:42.018Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 25,
               "Title": "Payment.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\Payment.cs",
               "RelativeDocumentMoniker": "GYMProject\\Payment.cs",
               "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\Payment.cs [Tasar\u0131m]",
               "RelativeToolTip": "GYMProject\\Payment.cs [Tasar\u0131m]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T18:30:43.759Z"
+              "WhenOpened": "2024-12-12T18:30:43.759Z",
+              "EditorCaption": " [Tasar\u0131m]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
+              "Title": "Giris.cs",
+              "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\Giris.cs",
+              "RelativeDocumentMoniker": "GYMProject\\Giris.cs",
+              "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\Giris.cs",
+              "RelativeToolTip": "GYMProject\\Giris.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIAwwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T17:41:23.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "Class.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\Class.cs",
               "RelativeDocumentMoniker": "GYMProject\\Class.cs",
               "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\Class.cs [Tasar\u0131m]",
               "RelativeToolTip": "GYMProject\\Class.cs [Tasar\u0131m]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T13:50:29.833Z",
-              "EditorCaption": " [Tasar\u0131m]"
+              "WhenOpened": "2024-12-14T13:50:29.833Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 17,
               "Title": "MemberList.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\MemberList.cs",
               "RelativeDocumentMoniker": "GYMProject\\MemberList.cs",
@@ -243,20 +405,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Giris.cs",
-              "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\Giris.cs",
-              "RelativeDocumentMoniker": "GYMProject\\Giris.cs",
-              "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\Giris.cs",
-              "RelativeToolTip": "GYMProject\\Giris.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAACAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T17:41:23.878Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 21,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\Program.cs",
               "RelativeDocumentMoniker": "GYMProject\\Program.cs",
@@ -269,18 +418,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 22,
               "Title": "TrainerList.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\TrainerList.cs",
               "RelativeDocumentMoniker": "GYMProject\\TrainerList.cs",
               "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\TrainerList.cs [Tasar\u0131m]",
               "RelativeToolTip": "GYMProject\\TrainerList.cs [Tasar\u0131m]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T20:01:42.793Z"
+              "WhenOpened": "2024-12-13T20:01:42.793Z",
+              "EditorCaption": " [Tasar\u0131m]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 23,
               "Title": "Giris.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\Giris.cs",
               "RelativeDocumentMoniker": "GYMProject\\Giris.cs",
@@ -291,7 +441,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 24,
               "Title": "Payment.Designer.cs",
               "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\Payment.Designer.cs",
               "RelativeDocumentMoniker": "GYMProject\\Payment.Designer.cs",
@@ -304,7 +454,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 26,
               "Title": "NewMember.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\NewMember.cs",
               "RelativeDocumentMoniker": "GYMProject\\NewMember.cs",
@@ -315,7 +465,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 27,
               "Title": "FileName.cs",
               "DocumentMoniker": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\FileName.cs",
               "RelativeDocumentMoniker": "GYMProject\\FileName.cs",

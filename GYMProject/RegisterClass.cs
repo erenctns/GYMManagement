@@ -52,7 +52,7 @@ namespace GYMProject
         {
             try
             {
-                string connectionString = "Data Source=DESKTOP-FAT5F5N\\SQLEXPRESS01;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+                string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
                 string query = "SELECT ClassID, Name FROM Class"; // Sınıf bilgilerini çek
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -124,7 +124,7 @@ namespace GYMProject
         {
             try
             {
-                string connectionString = "Data Source=DESKTOP-FAT5F5N\\SQLEXPRESS01;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+                string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
                 string query = @"
                     SELECT COUNT(*) 
                     FROM Attendance 
@@ -154,7 +154,7 @@ namespace GYMProject
         {
             try
             {
-                string connectionString = "Data Source=DESKTOP-FAT5F5N\\SQLEXPRESS01;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+                string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
                 string query = @"
                     INSERT INTO Attendance (MemberID, ClassID, Date)
                     VALUES (@MemberID, @ClassID, @Date)";
