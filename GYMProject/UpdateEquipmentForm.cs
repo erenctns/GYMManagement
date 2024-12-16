@@ -14,7 +14,8 @@ namespace GYMProject
     public partial class UpdateEquipmentForm : Form
     {
         // Veritabanı bağlantı dizesi
-        private string connectionString = "Data Source=DESKTOP-FAT5F5N\\SQLEXPRESS01;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+        string connectionString = GlobalVariables.ConnectionString;
+
 
         public UpdateEquipmentForm()
         {

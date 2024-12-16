@@ -70,7 +70,7 @@ namespace GYMProject
                 }
 
                 // Veritabanı bağlantısı
-                string connectionString = "Data Source=DESKTOP-FAT5F5N\\SQLEXPRESS01;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False"; // Bağlantı dizesini buraya ekleyin.
+                string connectionString = GlobalVariables.ConnectionString;
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();

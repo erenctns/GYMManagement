@@ -22,7 +22,7 @@ namespace GYMProject
             string password = passwordTextBox.Text;  // Þifre textBox'ý
 
             // Veritabaný baðlantý dizesi (Deðiþtirin: sunucu, veritabaný adý vb.)
-            string connectionString = "Data Source=DESKTOP-FAT5F5N\\SQLEXPRESS01;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+            string connectionString = GlobalVariables.ConnectionString;
 
             // SQL sorgusu
             string query = "SELECT COUNT(1) FROM UserAuth WHERE Username = @username AND Password = @password";

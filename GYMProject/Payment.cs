@@ -82,7 +82,7 @@ namespace GYMProject
             try
             {
                 // SQL bağlantısı ve komutları
-                using (var connection = new SqlConnection("Data Source=DESKTOP-FAT5F5N\\SQLEXPRESS01;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False"))
+                using (var connection = new SqlConnection(GlobalVariables.ConnectionString))
                 {
                     connection.Open();
 

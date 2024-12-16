@@ -13,7 +13,8 @@ namespace GYMProject
 {
     public partial class Product : Form
     {
-        private string connectionString = "Data Source=DESKTOP-FAT5F5N\\SQLEXPRESS01;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+        string connectionString = GlobalVariables.ConnectionString;
+
 
         public Product()
         {
