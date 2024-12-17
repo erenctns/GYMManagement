@@ -39,7 +39,7 @@ namespace GYMProject
             }
 
             // SQL bağlantısı
-            string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+            string connectionString = GlobalVariables.ConnectionString;
 
             // Yeni kayıt ekleme sorgusu
             string insertQuery = @"INSERT INTO Trainer (FirstName, LastName, Gender, Age, PhoneNumber, Email, Specialization)

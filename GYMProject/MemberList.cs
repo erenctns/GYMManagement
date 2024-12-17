@@ -53,7 +53,7 @@ namespace GYMProject
             try
             {
                 // Veritabanı bağlantı dizesi
-                string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+                string connectionString = GlobalVariables.ConnectionString;
 
                 // SQL sorgusu
                 string query = @"
@@ -94,7 +94,7 @@ namespace GYMProject
             try
             {
                 // Veritabanı bağlantı dizesi
-                string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+                string connectionString = GlobalVariables.ConnectionString;
 
                 // Silme sorgusu
                 string query = "DELETE FROM Member WHERE MemberID = @MemberID";

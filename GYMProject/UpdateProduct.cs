@@ -1,19 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace GYMProject
 {
     public partial class UpdateProduct : Form
     {
-        private string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+        string connectionString = GlobalVariables.ConnectionString;
 
         public UpdateProduct()
         {
@@ -36,9 +29,12 @@ namespace GYMProject
                 reader.Close();
             }
 
-            // NumericUpDown'ları sıfırla
+            // NumericUpDown'ları sıfırla ve maksimum değeri sınırsız yap
             productPriceCounter.Value = 0;
             productStockCounter.Value = 0;
+
+            productPriceCounter.Maximum = decimal.MaxValue;
+            productStockCounter.Maximum = decimal.MaxValue;
         }
 
         private void saveChangesButton_Click_1(object sender, EventArgs e)
@@ -80,9 +76,8 @@ namespace GYMProject
                     int rowsAffected = command.ExecuteNonQuery();
                     if (rowsAffected > 0)
                     {
-                        // Güncelleme başarılı
                         MessageBox.Show("Ürün başarıyla güncellendi!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close(); // Formu kapat
+                        this.Close();
                     }
                     else
                     {
@@ -94,11 +89,10 @@ namespace GYMProject
             {
                 MessageBox.Show("Hata: " + ex.Message);
             }
-
         }
+
         private void productNameComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-
             // Seçilen ürüne ait fiyat ve stok bilgilerini getir
             string selectedProduct = productNameComboBox.SelectedItem?.ToString();
             if (string.IsNullOrEmpty(selectedProduct)) return;
@@ -126,7 +120,6 @@ namespace GYMProject
             {
                 MessageBox.Show("Hata: " + ex.Message);
             }
-
         }
     }
 }

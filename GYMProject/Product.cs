@@ -13,7 +13,8 @@ namespace GYMProject
 {
     public partial class Product : Form
     {
-        private string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+        string connectionString = GlobalVariables.ConnectionString;
+
 
         public Product()
         {

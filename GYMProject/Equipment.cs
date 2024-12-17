@@ -25,7 +25,7 @@ namespace GYMProject
         private void Equipment_Load(object sender, EventArgs e)
         {
 
-            string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+            string connectionString = GlobalVariables.ConnectionString;
 
             // SQL sorgu
             string query = "SELECT EquipmentID, EquipmentName, Quantity, Condition FROM Equipment";

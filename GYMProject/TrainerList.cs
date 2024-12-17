@@ -57,7 +57,8 @@ namespace GYMProject
         {
             try
             {
-                string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+                string connectionString = GlobalVariables.ConnectionString;
+
 
                 string query = @"
                     SELECT 
@@ -83,7 +84,8 @@ namespace GYMProject
         {
             try
             {
-                string connectionString = "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+                string connectionString = GlobalVariables.ConnectionString;
+
 
                 string query = "DELETE FROM Trainer WHERE TrainerID = @TrainerID";
 
