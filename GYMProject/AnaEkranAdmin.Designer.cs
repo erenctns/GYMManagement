@@ -154,7 +154,7 @@
             // 
             // productButton
             // 
-            productButton.Location = new Point(32, 218);
+            productButton.Location = new Point(319, 297);
             productButton.Margin = new Padding(3, 2, 3, 2);
             productButton.Name = "productButton";
             productButton.Size = new Size(146, 40);
@@ -165,7 +165,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(312, 218);
+            button1.Location = new Point(575, 288);
             button1.Name = "button1";
             button1.Size = new Size(153, 49);
             button1.TabIndex = 9;
