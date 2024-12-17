@@ -4,13 +4,28 @@
     <Compile Update="AnaEkranAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="AnaEkranCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Class.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ClassDetails.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ClassMembers.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="CustomerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Equipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ExpiringMembershipsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="NewTrainer.cs">

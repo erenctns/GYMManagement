@@ -75,6 +75,7 @@ namespace GYMProject
         {
             PurchaseProduct purchaseProductForm = new PurchaseProduct();
             purchaseProductForm.Show();
+        }
         private void detailsButton_Click(object sender, EventArgs e)
         {
             Details detailsForm = new Details();

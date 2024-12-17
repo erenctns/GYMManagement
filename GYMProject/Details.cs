@@ -42,9 +42,10 @@ namespace GYMProject
         private void Details_Load(object sender, EventArgs e)
         {
             // Veritabanı bağlantı dizesi
-            string connectionString = "Data Source=EMREEROGLU\\SQLEXPRESS;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+            string connectionString = GlobalVariables.ConnectionString;
 
-            // SQL sorgusunu oluştur
+
+        // SQL sorgusunu oluştur
             string activeMembersQuery = "SELECT COUNT(*) AS ActiveMembers FROM Membership WHERE MONTH(StartDate) = MONTH(GETDATE()) AND YEAR(StartDate) = YEAR(GETDATE())";
             string trainerCountQuery = "SELECT COUNT(*) AS TrainerCount FROM Trainer";
             string totalIncomeQuery = "SELECT SUM(Price) AS TotalIncome FROM Membership WHERE MONTH(StartDate) = MONTH(GETDATE()) AND YEAR(StartDate) = YEAR(GETDATE())";

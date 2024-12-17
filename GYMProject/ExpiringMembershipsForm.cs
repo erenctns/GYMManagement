@@ -26,7 +26,7 @@ namespace GYMProject
 
         private void LoadMembershipExpirationData()
         {
-            string connectionString = "Data Source=EMREEROGLU\\SQLEXPRESS;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+            string connectionString = GlobalVariables.ConnectionString;
             string query = @"
                 SELECT m.FirstName, m.LastName, ms.EndDate 
                 FROM Member m
