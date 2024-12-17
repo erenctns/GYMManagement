@@ -10,6 +10,6 @@ namespace GYMProject
     {
         
         public static string ConnectionString { get; } =
-            "Data Source=DESKTOP-M4M4Q6P;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+            "Data Source=EMREEROGLU\\SQLEXPRESS;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
     }
 }
