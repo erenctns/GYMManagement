@@ -166,7 +166,7 @@ namespace GYMProject
             Controls.Add(panel1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Giris";
-            Text = "Form1";
+            Text = "Welcome";
             Load += Giris_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

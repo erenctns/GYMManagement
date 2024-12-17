@@ -1,4 +1,5 @@
-﻿namespace GYMProject
+﻿using System.Data.SqlClient;
+namespace GYMProject
 {
     public partial class AnaEkranAdmin : Form
     {
@@ -74,6 +75,10 @@
         {
             PurchaseProduct purchaseProductForm = new PurchaseProduct();
             purchaseProductForm.Show();
+        private void detailsButton_Click(object sender, EventArgs e)
+        {
+            Details detailsForm = new Details();
+            detailsForm.Show();
         }
     }
 }

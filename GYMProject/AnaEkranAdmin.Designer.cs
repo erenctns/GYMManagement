@@ -38,10 +38,12 @@
             classesButton = new Button();
             productButton = new Button();
             button1 = new Button();
+            detailsButton = new Button();
             SuspendLayout();
             // 
             // newMemberButton
             // 
+            newMemberButton.BackColor = SystemColors.Control;
             newMemberButton.BackgroundImage = Properties.Resources.add_group__1_;
             newMemberButton.BackgroundImageLayout = ImageLayout.None;
             newMemberButton.Location = new Point(32, 28);
@@ -50,7 +52,7 @@
             newMemberButton.TabIndex = 0;
             newMemberButton.Text = "New Member";
             newMemberButton.TextAlign = ContentAlignment.MiddleRight;
-            newMemberButton.UseVisualStyleBackColor = true;
+            newMemberButton.UseVisualStyleBackColor = false;
             newMemberButton.Click += newMemberButton_Click;
             // 
             // equipmentButton
@@ -172,6 +174,18 @@
             button1.Text = "Purchase Product";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click_1;
+            // detailsButton
+            // 
+            detailsButton.BackgroundImage = Properties.Resources.growth;
+            detailsButton.BackgroundImageLayout = ImageLayout.None;
+            detailsButton.Location = new Point(36, 305);
+            detailsButton.Name = "detailsButton";
+            detailsButton.Size = new Size(167, 70);
+            detailsButton.TabIndex = 8;
+            detailsButton.Text = "Details      ";
+            detailsButton.TextAlign = ContentAlignment.MiddleRight;
+            detailsButton.UseVisualStyleBackColor = true;
+            detailsButton.Click += detailsButton_Click;
             // 
             // AnaEkranAdmin
             // 
@@ -182,6 +196,8 @@
             ClientSize = new Size(800, 450);
             Controls.Add(button1);
             Controls.Add(productButton);
+            ClientSize = new Size(914, 600);
+            Controls.Add(detailsButton);
             Controls.Add(classesButton);
             Controls.Add(viewTrainersButton);
             Controls.Add(newTrainerButton);
@@ -191,7 +207,7 @@
             Controls.Add(equipmentButton);
             Controls.Add(newMemberButton);
             Name = "AnaEkranAdmin";
-            Text = "AnaEkranAdmin";
+            Text = "Main Menu";
             Load += AnaEkranAdmin_Load;
             ResumeLayout(false);
         }
@@ -208,5 +224,6 @@
         private Button classesButton;
         private Button productButton;
         private Button button1;
+        private Button detailsButton;
     }
 }
