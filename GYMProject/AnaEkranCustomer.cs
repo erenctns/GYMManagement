@@ -24,62 +24,94 @@ namespace GYMProject
 
         private void AnaEkranCustomer_Load(object sender, EventArgs e)
         {
-            ShowRemainingMembershipDays();
+            CheckMembershipExpiration();
+            GetMemberName();
+            welcomeLabel.BackColor = Color.Transparent;
         }
 
-        private async void ShowRemainingMembershipDays()
+        private void CheckMembershipExpiration()
         {
-            await Task.Delay(500); // Form tamamen yüklendikten sonra 500 ms gecikme (isteğe bağlı)
-
-            // Veritabanı bağlantı dizesi
             string connectionString = "Data Source=EMREEROGLU\\SQLEXPRESS;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
-
-            // Kullanıcının EndDate bilgisini almak için SQL sorgusu
-            string query = "SELECT EndDate FROM Membership WHERE MemberID = @memberId";
+            string query = "SELECT EndDate FROM Membership WHERE MemberID = @MemberID";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
-
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@memberId", memberId); // MemberID'yi sorguya ekle
+                    cmd.Parameters.AddWithValue("@MemberID", currentMemberId); // Giriş yapan üyenin ID'si
+                    SqlDataReader reader = cmd.ExecuteReader();
 
-                    object result = cmd.ExecuteScalar();
-
-                    if (result != null && DateTime.TryParse(result.ToString(), out DateTime endDate))
+                    if (reader.Read())
                     {
-                        // Kalan gün sayısını hesapla
-                        int remainingDays = (endDate - DateTime.Now).Days;
+                        DateTime EndDate = reader.GetDateTime(0);
+                        TimeSpan remainingDays = EndDate - DateTime.Now;
 
-                        // Kullanıcıya bilgi ver
-                        if (remainingDays > 0)
+                        // Eğer üyelik bitiş tarihi 7 gün veya daha yakınsa pop-up göster
+                        if (remainingDays.Days <= 27)
                         {
-                            MessageBox.Show($"Üyeliğinizin bitmesine {remainingDays} gün kaldı.", "Üyelik Durumu", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Üyelik süreniz sona ermiştir.", "Üyelik Durumu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show($"Üyeliğinizin bitmesine {remainingDays.Days} gün kaldı! Lütfen yenileyin.");
                         }
                     }
-                    else
-                    {
-                        MessageBox.Show("Üyelik bilgisi bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    reader.Close();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Bir hata oluştu: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Bir hata oluştu: " + ex.Message);
                 }
             }
-
         }
+
+        private void GetMemberName()
+        {
+            string connectionString = "Data Source=EMREEROGLU\\SQLEXPRESS;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+            string query = "SELECT FirstName, LastName FROM Member WHERE MemberID = @MemberID";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@MemberID", currentMemberId); // Giriş yapan üyenin ID'si
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        string firstName = reader.GetString(0);
+                        string lastName = reader.GetString(1);
+
+                        // Label'a "Welcome customer_name" yaz
+                        welcomeLabel.Text = $"Welcome {firstName} {lastName}";
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Bir hata oluştu: " + ex.Message);
+                }
+            }
+        }
+
 
         private void customerInfo_Click(object sender, EventArgs e)
         {
             CustomerInfo userInfoForm = new CustomerInfo(currentMemberId);
             userInfoForm.Show();
+        }
+
+        private void exitbuttonCustomer_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void LogOutButtonCustomer_Click(object sender, EventArgs e)
+        {
+            Giris girisForm = new Giris();
+            this.Hide();
+            girisForm.Show();
         }
     }
 }
