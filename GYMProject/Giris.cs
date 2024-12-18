@@ -18,14 +18,14 @@ namespace GYMProject
         private void loginButton_Click(object sender, EventArgs e)
         {
             string connectionString = GlobalVariables.ConnectionString;
-            // Kullanýcý adý ve þifreyi alýn
-            string username = userNameTextBox.Text;  // Kullanýcý adý textBox'ý
-            string password = passwordTextBox.Text;  // Þifre textBox'ý
+            // Get the username and password
+            string username = userNameTextBox.Text;  // Username textBox
+            string password = passwordTextBox.Text;  // Password textBox
 
-            // Veritabaný baðlantý dizesi
-            
+            // Database connection string
 
-            // SQL sorgusu: Kullanýcýnýn rolünü al
+
+            // SQL query: Get the user's role
             string query = @"
                 SELECT m.MemberID, m.Role
                 FROM UserAuth u
@@ -47,12 +47,12 @@ namespace GYMProject
                     {
                         if (reader.Read())
                         {
-                            int memberId = reader.GetInt32(0); // Ýlk sütun MemberID
-                            string role = reader.GetString(1).Trim(); // Ýkinci sütun Role
+                            int memberId = reader.GetInt32(0); // First column: MemberID
+                            string role = reader.GetString(1).Trim(); // Second column: Role
 
-                            MessageBox.Show("Giriþ baþarýlý!", "Baþarýlý", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            // Rolü kontrol et
+                            // Check the role
                             if (role.Equals("Admin", StringComparison.OrdinalIgnoreCase))
                             {
                                 AnaEkranAdmin adminForm = new AnaEkranAdmin();
@@ -60,21 +60,21 @@ namespace GYMProject
                             }
                             else if (role.Equals("Customer", StringComparison.OrdinalIgnoreCase))
                             {
-                                AnaEkranCustomer customerForm = new AnaEkranCustomer(memberId); // MemberID'yi geçir
+                                AnaEkranCustomer customerForm = new AnaEkranCustomer(memberId); // Pass MemberID
                                 customerForm.Show();
                             }
 
-                            this.Hide(); // Giriþ ekranýný gizle
+                            this.Hide(); // Hide the login form
                         }
                         else
                         {
-                            MessageBox.Show("Kullanýcý adý veya þifre hatalý!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Incorrect username or password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Bir hata oluþtu: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
@@ -88,10 +88,10 @@ namespace GYMProject
 
 
             GraphicsPath path = new GraphicsPath();
-            path.AddArc(0, 0, cornerRadius, cornerRadius, 180, 90); // Sol üst
-            path.AddArc(panel1.Width - cornerRadius, 0, cornerRadius, cornerRadius, 270, 90); // Sað üst
-            path.AddArc(panel1.Width - cornerRadius, panel1.Height - cornerRadius, cornerRadius, cornerRadius, 0, 90); // Sað alt
-            path.AddArc(0, panel1.Height - cornerRadius, cornerRadius, cornerRadius, 90, 90); // Sol alt
+            path.AddArc(0, 0, cornerRadius, cornerRadius, 180, 90); // Top left corner
+            path.AddArc(panel1.Width - cornerRadius, 0, cornerRadius, cornerRadius, 270, 90); // Top right corner
+            path.AddArc(panel1.Width - cornerRadius, panel1.Height - cornerRadius, cornerRadius, cornerRadius, 0, 90); // Bottom right corner
+            path.AddArc(0, panel1.Height - cornerRadius, cornerRadius, cornerRadius, 90, 90); // Bottom left corner
             path.CloseFigure();
             panel1.Region = new Region(path);
         }
@@ -105,11 +105,9 @@ namespace GYMProject
             logoName1.BackColor = Color.Transparent;
             logoName2.BackColor = Color.Transparent;
 
-
-
             passwordTextBox.PasswordChar = '*';
 
-            // Göz simgesinin ilk halini ayarlama
+            // Set the initial state of the eye icon
             eyePictureBox.Image = Properties.Resources.hide;
             eyePictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
         }
@@ -118,18 +116,18 @@ namespace GYMProject
         {
             if (isPasswordVisible)
             {
-                // Þifreyi gizle
+                // Hide the password
                 passwordTextBox.PasswordChar = '*';
-                eyePictureBox.Image = Properties.Resources.hide;  // Göz kapalý simgesi
+                eyePictureBox.Image = Properties.Resources.hide;  // Closed eye icon
             }
             else
             {
-                // Þifreyi göster
-                passwordTextBox.PasswordChar = '\0';  // Þifreyi gösterir
-                eyePictureBox.Image = Properties.Resources.eye;  // Göz açýk simgesi
+                // Show the password
+                passwordTextBox.PasswordChar = '\0';  // Shows the password
+                eyePictureBox.Image = Properties.Resources.eye;  // Open eye icon
             }
 
-            // Durum deðiþtir
+            // Toggle the state
             isPasswordVisible = !isPasswordVisible;
         }
     }

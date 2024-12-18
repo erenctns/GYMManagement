@@ -14,6 +14,7 @@ namespace GYMProject
     public partial class MyClassesForm : Form
     {
         private int memberId;
+
         public MyClassesForm(int memberId)
         {
             InitializeComponent();
@@ -49,23 +50,23 @@ namespace GYMProject
                 {
                     conn.Open();
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@MemberID", memberId); // Giriş yapan üyenin ID'si
+                    cmd.Parameters.AddWithValue("@MemberID", memberId); // ID of the logged-in member
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
 
-                    // DataGridView'e verileri yükle
+                    // Load the data into DataGridView
                     dataGridViewMemberClasses.DataSource = dt;
 
-                    dataGridViewMemberClasses.Columns["ClassName"].HeaderText = "Sınıf Adı";
-                    dataGridViewMemberClasses.Columns["Schedule"].HeaderText = "Program";
-                    dataGridViewMemberClasses.Columns["ClassType"].HeaderText = "Sınıf Türü";
-                    dataGridViewMemberClasses.Columns["TrainerFullName"].HeaderText = "Eğitmen";
+                    dataGridViewMemberClasses.Columns["ClassName"].HeaderText = "Class Name";
+                    dataGridViewMemberClasses.Columns["Schedule"].HeaderText = "Schedule";
+                    dataGridViewMemberClasses.Columns["ClassType"].HeaderText = "Class Type";
+                    dataGridViewMemberClasses.Columns["TrainerFullName"].HeaderText = "Trainer";
 
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Bir hata oluştu: " + ex.Message);
+                    MessageBox.Show("An error occurred: " + ex.Message);
                 }
             }
         }

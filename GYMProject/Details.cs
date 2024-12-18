@@ -13,10 +13,10 @@ namespace GYMProject
 {
     public partial class Details : Form
     {
-        private int activeMembers = 0;
-        private int trainerCount = 0;
-        private decimal totalIncome = 0;
-        private int classCount = 0;
+        private int activeMembers = 0; // Number of active members
+        private int trainerCount = 0; // Number of trainers
+        private decimal totalIncome = 0; // Total income
+        private int classCount = 0; // Number of classes
 
         public Details()
         {
@@ -25,13 +25,10 @@ namespace GYMProject
 
         private void showIncomesButton_Click(object sender, EventArgs e)
         {
-
-            // Yeni formu aç ve gelir ile üye sayısını göster
+            // Open a new form to display income and member count
             ClassDetails incomeForm = new ClassDetails();
             incomeForm.Show();
         }
-
-
 
         private void expirationButton_Click(object sender, EventArgs e)
         {
@@ -41,11 +38,10 @@ namespace GYMProject
 
         private void Details_Load(object sender, EventArgs e)
         {
-            // Veritabanı bağlantı dizesi
+            // Database connection string
             string connectionString = GlobalVariables.ConnectionString;
 
-
-            // SQL sorgusunu oluştur
+            // Define SQL queries
             string activeMembersQuery = "SELECT COUNT(*) AS ActiveMembers FROM Membership WHERE MONTH(StartDate) = MONTH(GETDATE()) AND YEAR(StartDate) = YEAR(GETDATE())";
             string trainerCountQuery = "SELECT COUNT(*) AS TrainerCount FROM Trainer";
             string totalIncomeQuery = @"
@@ -67,62 +63,62 @@ namespace GYMProject
                 {
                     conn.Open();
 
-                    // Aktif üyeler sorgusunu çalıştır
+                    // Execute query for active members
                     SqlCommand cmdActiveMembers = new SqlCommand(activeMembersQuery, conn);
                     SqlDataReader readerActiveMembers = cmdActiveMembers.ExecuteReader();
                     if (readerActiveMembers.Read())
                     {
-                        activeMembers = readerActiveMembers.IsDBNull(0) ? 0 : readerActiveMembers.GetInt32(0);  // Aktif üye sayısı
+                        activeMembers = readerActiveMembers.IsDBNull(0) ? 0 : readerActiveMembers.GetInt32(0); // Active member count
                     }
                     readerActiveMembers.Close();
 
-                    // Eğitmen sayısı sorgusunu çalıştır
+                    // Execute query for trainer count
                     SqlCommand cmdTrainerCount = new SqlCommand(trainerCountQuery, conn);
                     SqlDataReader readerTrainerCount = cmdTrainerCount.ExecuteReader();
                     if (readerTrainerCount.Read())
                     {
-                        trainerCount = readerTrainerCount.IsDBNull(0) ? 0 : readerTrainerCount.GetInt32(0);  // Eğitmen sayısı
+                        trainerCount = readerTrainerCount.IsDBNull(0) ? 0 : readerTrainerCount.GetInt32(0); // Trainer count
                     }
                     readerTrainerCount.Close();
 
-                    // Toplam gelir sorgusunu çalıştır
+                    // Execute query for total income
                     SqlCommand cmdTotalIncome = new SqlCommand(totalIncomeQuery, conn);
                     SqlDataReader readerTotalIncome = cmdTotalIncome.ExecuteReader();
                     if (readerTotalIncome.Read())
                     {
-                        decimal membershipIncome = readerTotalIncome.IsDBNull(0) ? 0 : readerTotalIncome.GetDecimal(0);  // Üyelik gelirleri
-                        decimal purchaseIncome = readerTotalIncome.IsDBNull(1) ? 0 : readerTotalIncome.GetDecimal(1);  // Ürün harcamaları
-                        totalIncome = membershipIncome + purchaseIncome;  // Üyelik ve ürün harcamalarını toplama
+                        decimal membershipIncome = readerTotalIncome.IsDBNull(0) ? 0 : readerTotalIncome.GetDecimal(0); // Membership income
+                        decimal purchaseIncome = readerTotalIncome.IsDBNull(1) ? 0 : readerTotalIncome.GetDecimal(1); // Product purchases income
+                        totalIncome = membershipIncome + purchaseIncome; // Total of membership and product purchases
                     }
                     readerTotalIncome.Close();
 
-                    // Sınıf sayısı sorgusunu çalıştır
+                    // Execute query for class count
                     SqlCommand cmdClassCount = new SqlCommand(classCountQuery, conn);
                     SqlDataReader readerClassCount = cmdClassCount.ExecuteReader();
                     if (readerClassCount.Read())
                     {
-                        classCount = readerClassCount.IsDBNull(0) ? 0 : readerClassCount.GetInt32(0);  // Sınıf sayısı
+                        classCount = readerClassCount.IsDBNull(0) ? 0 : readerClassCount.GetInt32(0); // Class count
                     }
                     readerClassCount.Close();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Bir hata oluştu: " + ex.Message);
+                    MessageBox.Show("An error occurred: " + ex.Message);
                 }
             }
 
-            // Sonuçları formda göster
+            // Display results on the form
             activeMembersLabel.Text = activeMembers.ToString();
             trainerCountLabel.Text = trainerCount.ToString();
-            totalIncomeLabel.Text = totalIncome.ToString("C");  // C formatıyla toplam gelir, para birimi ile gösteriliyor
+            totalIncomeLabel.Text = totalIncome.ToString("C"); // Display total income with currency formatting
             classCountLabel.Text = classCount.ToString();
         }
 
         private void ıncomesButton_Click(object sender, EventArgs e)
         {
+            // Open the "Incomes" form
             Incomes incomeForm = new Incomes();
             incomeForm.Show();
         }
     }
-
 }

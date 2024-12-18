@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-
 namespace GYMProject
 {
     public partial class Equipment : Form
@@ -24,38 +23,37 @@ namespace GYMProject
 
         private void Equipment_Load(object sender, EventArgs e)
         {
-
             string connectionString = GlobalVariables.ConnectionString;
 
-            // SQL sorgu
+            // SQL query
             string query = "SELECT EquipmentID, EquipmentName, Quantity, Condition FROM Equipment";
 
             try
             {
-                // Veritabanı bağlantısı
+                // Database connection
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    connection.Open(); // Bağlantıyı açmayı deneyin
+                    connection.Open(); // Attempt to open the connection
 
-                    // Veri çekme işlemi
+                    // Data retrieval
                     SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
                     DataTable dataTable = new DataTable();
                     dataAdapter.Fill(dataTable);
 
-                    // DataGridView yerine label'lara veri yükleme
+                    // Loading data into labels instead of a DataGridView
                     foreach (DataRow row in dataTable.Rows)
                     {
                         string equipmentName = row["EquipmentName"].ToString();
                         string quantity = row["Quantity"].ToString();
                         string condition = row["Condition"].ToString();
 
-                        // Null kontrolü yaparak güvenli bir şekilde veri atayabilirsiniz
+                        // Safely assign data with null checks
                         if (string.IsNullOrEmpty(equipmentName) || string.IsNullOrEmpty(quantity) || string.IsNullOrEmpty(condition))
                         {
-                            continue;  // Eğer herhangi biri boşsa, o satırı atla
+                            continue;  // Skip this row if any field is empty
                         }
 
-                        // Ekipman ismine göre Label'lara veri atama
+                        // Assigning data to labels based on equipment name
                         if (equipmentName == "Dumbbell")
                         {
                             dumbbellName.Text = equipmentName;
@@ -110,16 +108,14 @@ namespace GYMProject
                             latpullDownMachineQuantity.Text = quantity;
                             latpullDownMachineCondition.Text = condition;
                         }
-                        // Diğer ekipmanlar için de aynı şekilde devam edebilirsiniz
+                        // You can continue the same way for other equipment
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Veri yüklenirken bir hata oluştu: " + ex.Message);
+                MessageBox.Show("An error occurred while loading data: " + ex.Message);
             }
-
-
 
             targetLabels = new List<Label> { dumbbellCondition, treadmillCondition, stationaryBikeCondition, ellipticalTrainerCondition, smithMachineCondition, rowingMachineCondition, dumbbellSetCondition, kettlebellSetCondition, latpullDownMachineCondition };
             UpdateTargetLabelColors();
@@ -147,15 +143,15 @@ namespace GYMProject
             {
                 if (label.Text == "Good")
                 {
-                    label.ForeColor = Color.Green; // Text rengi yeşil
+                    label.ForeColor = Color.Green; // Text color green
                 }
                 else if (label.Text == "Needs Repair")
                 {
-                    label.ForeColor = Color.Gold; // Text rengi sarı
+                    label.ForeColor = Color.Gold; // Text color yellow
                 }
                 else if (label.Text == "Broken")
                 {
-                    label.ForeColor = Color.Red; // Text rengi kırmızı
+                    label.ForeColor = Color.Red; // Text color red
                 }
             }
         }

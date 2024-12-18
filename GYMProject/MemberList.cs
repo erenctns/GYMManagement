@@ -16,25 +16,24 @@ namespace GYMProject
         public MemberList()
         {
             InitializeComponent();
-            this.Load += new EventHandler(MemberList_Load); // Load olayına MemberList_Load metodunu bağlama
+            this.Load += new EventHandler(MemberList_Load); // Bind the MemberList_Load method to the Load event
 
-            // DataGridView stillerini uygula
+            // Apply DataGridView styles
             StyleDataGridView();
         }
 
         private void MemberList_Load(object sender, EventArgs e)
         {
             this.Size = new Size(1200, 600);
-            // Veritabanından verileri yükle ve DataGridView'e bağla
+            // Load data from the database and bind it to the DataGridView
             LoadMemberData();
             AddDeleteButtonColumn();
-            AddRegisterClassButtonColumn(); // Register Class butonunu ekle
+            AddRegisterClassButtonColumn(); // Add Register Class button
 
 
-            // Form boyutunu DataGridView'e göre ayarla
+            // Adjust the form size according to the DataGridView
             //AdjustFormSizeToDataGridView();
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-
         }
 
         private void AddRegisterClassButtonColumn()
@@ -52,10 +51,10 @@ namespace GYMProject
         {
             try
             {
-                // Veritabanı bağlantı dizesi
+                // Database connection string
                 string connectionString = GlobalVariables.ConnectionString;
 
-                // SQL sorgusu
+                // SQL query
                 string query = @"
             SELECT 
                 m.MemberID, m.FirstName, m.LastName, m.Age, m.PhoneNumber, m.Email, 
@@ -68,67 +67,67 @@ namespace GYMProject
             LEFT JOIN 
                 UserAuth ua ON m.MemberID = ua.MemberID";
 
-                // Veritabanı bağlantısı
+                // Database connection
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    // SQLDataAdapter kullanarak verileri al
+                    // Use SQLDataAdapter to retrieve data
                     SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
-                    DataTable dataTable = new DataTable(); // Verileri tutacak DataTable
+                    DataTable dataTable = new DataTable(); // DataTable to store data
 
-                    // Verileri al ve DataTable'a doldur
+                    // Retrieve data and fill the DataTable
                     adapter.Fill(dataTable);
 
-                    // Verileri DataGridView'e aktar
+                    // Bind data to DataGridView
                     dataGridView1.DataSource = dataTable;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Hata: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message}");
             }
         }
 
-       
+
         private void DeleteMember(int memberId)
         {
             try
             {
-                // Veritabanı bağlantı dizesi
+                // Database connection string
                 string connectionString = GlobalVariables.ConnectionString;
 
-                // Silme sorgusu
+                // Delete query
                 string query = "DELETE FROM Member WHERE MemberID = @MemberID";
 
-                // Veritabanı bağlantısı
+                // Database connection
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        // Parametreyi ekle
+                        // Add parameter
                         command.Parameters.AddWithValue("@MemberID", memberId);
 
-                        // Silme işlemini gerçekleştir
+                        // Execute delete operation
                         int rowsAffected = command.ExecuteNonQuery();
 
-                        // Eğer herhangi bir satır silindiyse, başarılı olundu
+                        // If any rows are affected, the operation was successful
                         if (rowsAffected > 0)
                         {
-                            MessageBox.Show("Üye başarıyla silindi.");
-                            // Verileri yeniden yükle
+                            MessageBox.Show("Member deleted successfully.");
+                            // Reload the data
                             LoadMemberData();
                         }
                         else
                         {
-                            MessageBox.Show("Silme işlemi başarısız oldu.");
+                            MessageBox.Show("Delete operation failed.");
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Hata: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message}");
             }
         }
 
@@ -145,10 +144,10 @@ namespace GYMProject
                 }
                 else if (dataGridView1.Columns[e.ColumnIndex].Name == "RegisterClass")
                 {
-                    // İlgili MemberID'yi al
+                    // Get the related MemberID
                     int memberId = Convert.ToInt32(selectedRow.Cells["MemberID"].Value);
 
-                    // Yeni RegisterClass formunu aç ve MemberID'yi ilet
+                    // Open the new RegisterClass form and pass the MemberID
                     RegisterClass registerForm = new RegisterClass(memberId);
                     registerForm.ShowDialog();
                 }
@@ -158,69 +157,69 @@ namespace GYMProject
         {
             DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn();
             deleteButtonColumn.Name = "Delete";
-            deleteButtonColumn.HeaderText = "Sil";
-            deleteButtonColumn.Text = "Sil";
+            deleteButtonColumn.HeaderText = "Delete";
+            deleteButtonColumn.Text = "Delete";
             deleteButtonColumn.UseColumnTextForButtonValue = true;
             dataGridView1.Columns.Add(deleteButtonColumn);
         }
         private void StyleDataGridView()
         {
 
-            // DataGridView'i formun tamamını kaplamasını sağlamak
-            dataGridView1.Dock = DockStyle.Fill; // DataGridView'in formu tamamen doldurmasını sağlar
+            // Make the DataGridView fill the entire form
+            dataGridView1.Dock = DockStyle.Fill; // Ensures DataGridView takes up the entire form
 
-            // Diğer stil ayarları
-            dataGridView1.AutoGenerateColumns = true;  // Kolonları otomatik oluşturur
-            dataGridView1.AllowUserToAddRows = false;  // Kullanıcı yeni satır ekleyemez
-            dataGridView1.AllowUserToDeleteRows = false;  // Kullanıcı satır silemez
-            dataGridView1.ReadOnly = true;  // Veriler sadece okunabilir
+            // Other styling
+            dataGridView1.AutoGenerateColumns = true;  // Automatically generate columns
+            dataGridView1.AllowUserToAddRows = false;  // User cannot add rows
+            dataGridView1.AllowUserToDeleteRows = false;  // User cannot delete rows
+            dataGridView1.ReadOnly = true;  // Data is read-only
 
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells; // vertical kaydırma
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells; // vertical scrolling
 
-            // Hücre ve yazı tipi stilleri
+            // Cell and font styling
             dataGridView1.DefaultCellStyle.BackColor = Color.White;
             dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
             dataGridView1.DefaultCellStyle.SelectionBackColor = Color.FromArgb(38, 45, 53);
             dataGridView1.DefaultCellStyle.SelectionForeColor = Color.White;
             dataGridView1.DefaultCellStyle.Font = new Font("Arial", 10);
 
-            // Başlık satırı stili
+            // Header row styling
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(38, 45, 53);
             dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Bold);
 
-            // Kolon hizalamaları
+            // Column alignments
             foreach (DataGridViewColumn column in dataGridView1.Columns)
             {
                 column.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
 
-            // Kenarlık stilleri
+            // Border styles
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridView1.GridColor = Color.Gray;
 
-            // Satır seçimi stilini ayarlama
-            dataGridView1.RowHeadersVisible = false;  // Satır başlıklarını gizle
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;  // Satır seçimini yap
+            // Row selection style
+            dataGridView1.RowHeadersVisible = false;  // Hide row headers
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;  // Select entire rows
 
-            // Alternatif satır renkleri
+            // Alternate row colors
             dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 245, 245);
         }
 
         private void AdjustFormSizeToDataGridView()
         {
-            // DataGridView'in toplam boyutunu al
+            // Get the total width of the DataGridView
             int totalWidth = dataGridView1.Columns.GetColumnsWidth(DataGridViewElementStates.Visible);
             int totalHeight = dataGridView1.Rows.GetRowsHeight(DataGridViewElementStates.Visible);
 
-            // DataGridView'e biraz padding eklemek (isteğe bağlı)
-            totalWidth += 30; // Genişlik için biraz padding
-            totalHeight += 80; // Yükseklik için biraz padding
+            // Add some padding to the DataGridView (optional)
+            totalWidth += 30; // Add padding to the width
+            totalHeight += 80; // Add padding to the height
 
-            // Form boyutunu ayarlayın
+            // Adjust the form size
             this.ClientSize = new Size(totalWidth, totalHeight);
         }
 

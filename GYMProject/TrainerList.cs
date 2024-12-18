@@ -59,7 +59,6 @@ namespace GYMProject
             {
                 string connectionString = GlobalVariables.ConnectionString;
 
-
                 string query = @"
                     SELECT 
                         TrainerID, FirstName, LastName, Gender, Age, PhoneNumber, Email, Specialization
@@ -85,7 +84,6 @@ namespace GYMProject
             try
             {
                 string connectionString = GlobalVariables.ConnectionString;
-
 
                 string query = "DELETE FROM Trainer WHERE TrainerID = @TrainerID";
 

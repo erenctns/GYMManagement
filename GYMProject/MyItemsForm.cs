@@ -14,6 +14,7 @@ namespace GYMProject
     public partial class MyItemsForm : Form
     {
         private int currentMemberId;
+
         public MyItemsForm(int memberId)
         {
             InitializeComponent();
@@ -51,32 +52,31 @@ namespace GYMProject
                     DataTable dt = new DataTable();
                     da.Fill(dt);
 
-                    // DataGridView'e verileri yükle
+                    // Load the data into DataGridView
                     dataGridViewProducts.DataSource = dt;
 
-                    // Başlıkları güncelle
-                    dataGridViewProducts.Columns["ProductName"].HeaderText = "Ürün Adı";
-                    dataGridViewProducts.Columns["TotalQuantity"].HeaderText = "Toplam Miktar";
-                    dataGridViewProducts.Columns["Price"].HeaderText = "Birim Fiyat";
-                    dataGridViewProducts.Columns["TotalSpent"].HeaderText = "Toplam Harcama";
+                    // Update column headers
+                    dataGridViewProducts.Columns["ProductName"].HeaderText = "Product Name";
+                    dataGridViewProducts.Columns["TotalQuantity"].HeaderText = "Total Quantity";
+                    dataGridViewProducts.Columns["Price"].HeaderText = "Unit Price";
+                    dataGridViewProducts.Columns["TotalSpent"].HeaderText = "Total Spent";
 
-                    // Genel toplam harcamayı hesapla
+                    // Calculate total spending
                     decimal totalSpent = 0;
                     foreach (DataRow row in dt.Rows)
                     {
                         totalSpent += row.IsNull("TotalSpent") ? 0 : Convert.ToDecimal(row["TotalSpent"]);
                     }
 
-
-                    totalSpentLabel.Location = new Point(10, dataGridViewProducts.Bottom + 10); // 10px boşluk bırakabilirsiniz
-                    totalSpentLabel.Size = new Size(200, 30); // Boyutları ayarlayın
-                    // Toplam harcamayı label'a yazdır
-                    totalSpentLabel.Text = $"Toplam Harcama: {totalSpent:C}";
+                    totalSpentLabel.Location = new Point(10, dataGridViewProducts.Bottom + 10); // You can leave 10px of space
+                    totalSpentLabel.Size = new Size(200, 30); // Adjust the size
+                    // Display the total spending in the label
+                    totalSpentLabel.Text = $"Total Spending: {totalSpent:C}";
                     totalSpentLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Bir hata oluştu: " + ex.Message);
+                    MessageBox.Show("An error occurred: " + ex.Message);
                 }
             }
         }

@@ -68,12 +68,12 @@ namespace GYMProject
 
         private void LoadData()
         {
-            // Ürünleri yükle
+            // Load products
             string queryProducts = "SELECT ProductID, ProductName, Price FROM Product";
             DataTable products = ExecuteQuery(queryProducts);
             dgvProducts.DataSource = products;
 
-            // Üyeleri yükle
+            // Load members
             string queryMembers = @"
                 SELECT 
                     M.MemberID, 
@@ -92,7 +92,7 @@ namespace GYMProject
         {
             if (dgvProducts.SelectedRows.Count > 0)
             {
-                // ProductID kontrolü
+                // Check ProductID
                 object productIdObj = dgvProducts.SelectedRows[0].Cells["ProductID"].Value;
 
                 if (productIdObj == null || Convert.ToInt32(productIdObj) == 0)
@@ -142,12 +142,6 @@ namespace GYMProject
                 int productId = Convert.ToInt32(row.Cells["ProductID"].Value);
                 int quantity = Convert.ToInt32(row.Cells["Quantity"].Value);
 
-                //if (productId == 0)
-                //{
-                //    MessageBox.Show("Invalid ProductID in the cart. Skipping this item.");
-                //    continue;
-                //}
-
                 string checkProductQuery = "SELECT COUNT(*) FROM Product WHERE ProductID = @ProductID";
                 int productExists = Convert.ToInt32(ExecuteScalar(checkProductQuery, new SqlParameter("@ProductID", productId)));
 
@@ -157,7 +151,7 @@ namespace GYMProject
                     continue;
                 }
 
-                // Purchase işlemi
+                // Purchase operation
                 string insertPurchaseQuery = @"INSERT INTO Purchase (MemberID, ProductID, Quantity, PurchaseDate)
                                                VALUES (@MemberID, @ProductID, @Quantity, @PurchaseDate)";
                 ExecuteNonQuery(insertPurchaseQuery,
@@ -166,14 +160,12 @@ namespace GYMProject
                     new SqlParameter("@Quantity", quantity),
                     new SqlParameter("@PurchaseDate", purchaseDate));
 
-                // Stok güncelle
+                // Update stock
                 string updateStockQuery = "UPDATE Product SET Stock = Stock - @Quantity WHERE ProductID = @ProductID";
                 ExecuteNonQuery(updateStockQuery,
                     new SqlParameter("@Quantity", quantity),
                     new SqlParameter("@ProductID", productId));
             }
-
-            
 
             dgvCart.Rows.Clear();
             UpdateTotalPrice();

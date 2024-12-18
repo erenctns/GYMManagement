@@ -29,7 +29,7 @@ namespace GYMProject
             SELECT m.MemberID, m.FirstName + ' ' + m.LastName AS FullName, m.Email, a.Date AS AttendanceDate
             FROM Member m
             INNER JOIN Attendance a ON m.MemberID = a.MemberID
-            WHERE a.ClassID = @ClassID";  // ClassID ile filtrele
+            WHERE a.ClassID = @ClassID";  // Filter by ClassID
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
@@ -39,12 +39,12 @@ namespace GYMProject
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
 
-                    // Veriyi bir DataGridView'e yükleyin
+                    // Load data into a DataGridView
                     dataGridViewMembers.DataSource = dataTable;
 
-                    // DataGridView ayarlarını düzenle
-                    dataGridViewMembers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // Sütunları yatay doldur
-                    dataGridViewMembers.Dock = DockStyle.Fill; // DataGridView'i formu kaplayacak şekilde ayarla
+                    // Adjust DataGridView settings
+                    dataGridViewMembers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // Fill columns horizontally
+                    dataGridViewMembers.Dock = DockStyle.Fill; // Set DataGridView to fill the form
                 }
             }
             catch (Exception ex)
