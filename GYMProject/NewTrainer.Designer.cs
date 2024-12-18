@@ -195,7 +195,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(513, 478);
             panel1.TabIndex = 15;
-            panel1.Paint += panel1_Paint;
+            
             // 
             // NewTrainer
             // 

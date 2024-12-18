@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace GYMProject
 {
@@ -20,7 +21,7 @@ namespace GYMProject
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            // Kullanıcı girişlerini al
+            // Get user inputs
             string firstName = firstNameTextBox.Text.Trim();
             string lastName = lastNameTextBox.Text.Trim();
             string gender = genderComboBox.SelectedItem?.ToString();
@@ -29,19 +30,33 @@ namespace GYMProject
             string email = emailTextBox.Text.Trim();
             string specialization = specializationComboBox.SelectedItem?.ToString();
 
-            // Validasyon kontrolü
+            // Validation check
             if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) ||
                 string.IsNullOrEmpty(gender) || string.IsNullOrEmpty(phoneNumber) ||
                 string.IsNullOrEmpty(email) || string.IsNullOrEmpty(specialization))
             {
-                MessageBox.Show("Lütfen tüm alanları doldurun.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // SQL bağlantısı
+            // Email validation
+            if (!IsValidEmail(email))
+            {
+                MessageBox.Show("Please enter a valid email address.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Phone number validation
+            if (!IsValidPhoneNumber(phoneNumber))
+            {
+                MessageBox.Show("Please enter a valid phone number (digits only).", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // SQL connection
             string connectionString = GlobalVariables.ConnectionString;
 
-            // Yeni kayıt ekleme sorgusu
+            // Insert query for new record
             string insertQuery = @"INSERT INTO Trainer (FirstName, LastName, Gender, Age, PhoneNumber, Email, Specialization)
                                    VALUES (@FirstName, @LastName, @Gender, @Age, @PhoneNumber, @Email, @Specialization)";
 
@@ -53,7 +68,7 @@ namespace GYMProject
 
                     using (SqlCommand command = new SqlCommand(insertQuery, connection))
                     {
-                        // SQL parametrelerini ekle
+                        // Add SQL parameters
                         command.Parameters.AddWithValue("@FirstName", firstName);
                         command.Parameters.AddWithValue("@LastName", lastName);
                         command.Parameters.AddWithValue("@Gender", gender);
@@ -62,30 +77,44 @@ namespace GYMProject
                         command.Parameters.AddWithValue("@Email", email);
                         command.Parameters.AddWithValue("@Specialization", specialization);
 
-                        // Sorguyu çalıştır
+                        // Execute the query
                         int rowsAffected = command.ExecuteNonQuery();
 
                         if (rowsAffected > 0)
                         {
-                            MessageBox.Show("Eğitmen başarıyla kaydedildi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            ClearForm(); // Formu temizle
+                            MessageBox.Show("Trainer successfully added.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            ClearForm(); // Clear the form
                         }
                         else
                         {
-                            MessageBox.Show("Kayıt sırasında bir sorun oluştu.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("An issue occurred during the registration.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Hata: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
+
+        private bool IsValidEmail(string email)
+        {
+            // Regular expression for email validation
+            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, emailPattern);
+        }
+
+        private bool IsValidPhoneNumber(string phoneNumber)
+        {
+            // Regular expression for phone number validation (digits only)
+            string phonePattern = @"^\d+$";
+            return Regex.IsMatch(phoneNumber, phonePattern);
+        }
+
         private void ClearForm()
         {
-            // Form alanlarını trainer eklendikten sonra temizle
+            // Clear form fields after trainer is added
             firstNameTextBox.Clear();
             lastNameTextBox.Clear();
             genderComboBox.SelectedIndex = -1;
@@ -95,10 +124,6 @@ namespace GYMProject
             specializationComboBox.SelectedIndex = -1;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 
 }

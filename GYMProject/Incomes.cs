@@ -91,7 +91,7 @@ namespace GYMProject
                 }
             }
 
-            
+
 
             PlotPieChart();
         }
@@ -131,5 +131,9 @@ namespace GYMProject
             // Grafiği yenile
             formsPlot2.Refresh();
         }
+
+      
+
+       
     }
 }
