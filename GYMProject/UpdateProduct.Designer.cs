@@ -35,14 +35,16 @@
             label2 = new Label();
             label3 = new Label();
             saveChangesButton = new Button();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)productPriceCounter).BeginInit();
             ((System.ComponentModel.ISupportInitialize)productStockCounter).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // productNameComboBox
             // 
             productNameComboBox.FormattingEnabled = true;
-            productNameComboBox.Location = new Point(144, 56);
+            productNameComboBox.Location = new Point(41, 72);
             productNameComboBox.Name = "productNameComboBox";
             productNameComboBox.Size = new Size(140, 28);
             productNameComboBox.TabIndex = 0;
@@ -50,14 +52,14 @@
             // 
             // productPriceCounter
             // 
-            productPriceCounter.Location = new Point(412, 54);
+            productPriceCounter.Location = new Point(274, 73);
             productPriceCounter.Name = "productPriceCounter";
             productPriceCounter.Size = new Size(105, 27);
             productPriceCounter.TabIndex = 1;
             // 
             // productStockCounter
             // 
-            productStockCounter.Location = new Point(635, 53);
+            productStockCounter.Location = new Point(454, 73);
             productStockCounter.Name = "productStockCounter";
             productStockCounter.Size = new Size(97, 27);
             productStockCounter.TabIndex = 2;
@@ -65,7 +67,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(56, 64);
+            label1.Location = new Point(41, 40);
             label1.Name = "label1";
             label1.Size = new Size(49, 20);
             label1.TabIndex = 3;
@@ -74,7 +76,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(328, 60);
+            label2.Location = new Point(274, 40);
             label2.Name = "label2";
             label2.Size = new Size(41, 20);
             label2.TabIndex = 4;
@@ -83,7 +85,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(564, 56);
+            label3.Location = new Point(454, 40);
             label3.Name = "label3";
             label3.Size = new Size(45, 20);
             label3.TabIndex = 5;
@@ -91,7 +93,7 @@
             // 
             // saveChangesButton
             // 
-            saveChangesButton.Location = new Point(338, 275);
+            saveChangesButton.Location = new Point(244, 208);
             saveChangesButton.Name = "saveChangesButton";
             saveChangesButton.Size = new Size(145, 29);
             saveChangesButton.TabIndex = 6;
@@ -99,24 +101,35 @@
             saveChangesButton.UseVisualStyleBackColor = true;
             saveChangesButton.Click += saveChangesButton_Click_1;
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(saveChangesButton);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(productNameComboBox);
+            panel1.Controls.Add(productPriceCounter);
+            panel1.Controls.Add(productStockCounter);
+            panel1.Location = new Point(88, 82);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(626, 264);
+            panel1.TabIndex = 7;
+            // 
             // UpdateProduct
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.background;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
-            Controls.Add(saveChangesButton);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(productStockCounter);
-            Controls.Add(productPriceCounter);
-            Controls.Add(productNameComboBox);
+            Controls.Add(panel1);
             Name = "UpdateProduct";
             Text = "UpdateProduct";
             ((System.ComponentModel.ISupportInitialize)productPriceCounter).EndInit();
             ((System.ComponentModel.ISupportInitialize)productStockCounter).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -128,5 +141,6 @@
         private Label label2;
         private Label label3;
         private Button saveChangesButton;
+        private Panel panel1;
     }
 }

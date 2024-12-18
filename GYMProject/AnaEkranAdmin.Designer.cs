@@ -154,22 +154,28 @@
             // 
             // productButton
             // 
+            productButton.BackgroundImage = Properties.Resources.water_bottle1;
+            productButton.BackgroundImageLayout = ImageLayout.None;
             productButton.Location = new Point(357, 316);
             productButton.Name = "productButton";
             productButton.Size = new Size(175, 73);
             productButton.TabIndex = 8;
-            productButton.Text = "Products";
+            productButton.Text = "Products     ";
+            productButton.TextAlign = ContentAlignment.MiddleRight;
             productButton.UseVisualStyleBackColor = true;
             productButton.Click += productButton_Click;
             // 
             // button1
             // 
+            button1.BackgroundImage = Properties.Resources.shopping_cart;
+            button1.BackgroundImageLayout = ImageLayout.None;
             button1.Location = new Point(673, 316);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(175, 73);
             button1.TabIndex = 9;
-            button1.Text = "Purchase Product";
+            button1.Text = "Purchase   ";
+            button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click_1;
             // 
@@ -180,7 +186,7 @@
             detailsButton.Location = new Point(37, 316);
             detailsButton.Margin = new Padding(3, 4, 3, 4);
             detailsButton.Name = "detailsButton";
-            detailsButton.Size = new Size(191, 73);
+            detailsButton.Size = new Size(167, 73);
             detailsButton.TabIndex = 8;
             detailsButton.Text = "Details      ";
             detailsButton.TextAlign = ContentAlignment.MiddleRight;
