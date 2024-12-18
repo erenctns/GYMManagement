@@ -38,10 +38,12 @@
             classesButton = new Button();
             productButton = new Button();
             button1 = new Button();
+            detailsButton = new Button();
             SuspendLayout();
             // 
             // newMemberButton
             // 
+            newMemberButton.BackColor = SystemColors.Control;
             newMemberButton.BackgroundImage = Properties.Resources.add_group__1_;
             newMemberButton.BackgroundImageLayout = ImageLayout.None;
             newMemberButton.Location = new Point(32, 28);
@@ -50,7 +52,7 @@
             newMemberButton.TabIndex = 0;
             newMemberButton.Text = "New Member";
             newMemberButton.TextAlign = ContentAlignment.MiddleRight;
-            newMemberButton.UseVisualStyleBackColor = true;
+            newMemberButton.UseVisualStyleBackColor = false;
             newMemberButton.Click += newMemberButton_Click;
             // 
             // equipmentButton
@@ -85,7 +87,7 @@
             LogOutButton.BackgroundImage = Properties.Resources.logout;
             LogOutButton.BackgroundImageLayout = ImageLayout.None;
             LogOutButton.ImageAlign = ContentAlignment.MiddleLeft;
-            LogOutButton.Location = new Point(536, 386);
+            LogOutButton.Location = new Point(517, 386);
             LogOutButton.Margin = new Padding(3, 2, 3, 2);
             LogOutButton.Name = "LogOutButton";
             LogOutButton.Size = new Size(130, 55);
@@ -154,10 +156,10 @@
             // 
             // productButton
             // 
-            productButton.Location = new Point(32, 218);
+            productButton.Location = new Point(312, 237);
             productButton.Margin = new Padding(3, 2, 3, 2);
             productButton.Name = "productButton";
-            productButton.Size = new Size(146, 40);
+            productButton.Size = new Size(153, 55);
             productButton.TabIndex = 8;
             productButton.Text = "Products";
             productButton.UseVisualStyleBackColor = true;
@@ -165,13 +167,26 @@
             // 
             // button1
             // 
-            button1.Location = new Point(312, 218);
+            button1.Location = new Point(589, 237);
             button1.Name = "button1";
-            button1.Size = new Size(153, 49);
+            button1.Size = new Size(153, 55);
             button1.TabIndex = 9;
             button1.Text = "Purchase Product";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click_1;
+            // 
+            // detailsButton
+            // 
+            detailsButton.BackgroundImage = Properties.Resources.growth;
+            detailsButton.BackgroundImageLayout = ImageLayout.None;
+            detailsButton.Location = new Point(32, 237);
+            detailsButton.Name = "detailsButton";
+            detailsButton.Size = new Size(167, 55);
+            detailsButton.TabIndex = 8;
+            detailsButton.Text = "Details      ";
+            detailsButton.TextAlign = ContentAlignment.MiddleRight;
+            detailsButton.UseVisualStyleBackColor = true;
+            detailsButton.Click += detailsButton_Click;
             // 
             // AnaEkranAdmin
             // 
@@ -179,9 +194,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.background;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(button1);
             Controls.Add(productButton);
+            Controls.Add(detailsButton);
             Controls.Add(classesButton);
             Controls.Add(viewTrainersButton);
             Controls.Add(newTrainerButton);
@@ -191,7 +207,7 @@
             Controls.Add(equipmentButton);
             Controls.Add(newMemberButton);
             Name = "AnaEkranAdmin";
-            Text = "AnaEkranAdmin";
+            Text = "Main Menu";
             Load += AnaEkranAdmin_Load;
             ResumeLayout(false);
         }
@@ -208,5 +224,6 @@
         private Button classesButton;
         private Button productButton;
         private Button button1;
+        private Button detailsButton;
     }
 }
