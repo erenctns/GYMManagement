@@ -28,6 +28,15 @@
     <Compile Update="ExpiringMembershipsForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Incomes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MyClassesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MyItemsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="NewTrainer.cs">
       <SubType>Form</SubType>
     </Compile>

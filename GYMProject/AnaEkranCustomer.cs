@@ -31,7 +31,7 @@ namespace GYMProject
 
         private void CheckMembershipExpiration()
         {
-            string connectionString = "Data Source=EMREEROGLU\\SQLEXPRESS;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+            string connectionString = GlobalVariables.ConnectionString;
             string query = "SELECT EndDate FROM Membership WHERE MemberID = @MemberID";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -65,7 +65,7 @@ namespace GYMProject
 
         private void GetMemberName()
         {
-            string connectionString = "Data Source=EMREEROGLU\\SQLEXPRESS;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+            string connectionString = GlobalVariables.ConnectionString;
             string query = "SELECT FirstName, LastName FROM Member WHERE MemberID = @MemberID";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -112,6 +112,18 @@ namespace GYMProject
             Giris girisForm = new Giris();
             this.Hide();
             girisForm.Show();
+        }
+
+        private void myClassesButton_Click(object sender, EventArgs e)
+        {
+            MyClassesForm myClassesForm = new MyClassesForm(currentMemberId);
+            myClassesForm.Show();
+        }
+
+        private void myItemsButton_Click(object sender, EventArgs e)
+        {
+            MyItemsForm myItemsForm = new MyItemsForm(currentMemberId);
+            myItemsForm.Show();
         }
     }
 }

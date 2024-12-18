@@ -45,6 +45,7 @@
             panelMoney = new Panel();
             pictureBoxMoney = new PictureBox();
             totalIncomeLabel = new Label();
+            ıncomesButton = new Button();
             panelMembers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMembers).BeginInit();
             panelStaffs.SuspendLayout();
@@ -57,6 +58,7 @@
             // 
             // classDetailsButton
             // 
+            classDetailsButton.BackgroundImage = Properties.Resources.bar_chart;
             classDetailsButton.BackgroundImageLayout = ImageLayout.None;
             classDetailsButton.Location = new Point(221, 27);
             classDetailsButton.Name = "classDetailsButton";
@@ -240,6 +242,19 @@
             totalIncomeLabel.TabIndex = 8;
             totalIncomeLabel.Text = "label1";
             // 
+            // ıncomesButton
+            // 
+            ıncomesButton.BackgroundImage = Properties.Resources.growth1;
+            ıncomesButton.BackgroundImageLayout = ImageLayout.None;
+            ıncomesButton.Location = new Point(425, 27);
+            ıncomesButton.Name = "ıncomesButton";
+            ıncomesButton.Size = new Size(166, 74);
+            ıncomesButton.TabIndex = 6;
+            ıncomesButton.Text = "Incomes   ";
+            ıncomesButton.TextAlign = ContentAlignment.MiddleRight;
+            ıncomesButton.UseVisualStyleBackColor = true;
+            ıncomesButton.Click += ıncomesButton_Click;
+            // 
             // Details
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -247,6 +262,7 @@
             BackgroundImage = Properties.Resources.background;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1029, 503);
+            Controls.Add(ıncomesButton);
             Controls.Add(panelMoney);
             Controls.Add(panelClasses);
             Controls.Add(panelStaffs);
@@ -290,5 +306,6 @@
         private PictureBox pictureBoxMembers;
         private PictureBox pictureBoxClasses;
         private PictureBox pictureBoxMoney;
+        private Button ıncomesButton;
     }
 }
