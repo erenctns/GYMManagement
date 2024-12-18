@@ -43,7 +43,7 @@ namespace GYMProject
         private void LoadUserInfo(int memberId)
         {
             // Veritabanı bağlantı dizesi
-            string connectionString = "Data Source=EMREEROGLU\\SQLEXPRESS;Initial Catalog=GYMNEW;Integrated Security=True;Encrypt=False";
+            string connectionString = GlobalVariables.ConnectionString;
 
             // SQL sorgusu
             string query = @"

@@ -17,53 +17,67 @@ namespace GYMProject
 
         private void loginButton_Click(object sender, EventArgs e)
         {
+            string connectionString = GlobalVariables.ConnectionString;
             // Kullanýcý adý ve þifreyi alýn
             string username = userNameTextBox.Text;  // Kullanýcý adý textBox'ý
             string password = passwordTextBox.Text;  // Þifre textBox'ý
 
-            // Veritabaný baðlantý dizesi (Deðiþtirin: sunucu, veritabaný adý vb.)
-            string connectionString = GlobalVariables.ConnectionString;
+            // Veritabaný baðlantý dizesi
+            
 
-            // SQL sorgusu
-            string query = "SELECT COUNT(1) FROM UserAuth WHERE Username = @username AND Password = @password";
+            // SQL sorgusu: Kullanýcýnýn rolünü al
+            string query = @"
+                SELECT m.MemberID, m.Role
+                FROM UserAuth u
+                JOIN Member m ON u.MemberID = m.MemberID
+                WHERE u.Username = @username AND u.Password = @password";
+
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
                 {
-                    // Baðlantýyý aç
                     conn.Open();
 
-                    // SQL komutunu oluþtur
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@username", username);
-                    cmd.Parameters.AddWithValue("@password", password); // Þifrenin güvenliði için hashing önerilir
+                    cmd.Parameters.AddWithValue("@password", password);
 
-                    // Sonucu kontrol et
-                    int result = Convert.ToInt32(cmd.ExecuteScalar());
-
-                    // Giriþ baþarýlýysa
-                    if (result > 0)
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        MessageBox.Show("Giriþ baþarýlý!", "Baþarýlý", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (reader.Read())
+                        {
+                            int memberId = reader.GetInt32(0); // Ýlk sütun MemberID
+                            string role = reader.GetString(1).Trim(); // Ýkinci sütun Role
 
+                            MessageBox.Show("Giriþ baþarýlý!", "Baþarýlý", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        // AnaEkranAdmin formuna yönlendir
-                        AnaEkranAdmin adminForm = new AnaEkranAdmin();
-                        adminForm.Show();
-                        this.Hide();  // Giriþ ekranýný gizle
-                    }
-                    else
-                    {
-                        MessageBox.Show("Kullanýcý adý veya þifre hatalý!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            // Rolü kontrol et
+                            if (role.Equals("Admin", StringComparison.OrdinalIgnoreCase))
+                            {
+                                AnaEkranAdmin adminForm = new AnaEkranAdmin();
+                                adminForm.Show();
+                            }
+                            else if (role.Equals("Customer", StringComparison.OrdinalIgnoreCase))
+                            {
+                                AnaEkranCustomer customerForm = new AnaEkranCustomer(memberId); // MemberID'yi geçir
+                                customerForm.Show();
+                            }
 
+                            this.Hide(); // Giriþ ekranýný gizle
+                        }
+                        else
+                        {
+                            MessageBox.Show("Kullanýcý adý veya þifre hatalý!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Bir hata oluþtu: " + ex.Message);
+                    MessageBox.Show("Bir hata oluþtu: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -90,6 +104,7 @@ namespace GYMProject
             logoBox.BackColor = Color.Transparent;
             logoName1.BackColor = Color.Transparent;
             logoName2.BackColor = Color.Transparent;
+
 
 
             passwordTextBox.PasswordChar = '*';

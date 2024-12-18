@@ -20,6 +20,9 @@
             base.Dispose(disposing);
         }
 
+
+
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -28,7 +31,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            formsPlot1 = new ScottPlot.WinForms.FormsPlot();
             SuspendLayout();
+            // 
+            // formsPlot1
+            // 
+            formsPlot1.DisplayScale = 1.25F;
+            formsPlot1.Location = new Point(134, 39);
+            formsPlot1.Name = "formsPlot1";
+            formsPlot1.Size = new Size(530, 384);
+            formsPlot1.TabIndex = 0;
             // 
             // ClassDetails
             // 
@@ -37,6 +49,7 @@
             BackgroundImage = Properties.Resources.background;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(formsPlot1);
             Name = "ClassDetails";
             Text = "ClassDetails";
             Load += CustomerIncomeForm_Load;
@@ -44,5 +57,7 @@
         }
 
         #endregion
+
+        private ScottPlot.WinForms.FormsPlot formsPlot1;
     }
 }

@@ -25,7 +25,7 @@ namespace GYMProject
 
         private void showIncomesButton_Click(object sender, EventArgs e)
         {
-            
+
             // Yeni formu aç ve gelir ile üye sayısını göster
             ClassDetails incomeForm = new ClassDetails();
             incomeForm.Show();
@@ -45,10 +45,20 @@ namespace GYMProject
             string connectionString = GlobalVariables.ConnectionString;
 
 
-        // SQL sorgusunu oluştur
+            // SQL sorgusunu oluştur
             string activeMembersQuery = "SELECT COUNT(*) AS ActiveMembers FROM Membership WHERE MONTH(StartDate) = MONTH(GETDATE()) AND YEAR(StartDate) = YEAR(GETDATE())";
             string trainerCountQuery = "SELECT COUNT(*) AS TrainerCount FROM Trainer";
-            string totalIncomeQuery = "SELECT SUM(Price) AS TotalIncome FROM Membership WHERE MONTH(StartDate) = MONTH(GETDATE()) AND YEAR(StartDate) = YEAR(GETDATE())";
+            string totalIncomeQuery = @"
+                SELECT 
+                    SUM(M.Price) AS TotalIncome,
+                    (SELECT SUM(P.Quantity * Pr.Price) 
+                     FROM Purchase P
+                     JOIN Product Pr ON P.ProductID = Pr.ProductID
+                     WHERE MONTH(P.PurchaseDate) = MONTH(GETDATE()) 
+                     AND YEAR(P.PurchaseDate) = YEAR(GETDATE())) AS TotalPurchaseIncome
+                FROM Membership M
+                WHERE MONTH(M.StartDate) = MONTH(GETDATE()) 
+                AND YEAR(M.StartDate) = YEAR(GETDATE())";
             string classCountQuery = "SELECT COUNT(*) AS ClassCount FROM Class";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -80,7 +90,9 @@ namespace GYMProject
                     SqlDataReader readerTotalIncome = cmdTotalIncome.ExecuteReader();
                     if (readerTotalIncome.Read())
                     {
-                        totalIncome = readerTotalIncome.IsDBNull(0) ? 0 : readerTotalIncome.GetDecimal(0);  // Toplam gelir
+                        decimal membershipIncome = readerTotalIncome.IsDBNull(0) ? 0 : readerTotalIncome.GetDecimal(0);  // Üyelik gelirleri
+                        decimal purchaseIncome = readerTotalIncome.IsDBNull(1) ? 0 : readerTotalIncome.GetDecimal(1);  // Ürün harcamaları
+                        totalIncome = membershipIncome + purchaseIncome;  // Üyelik ve ürün harcamalarını toplama
                     }
                     readerTotalIncome.Close();
 
@@ -106,8 +118,11 @@ namespace GYMProject
             classCountLabel.Text = classCount.ToString();
         }
 
-
-
+        private void ıncomesButton_Click(object sender, EventArgs e)
+        {
+            Incomes incomeForm = new Incomes();
+            incomeForm.Show();
+        }
     }
 
 }

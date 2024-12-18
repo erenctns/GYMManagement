@@ -33,6 +33,7 @@
             LogOutButtonCustomer = new Button();
             welcomeLabel = new Label();
             myClassesButton = new Button();
+            myItemsButton = new Button();
             SuspendLayout();
             // 
             // customerInfo
@@ -88,12 +89,29 @@
             // 
             // myClassesButton
             // 
+            myClassesButton.BackgroundImage = Properties.Resources.calendar;
+            myClassesButton.BackgroundImageLayout = ImageLayout.None;
             myClassesButton.Location = new Point(264, 119);
             myClassesButton.Name = "myClassesButton";
             myClassesButton.Size = new Size(167, 74);
             myClassesButton.TabIndex = 8;
             myClassesButton.Text = "My Classes";
+            myClassesButton.TextAlign = ContentAlignment.MiddleRight;
             myClassesButton.UseVisualStyleBackColor = true;
+            myClassesButton.Click += myClassesButton_Click;
+            // 
+            // myItemsButton
+            // 
+            myItemsButton.BackgroundImage = Properties.Resources.shopping_bag;
+            myItemsButton.BackgroundImageLayout = ImageLayout.None;
+            myItemsButton.Location = new Point(482, 119);
+            myItemsButton.Name = "myItemsButton";
+            myItemsButton.Size = new Size(167, 74);
+            myItemsButton.TabIndex = 9;
+            myItemsButton.Text = "My Items   ";
+            myItemsButton.TextAlign = ContentAlignment.MiddleRight;
+            myItemsButton.UseVisualStyleBackColor = true;
+            myItemsButton.Click += myItemsButton_Click;
             // 
             // AnaEkranCustomer
             // 
@@ -102,6 +120,7 @@
             BackgroundImage = Properties.Resources.background;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(myItemsButton);
             Controls.Add(myClassesButton);
             Controls.Add(welcomeLabel);
             Controls.Add(exitbuttonCustomer);
@@ -121,5 +140,6 @@
         private Button LogOutButtonCustomer;
         private Label welcomeLabel;
         private Button myClassesButton;
+        private Button myItemsButton;
     }
 }
