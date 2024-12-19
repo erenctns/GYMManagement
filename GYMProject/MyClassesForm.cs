@@ -35,8 +35,8 @@ namespace GYMProject
                 {
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("GetMemberClasses", conn);
-                    cmd.CommandType = CommandType.StoredProcedure; // Saklı prosedürü çağırıyoruz
-                    cmd.Parameters.AddWithValue("@MemberID", memberId); // Giriş yapan üyenin ID'si
+                    cmd.CommandType = CommandType.StoredProcedure; // Call hide prosedure
+                    cmd.Parameters.AddWithValue("@MemberID", memberId); // UserID that tries to log on
 
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
