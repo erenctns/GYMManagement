@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using ScottPlot;
 using ScottPlot.Plottables;
 
+
 namespace GYMProject
 {
     public partial class Incomes : Form
@@ -26,30 +27,30 @@ namespace GYMProject
 
         private void Incomes_Load(object sender, EventArgs e)
         {
-            // Database connection string
+            // Veritabanı bağlantı dizesi
             string connectionString = GlobalVariables.ConnectionString;
 
-            // SQL queries
+            // SQL sorgularını oluştur
             string monthlyIncomeQuery = @"
                 SELECT SUM(Price) AS MonthlyIncome 
                 FROM Membership 
                 WHERE MONTH(StartDate) = MONTH(GETDATE()) 
                 AND YEAR(StartDate) = YEAR(GETDATE()) 
-                AND MembershipType = 'Month'"; // Get monthly subscription income
+                AND MembershipType = 'Month'"; // Aylık abonelik gelirini al
 
             string yearlyIncomeQuery = @"
                 SELECT SUM(Price) AS YearlyIncome 
                 FROM Membership 
                 WHERE MONTH(StartDate) = MONTH(GETDATE()) 
                 AND YEAR(StartDate) = YEAR(GETDATE()) 
-                AND MembershipType = 'Year'";  // Get yearly subscription income
+                AND MembershipType = 'Year'";  // Yıllık abonelik gelirini al
 
             string productIncomeQuery = @"
                 SELECT SUM(P.Quantity * Pr.Price) AS ProductIncome
                 FROM Purchase P
                 JOIN Product Pr ON P.ProductID = Pr.ProductID
                 WHERE MONTH(P.PurchaseDate) = MONTH(GETDATE()) 
-                AND YEAR(P.PurchaseDate) = YEAR(GETDATE())";  // Get product sales income
+                AND YEAR(P.PurchaseDate) = YEAR(GETDATE())";  // Ürün satışlarını al
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -57,75 +58,82 @@ namespace GYMProject
                 {
                     conn.Open();
 
-                    // Run monthly income query
+                    // Aylık gelir sorgusunu çalıştır
                     SqlCommand cmdMonthlyIncome = new SqlCommand(monthlyIncomeQuery, conn);
                     SqlDataReader readerMonthlyIncome = cmdMonthlyIncome.ExecuteReader();
                     if (readerMonthlyIncome.Read())
                     {
-                        monthlyIncome = readerMonthlyIncome.IsDBNull(0) ? 0 : readerMonthlyIncome.GetDecimal(0); // Monthly subscription income
+                        monthlyIncome = readerMonthlyIncome.IsDBNull(0) ? 0 : readerMonthlyIncome.GetDecimal(0); // Aylık abonelik geliri
                     }
                     readerMonthlyIncome.Close();
 
-                    // Run yearly income query
+                    // Yıllık gelir sorgusunu çalıştır
                     SqlCommand cmdYearlyIncome = new SqlCommand(yearlyIncomeQuery, conn);
                     SqlDataReader readerYearlyIncome = cmdYearlyIncome.ExecuteReader();
                     if (readerYearlyIncome.Read())
                     {
-                        yearlyIncome = readerYearlyIncome.IsDBNull(0) ? 0 : readerYearlyIncome.GetDecimal(0); // Yearly subscription income
+                        yearlyIncome = readerYearlyIncome.IsDBNull(0) ? 0 : readerYearlyIncome.GetDecimal(0); // Yıllık abonelik geliri
                     }
                     readerYearlyIncome.Close();
 
-                    // Query product sales income
+                    // Ürün satış gelirini sorgula
                     SqlCommand cmdProductIncome = new SqlCommand(productIncomeQuery, conn);
                     SqlDataReader readerProductIncome = cmdProductIncome.ExecuteReader();
                     if (readerProductIncome.Read())
                     {
-                        productIncome = readerProductIncome.IsDBNull(0) ? 0 : readerProductIncome.GetDecimal(0); // Product sales income
+                        productIncome = readerProductIncome.IsDBNull(0) ? 0 : readerProductIncome.GetDecimal(0); // Ürün satış geliri
                     }
                     readerProductIncome.Close();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("An error occurred: " + ex.Message);
+                    MessageBox.Show("Bir hata oluştu: " + ex.Message);
                 }
             }
+
+
 
             PlotPieChart();
         }
 
         private void PlotPieChart()
         {
-            // Create a new ScottPlot object
+
+            // Yeni bir ScottPlot nesnesi oluştur
             var myPlot = formsPlot2.Plot;
 
-            // Values for pie chart
+            // Pie chart için değerler
             double[] values = { (double)monthlyIncome, (double)yearlyIncome, (double)productIncome };
 
-            // Add the pie chart
+            // Pie chart'ı ekle
             var pie = myPlot.Add.Pie(values);
             pie.ExplodeFraction = 0.1;
             pie.SliceLabelDistance = 0.5;
 
-            // Set labels and legend text for pie slices
+            // Pie dilimleri için etiketler ve efsane metinlerini ayarla
             double total = pie.Slices.Select(x => x.Value).Sum();
             for (int i = 0; i < pie.Slices.Count; i++)
             {
                 pie.Slices[i].LabelFontSize = 20;
-                pie.Slices[i].Label = $"{pie.Slices[i].Value}"; // Set slice labels
+                pie.Slices[i].Label = $"{pie.Slices[i].Value}"; // Dilim etiketlerini ayarla
                 pie.Slices[i].LegendText = $"{pie.Slices[i].Value} " +
-                    $"({pie.Slices[i].Value / total:p1})"; // Set legend text
+                    $"({pie.Slices[i].Value / total:p1})"; // Efsane metni ayarla
             }
 
-            // Set title and other settings
-            myPlot.Title("Income Distribution");
+            // Başlık ve diğer ayarları yap
+            myPlot.Title("Gelir Dağılımı");
             myPlot.ShowLegend();
 
-            // Hide unnecessary graph components
+            // Gereksiz grafik bileşenlerini gizle
             myPlot.Axes.Frameless();
             myPlot.HideGrid();
 
-            // Refresh the plot
+            // Grafiği yenile
             formsPlot2.Refresh();
         }
+
+      
+
+       
     }
 }

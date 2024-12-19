@@ -8,6 +8,8 @@ namespace GYMProject
         public Giris()
         {
             InitializeComponent();
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(Giris_KeyDown);
         }
 
         private void userNameTextBox_TextChanged(object sender, EventArgs e)
@@ -17,21 +19,23 @@ namespace GYMProject
 
         private void loginButton_Click(object sender, EventArgs e)
         {
+            PerformLogin();
+
+        }
+
+        private void PerformLogin()
+        {
             string connectionString = GlobalVariables.ConnectionString;
-            // Get the username and password
-            string username = userNameTextBox.Text;  // Username textBox
-            string password = passwordTextBox.Text;  // Password textBox
+            // Retrieve username and password
+            string username = userNameTextBox.Text;
+            string password = passwordTextBox.Text;
 
-            // Database connection string
-
-
-            // SQL query: Get the user's role
+            // SQL query to retrieve user's role
             string query = @"
                 SELECT m.MemberID, m.Role
                 FROM UserAuth u
                 JOIN Member m ON u.MemberID = m.MemberID
                 WHERE u.Username = @username AND u.Password = @password";
-
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -47,12 +51,12 @@ namespace GYMProject
                     {
                         if (reader.Read())
                         {
-                            int memberId = reader.GetInt32(0); // First column: MemberID
-                            string role = reader.GetString(1).Trim(); // Second column: Role
+                            int memberId = reader.GetInt32(0); // MemberID from first column
+                            string role = reader.GetString(1).Trim(); // Role from second column
 
                             MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            // Check the role
+                            // Check role
                             if (role.Equals("Admin", StringComparison.OrdinalIgnoreCase))
                             {
                                 AnaEkranAdmin adminForm = new AnaEkranAdmin();
@@ -68,7 +72,7 @@ namespace GYMProject
                         }
                         else
                         {
-                            MessageBox.Show("Incorrect username or password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Invalid username or password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
@@ -77,7 +81,14 @@ namespace GYMProject
                     MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
 
+        private void Giris_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                PerformLogin();
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -88,10 +99,10 @@ namespace GYMProject
 
 
             GraphicsPath path = new GraphicsPath();
-            path.AddArc(0, 0, cornerRadius, cornerRadius, 180, 90); // Top left corner
-            path.AddArc(panel1.Width - cornerRadius, 0, cornerRadius, cornerRadius, 270, 90); // Top right corner
-            path.AddArc(panel1.Width - cornerRadius, panel1.Height - cornerRadius, cornerRadius, cornerRadius, 0, 90); // Bottom right corner
-            path.AddArc(0, panel1.Height - cornerRadius, cornerRadius, cornerRadius, 90, 90); // Bottom left corner
+            path.AddArc(0, 0, cornerRadius, cornerRadius, 180, 90); // Sol üst
+            path.AddArc(panel1.Width - cornerRadius, 0, cornerRadius, cornerRadius, 270, 90); // Sað üst
+            path.AddArc(panel1.Width - cornerRadius, panel1.Height - cornerRadius, cornerRadius, cornerRadius, 0, 90); // Sað alt
+            path.AddArc(0, panel1.Height - cornerRadius, cornerRadius, cornerRadius, 90, 90); // Sol alt
             path.CloseFigure();
             panel1.Region = new Region(path);
         }
@@ -105,9 +116,11 @@ namespace GYMProject
             logoName1.BackColor = Color.Transparent;
             logoName2.BackColor = Color.Transparent;
 
+
+
             passwordTextBox.PasswordChar = '*';
 
-            // Set the initial state of the eye icon
+            // Göz simgesinin ilk halini ayarlama
             eyePictureBox.Image = Properties.Resources.hide;
             eyePictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
         }
@@ -116,18 +129,18 @@ namespace GYMProject
         {
             if (isPasswordVisible)
             {
-                // Hide the password
+                // Þifreyi gizle
                 passwordTextBox.PasswordChar = '*';
-                eyePictureBox.Image = Properties.Resources.hide;  // Closed eye icon
+                eyePictureBox.Image = Properties.Resources.hide;  // Göz kapalý simgesi
             }
             else
             {
-                // Show the password
-                passwordTextBox.PasswordChar = '\0';  // Shows the password
-                eyePictureBox.Image = Properties.Resources.eye;  // Open eye icon
+                // Þifreyi göster
+                passwordTextBox.PasswordChar = '\0';  // Þifreyi gösterir
+                eyePictureBox.Image = Properties.Resources.eye;  // Göz açýk simgesi
             }
 
-            // Toggle the state
+            // Durum deðiþtir
             isPasswordVisible = !isPasswordVisible;
         }
     }

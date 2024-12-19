@@ -14,7 +14,6 @@ namespace GYMProject
     public partial class MyClassesForm : Form
     {
         private int memberId;
-
         public MyClassesForm(int memberId)
         {
             InitializeComponent();
@@ -29,44 +28,32 @@ namespace GYMProject
         private void LoadMemberClasses(int memberId)
         {
             string connectionString = GlobalVariables.ConnectionString;
-            string query = @"
-        SELECT 
-            C.Name AS ClassName,
-            C.Schedule,
-            C.ClassType,
-            CONCAT(T.FirstName, ' ', T.LastName) AS TrainerFullName
-        FROM 
-            Attendance A
-        INNER JOIN 
-            Class C ON A.ClassID = C.ClassID
-        INNER JOIN 
-            Trainer T ON C.TrainerID = T.TrainerID
-        WHERE 
-            A.MemberID = @MemberID";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@MemberID", memberId); // ID of the logged-in member
+                    SqlCommand cmd = new SqlCommand("GetMemberClasses", conn);
+                    cmd.CommandType = CommandType.StoredProcedure; // Saklı prosedürü çağırıyoruz
+                    cmd.Parameters.AddWithValue("@MemberID", memberId); // Giriş yapan üyenin ID'si
+
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
 
-                    // Load the data into DataGridView
+                    // DataGridView'e verileri yükle
                     dataGridViewMemberClasses.DataSource = dt;
 
-                    dataGridViewMemberClasses.Columns["ClassName"].HeaderText = "Class Name";
-                    dataGridViewMemberClasses.Columns["Schedule"].HeaderText = "Schedule";
-                    dataGridViewMemberClasses.Columns["ClassType"].HeaderText = "Class Type";
-                    dataGridViewMemberClasses.Columns["TrainerFullName"].HeaderText = "Trainer";
-
+                    // Sütun başlıklarını Türkçeleştir
+                    dataGridViewMemberClasses.Columns["ClassName"].HeaderText = "Sınıf Adı";
+                    dataGridViewMemberClasses.Columns["Schedule"].HeaderText = "Program";
+                    dataGridViewMemberClasses.Columns["ClassType"].HeaderText = "Sınıf Türü";
+                    dataGridViewMemberClasses.Columns["TrainerFullName"].HeaderText = "Eğitmen";
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("An error occurred: " + ex.Message);
+                    MessageBox.Show("Bir hata oluştu: " + ex.Message);
                 }
             }
         }

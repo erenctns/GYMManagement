@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace GYMProject
 {
@@ -20,7 +21,7 @@ namespace GYMProject
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            // Get user input
+            // Get user inputs
             string firstName = firstNameTextBox.Text.Trim();
             string lastName = lastNameTextBox.Text.Trim();
             string gender = genderComboBox.SelectedItem?.ToString();
@@ -38,10 +39,24 @@ namespace GYMProject
                 return;
             }
 
+            // Email validation
+            if (!IsValidEmail(email))
+            {
+                MessageBox.Show("Please enter a valid email address.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Phone number validation
+            if (!IsValidPhoneNumber(phoneNumber))
+            {
+                MessageBox.Show("Please enter a valid phone number (digits only).", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             // SQL connection
             string connectionString = GlobalVariables.ConnectionString;
 
-            // New record insertion query
+            // Insert query for new record
             string insertQuery = @"INSERT INTO Trainer (FirstName, LastName, Gender, Age, PhoneNumber, Email, Specialization)
                                    VALUES (@FirstName, @LastName, @Gender, @Age, @PhoneNumber, @Email, @Specialization)";
 
@@ -67,12 +82,12 @@ namespace GYMProject
 
                         if (rowsAffected > 0)
                         {
-                            MessageBox.Show("Trainer successfully registered.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Trainer successfully added.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             ClearForm(); // Clear the form
                         }
                         else
                         {
-                            MessageBox.Show("An issue occurred during registration.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("An issue occurred during the registration.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
@@ -81,7 +96,20 @@ namespace GYMProject
             {
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
 
+        private bool IsValidEmail(string email)
+        {
+            // Regular expression for email validation
+            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, emailPattern);
+        }
+
+        private bool IsValidPhoneNumber(string phoneNumber)
+        {
+            // Regular expression for phone number validation (digits only)
+            string phonePattern = @"^\d+$";
+            return Regex.IsMatch(phoneNumber, phonePattern);
         }
 
         private void ClearForm()
@@ -96,9 +124,6 @@ namespace GYMProject
             specializationComboBox.SelectedIndex = -1;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
+
 }

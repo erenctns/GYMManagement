@@ -21,6 +21,7 @@ namespace GYMProject
         private void lastNameLabel_Click(object sender, EventArgs e)
         {
 
+
         }
 
         private void genderComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -43,24 +44,39 @@ namespace GYMProject
                     string.IsNullOrWhiteSpace(addressTextBox.Text) ||
                     membershipTypeComboBox.SelectedItem == null)
                 {
-                    MessageBox.Show("Please fill in all the fields!", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Please fill out all the fields!", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Email validation
+                if (!System.Text.RegularExpressions.Regex.IsMatch(emailTextBox.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+                {
+                    MessageBox.Show("Please enter a valid email address!", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Phone number validation
+                if (!System.Text.RegularExpressions.Regex.IsMatch(phoneNumberTextBox.Text, @"^\d{11}$"))
+                {
+                    MessageBox.Show("Phone number must be exactly 11 digits!", "Invalid Phone Number", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
                 decimal membershipPrice = 0;
                 DateTime startDate = DateTime.Now;
                 DateTime endDate = startDate;
-                // Determine price based on MembershipType
+
+                // Determine membership price and end date based on membership type
                 switch (membershipTypeComboBox.SelectedItem.ToString())
                 {
                     case "Month":
-                        membershipPrice = 1000; // Price for 1 month
-                        endDate = startDate.AddMonths(1); // Add 1 month
+                        membershipPrice = 1000; // Price for one month
+                        endDate = startDate.AddMonths(1); // Add one month
                         break;
 
                     case "Year":
-                        membershipPrice = 9000; // Price for 1 year
-                        endDate = startDate.AddYears(1);
+                        membershipPrice = 9000; // Price for one year
+                        endDate = startDate.AddYears(1); // Add one year
                         break;
 
                     default:
@@ -74,11 +90,11 @@ namespace GYMProject
                 {
                     connection.Open();
 
-                    // Insert data into the Member table
+                    // Insert data into Member table
                     string insertMemberQuery = @"
-                INSERT INTO Member (FirstName, LastName, Gender, Age, PhoneNumber, Email, Address, Role)
-                OUTPUT INSERTED.MemberID
-                VALUES (@FirstName, @LastName, @Gender, @Age, @PhoneNumber, @Email, @Address, @Role)";
+            INSERT INTO Member (FirstName, LastName, Gender, Age, PhoneNumber, Email, Address, Role)
+            OUTPUT INSERTED.MemberID
+            VALUES (@FirstName, @LastName, @Gender, @Age, @PhoneNumber, @Email, @Address, @Role)";
 
                     using (SqlCommand command = new SqlCommand(insertMemberQuery, connection))
                     {
@@ -91,13 +107,12 @@ namespace GYMProject
                         command.Parameters.AddWithValue("@Address", addressTextBox.Text);
                         command.Parameters.AddWithValue("@Role", roleComboBox.SelectedItem.ToString());
 
-
                         int memberId = (int)command.ExecuteScalar(); // Get MemberID
 
-                        // Insert data into the Membership table
+                        // Insert data into Membership table
                         string insertMembershipQuery = @"
-INSERT INTO Membership (MemberID, MembershipType, Price, StartDate, EndDate)
-VALUES (@MemberID, @MembershipType, @Price, @StartDate, @EndDate)";
+            INSERT INTO Membership (MemberID, MembershipType, Price, StartDate, EndDate)
+            VALUES (@MemberID, @MembershipType, @Price, @StartDate, @EndDate)";
 
                         using (SqlCommand membershipCommand = new SqlCommand(insertMembershipQuery, connection))
                         {
@@ -107,15 +122,16 @@ VALUES (@MemberID, @MembershipType, @Price, @StartDate, @EndDate)";
                             membershipCommand.Parameters.AddWithValue("@StartDate", startDate);
                             membershipCommand.Parameters.AddWithValue("@EndDate", endDate);
 
-                            membershipCommand.ExecuteNonQuery(); // Insert Membership data
+                            membershipCommand.ExecuteNonQuery(); // Add Membership data
                         }
-                        // Insert data into the userAuth table (username and password)
+
+                        // Insert data into userAuth table (username and password)
                         string username = $"{firstNameTextBox.Text.ToLower()}{memberId}";
-                        string password = username; // Set password equal to the username, you can use a different method for encryption if needed.
+                        string password = username; // Password is set to username for simplicity
 
                         string insertAuthQuery = @"
-                    INSERT INTO userAuth (Username, Password, MemberID)
-                    VALUES (@Username, @Password, @MemberID)";
+            INSERT INTO userAuth (Username, Password, MemberID)
+            VALUES (@Username, @Password, @MemberID)";
 
                         using (SqlCommand authCommand = new SqlCommand(insertAuthQuery, connection))
                         {
@@ -123,18 +139,18 @@ VALUES (@MemberID, @MembershipType, @Price, @StartDate, @EndDate)";
                             authCommand.Parameters.AddWithValue("@Password", password);
                             authCommand.Parameters.AddWithValue("@MemberID", memberId);
 
-                            authCommand.ExecuteNonQuery(); // Insert userAuth data
+                            authCommand.ExecuteNonQuery(); // Add userAuth data
                         }
 
-                        // Create the Payment form and pass MemberID, price, and other details
+                        // Create Payment form and pass the required data
                         string fullName = $"{firstNameTextBox.Text} {lastNameTextBox.Text}";
                         string email = emailTextBox.Text;
                         string membershipType = membershipTypeComboBox.SelectedItem.ToString();
 
                         Payment paymentForm = new Payment(memberId, membershipPrice, fullName, email, membershipType);
-                        paymentForm.MembershipAmount = membershipPrice; // Pass the price
+                        paymentForm.MembershipAmount = membershipPrice; // Pass price
                         paymentForm.Show();
-                        this.Hide(); // Hide the NewMember form
+                        this.Hide(); // Hide NewMember form
                     }
                 }
             }
@@ -144,9 +160,11 @@ VALUES (@MemberID, @MembershipType, @Price, @StartDate, @EndDate)";
             }
         }
 
+      
+
         private void NewMember_Load(object sender, EventArgs e)
         {
-
+        
         }
     }
 }
