@@ -8,21 +8,21 @@ namespace GYMProject
 {
     public partial class TrainerSchedule : Form
     {
-        private int trainerId; // Seçili eğitmenin ID'si
+        private int trainerId; // The selected trainer's ID
 
         public TrainerSchedule(int trainerId)
         {
             InitializeComponent();
-            this.trainerId = trainerId; // Eğitmen ID'sini al
+            this.trainerId = trainerId; // Get the trainer's ID
             this.Load += TrainerSchedule_Load;
         }
 
         private void TrainerSchedule_Load(object sender, EventArgs e)
         {
-            this.Text = "Trainer Ders Programı";
+            this.Text = "Trainer Schedule";
             this.Size = new Size(800, 500);
 
-            // DataGridView oluştur ve ayarla
+            // Create and configure the DataGridView
             DataGridView dataGridViewSchedule = new DataGridView
             {
                 Dock = DockStyle.Fill,
@@ -32,13 +32,13 @@ namespace GYMProject
                 AllowUserToDeleteRows = false
             };
 
-            // Stil ayarlarını uygula
+            // Apply styling settings
             StyleDataGridView(dataGridViewSchedule);
 
-            // Veriyi yükle
+            // Load the trainer's schedule data
             LoadTrainerSchedule(dataGridViewSchedule);
 
-            // Form'a DataGridView ekle
+            // Add DataGridView to the form
             this.Controls.Add(dataGridViewSchedule);
         }
 
@@ -48,13 +48,12 @@ namespace GYMProject
             {
                 string connectionString = GlobalVariables.ConnectionString;
 
-
                 string query = @"
                     SELECT 
                         ClassID AS [ID], 
-                        Name AS [Ders Adı], 
-                        Schedule AS [Program], 
-                        ClassType AS [Ders Tipi]
+                        Name AS [Class Name], 
+                        Schedule AS [Schedule], 
+                        ClassType AS [Class Type]
                     FROM 
                         Class
                     WHERE 
@@ -79,7 +78,7 @@ namespace GYMProject
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ders programı yüklenirken hata oluştu: {ex.Message}");
+                MessageBox.Show($"An error occurred while loading the schedule: {ex.Message}");
             }
         }
 

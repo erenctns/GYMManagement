@@ -15,7 +15,6 @@ namespace GYMProject
     {
         string connectionString = GlobalVariables.ConnectionString;
 
-
         public Product()
         {
             InitializeComponent();
@@ -40,7 +39,6 @@ namespace GYMProject
                         string productName = row["ProductName"].ToString();
                         string price = row["Price"].ToString();
                         string stock = row["Stock"].ToString();
-
 
                         if (productName == "Protein Bar")
                         {
@@ -96,19 +94,17 @@ namespace GYMProject
                             towelPrice.Text = price;
                             towelStock.Text = stock;
                         }
-
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Veri yüklenirken bir hata oluştu: " + ex.Message);
+                MessageBox.Show("An error occurred while loading the data: " + ex.Message);
             }
         }
 
         private void updateButton_Click_1(object sender, EventArgs e)
         {
-
             UpdateProduct updateProductForm = new UpdateProduct();
             updateProductForm.Show();
         }

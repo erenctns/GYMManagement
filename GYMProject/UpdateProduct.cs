@@ -16,7 +16,7 @@ namespace GYMProject
 
         private void UpdateProduct_Load(object sender, EventArgs e)
         {
-            // ComboBox'a ProductName değerlerini yükle
+            // Load ProductName values into ComboBox
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -29,7 +29,7 @@ namespace GYMProject
                 reader.Close();
             }
 
-            // NumericUpDown'ları sıfırla ve maksimum değeri sınırsız yap
+            // Reset NumericUpDown values and set maximum value to unlimited
             productPriceCounter.Value = 0;
             productStockCounter.Value = 0;
 
@@ -41,29 +41,29 @@ namespace GYMProject
         {
             try
             {
-                // Seçilen ürün bilgilerini al
+                // Get selected product details
                 string selectedProduct = productNameComboBox.SelectedItem?.ToString();
                 decimal newPrice = productPriceCounter.Value;
                 int newStock = (int)productStockCounter.Value;
 
-                // Girdi kontrolü
+                // Input validation
                 if (string.IsNullOrEmpty(selectedProduct))
                 {
-                    MessageBox.Show("Lütfen bir ürün seçin!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Please select a product!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 if (newPrice <= 0)
                 {
-                    MessageBox.Show("Lütfen geçerli bir fiyat girin!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Please enter a valid price!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 if (newStock < 0)
                 {
-                    MessageBox.Show("Lütfen geçerli bir stok miktarı girin!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Please enter a valid stock quantity!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                // Veritabanını güncelleme işlemi
+                // Update database operation
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -76,24 +76,24 @@ namespace GYMProject
                     int rowsAffected = command.ExecuteNonQuery();
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show("Ürün başarıyla güncellendi!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Product successfully updated!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("Güncelleme başarısız oldu!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Update failed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Hata: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
         private void productNameComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            // Seçilen ürüne ait fiyat ve stok bilgilerini getir
+            // Retrieve price and stock information for the selected product
             string selectedProduct = productNameComboBox.SelectedItem?.ToString();
             if (string.IsNullOrEmpty(selectedProduct)) return;
 
@@ -109,7 +109,7 @@ namespace GYMProject
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.Read())
                     {
-                        // Fiyat ve stok bilgilerini NumericUpDown'lara yükle
+                        // Load price and stock values into NumericUpDown controls
                         productPriceCounter.Value = Convert.ToDecimal(reader["Price"]);
                         productStockCounter.Value = Convert.ToInt32(reader["Stock"]);
                     }
@@ -118,7 +118,7 @@ namespace GYMProject
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Hata: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
     }

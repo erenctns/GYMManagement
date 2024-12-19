@@ -10,41 +10,30 @@ using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 using ScottPlot;
 
-
-
-
-
 namespace GYMProject
 {
-
-
     public partial class ClassDetails : Form
     {
-
         public ClassDetails()
         {
             InitializeComponent();
-
-
         }
-
-
 
         private void CustomerIncomeForm_Load(object sender, EventArgs e)
         {
-            // Veritabanından verileri çek
+            // Fetch data from the database
             (string[] classNames, double[] attendanceCounts) = GetClassAttendanceData();
 
-            // Verileri grafikle
+            // Display data on the graph
             PlotGraph(classNames, attendanceCounts);
         }
 
         private (string[] classNames, double[] attendanceCounts) GetClassAttendanceData()
         {
-            // Veritabanı bağlantı dizesi
+            // Database connection string
             string connectionString = GlobalVariables.ConnectionString;
 
-            // SQL sorgusu: Her sınıftaki katılımcı sayısını getir
+            // SQL query: Retrieve the number of participants for each class
             string query = @"
                 SELECT c.Name, COUNT(a.AttendanceID) AS AttendanceCount
                 FROM Class c
@@ -70,7 +59,8 @@ namespace GYMProject
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Hata: " + ex.Message);
+                    // Show a message to the user in case of an error
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
 
@@ -79,27 +69,23 @@ namespace GYMProject
 
         private void PlotGraph(string[] classNames, double[] attendanceCounts)
         {
-            // Yeni bir ScottPlot Plot nesnesi oluştur
+            // Create a new ScottPlot Plot object
             var plt = formsPlot1.Plot;
 
-            // Çubuk grafik ekle
-            plt.Add.Bars(attendanceCounts);  // AddBar kullanılır
+            // Add a bar chart
+            plt.Add.Bars(attendanceCounts);  // AddBar is used
 
-            // Başlık ve eksen isimleri
-            plt.Title("Sınıflara Göre Katılım Sayısı");
-            plt.YLabel("Katılım Sayısı");
-            plt.XLabel("Sınıflar");
+            // Set title and axis labels
+            plt.Title("Attendance Count by Class");
+            plt.YLabel("Attendance Count");
+            plt.XLabel("Classes");
 
-            // X ekseni etiketlerini ayarla
+            // Set X-axis labels
             double[] xPositions = System.Linq.Enumerable.Range(0, classNames.Length).Select(i => (double)i).ToArray();
             plt.Axes.Bottom.SetTicks(xPositions, classNames);
 
-            // Grafik yenile
+            // Refresh the graph
             formsPlot1.Refresh();
         }
-
-    } 
-    
+    }
 }
-
-

@@ -20,7 +20,7 @@ namespace GYMProject
 
         private void ExpiringMembershipsForm_Load(object sender, EventArgs e)
         {
-            // Üyelik süresi dolmak üzere olan üyeleri kontrol et
+            // Check for members with expiring memberships
             LoadMembershipExpirationData();
         }
 
@@ -44,12 +44,12 @@ namespace GYMProject
                     DataTable dt = new DataTable();
                     da.Fill(dt);
 
-                    // DataGridView'e verileri yükle
+                    // Load the data into the DataGridView
                     dataGridViewExpiringMemberships.DataSource = dt;
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Bir hata oluştu: " + ex.Message);
+                    MessageBox.Show("An error occurred: " + ex.Message);
                 }
             }
         }
@@ -58,14 +58,14 @@ namespace GYMProject
         {
             if (e.RowIndex >= 0)
             {
-                // Bitiş tarihi sütunu (ExpirationDate) varsayılan olarak 3. sütun
+                // The expiration date column (ExpirationDate) is assumed to be the 3rd column by default
                 if (dataGridViewExpiringMemberships.Columns[e.ColumnIndex].Name == "EndDate")
                 {
                     DateTime EndDate = Convert.ToDateTime(dataGridViewExpiringMemberships.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
                     if (EndDate <= DateTime.Now.AddDays(27))
                     {
-                        e.CellStyle.BackColor = Color.Red; // Yaklaşan tarihler kırmızı
-                        e.CellStyle.ForeColor = Color.White; // Yazıyı beyaz yap
+                        e.CellStyle.BackColor = Color.Red; // Upcoming dates in red
+                        e.CellStyle.ForeColor = Color.White; // Set the text to white
                     }
                 }
             }

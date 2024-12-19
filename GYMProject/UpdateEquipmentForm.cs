@@ -13,7 +13,7 @@ namespace GYMProject
 {
     public partial class UpdateEquipmentForm : Form
     {
-        // Veritabanı bağlantı dizesi
+        // Database connection string
         string connectionString = GlobalVariables.ConnectionString;
 
 
@@ -25,7 +25,7 @@ namespace GYMProject
 
         private void UpdateEquipmentForm_Load(object sender, EventArgs e)
         {
-            // ComboBox'a EquipmentName değerlerini yükle
+            // Load EquipmentName values into ComboBox
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -38,37 +38,37 @@ namespace GYMProject
                 reader.Close();
             }
 
-            // conditionNameComboBox'a sabit değerleri yükle
+            // Load fixed values into conditionNameComboBox
             ConditionNameComboBox.Items.AddRange(new string[] { "Good", "Needs Repair", "Broken" });
         }
+
         private void saveButton_Click_1(object sender, EventArgs e)
         {
             try
             {
-                // Formdaki değerleri al
+                // Get values from the form
                 string selectedEquipment = EquipmentNameComboBox.SelectedItem?.ToString();
                 int newQuantity = (int)quantityCounter.Value;
                 string newCondition = ConditionNameComboBox.SelectedItem?.ToString();
 
-                // Girdi kontrolü
+                // Input validation
                 if (string.IsNullOrEmpty(selectedEquipment))
                 {
-                    MessageBox.Show("Lütfen ekipman seçin!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                    MessageBox.Show("Please select equipment!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 if (newQuantity <= 0)
                 {
-                    MessageBox.Show("Lütfen geçerli bir miktar girin!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Please enter a valid quantity!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 if (string.IsNullOrEmpty(newCondition))
                 {
-                    MessageBox.Show("Lütfen durum seçin!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Please select a condition!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                // Veritabanını güncelle
+                // Update the database
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -81,31 +81,28 @@ namespace GYMProject
                     int rowsAffected = command.ExecuteNonQuery();
                     if (rowsAffected > 0)
                     {
-                        // Güncelleme başarılı, önce mesaj göster, sonra formu kapat
-                        MessageBox.Show("Ekipman başarıyla güncellendi!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        this.Close(); // Formu kapat
+                        // Successful update, show message first, then close the form
+                        MessageBox.Show("Equipment updated successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close(); // Close the form
                     }
                     else
                     {
-                        MessageBox.Show("Güncelleme başarısız oldu!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                        MessageBox.Show("Update failed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Hata: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
-
-        }        
+        }
 
         private void EquipmentNameComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            // Seçilen EquipmentName'e ait Quantity ve Condition bilgilerini getir
+            // Retrieve Quantity and Condition information for the selected EquipmentName
             string selectedEquipment = EquipmentNameComboBox.SelectedItem?.ToString();
 
-            // Eğer seçili öğe yoksa, işlem yapma
+            // If no item is selected, do nothing
             if (string.IsNullOrEmpty(selectedEquipment)) return;
 
             try
@@ -120,7 +117,7 @@ namespace GYMProject
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.Read())
                     {
-                        // NumericUpDown ve ComboBox'ları doldur
+                        // Fill NumericUpDown and ComboBox controls
                         quantityCounter.Value = Convert.ToInt32(reader["Quantity"]);
                         ConditionNameComboBox.SelectedItem = reader["Condition"].ToString();
                     }
@@ -129,10 +126,8 @@ namespace GYMProject
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Hata: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
-
         }
-
     }
 }

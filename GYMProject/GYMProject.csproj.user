@@ -28,6 +28,9 @@
     <Compile Update="ExpiringMembershipsForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Incomes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,9 +59,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UpdateEquipmentForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Giris.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="MemberList.cs">

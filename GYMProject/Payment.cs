@@ -14,15 +14,14 @@ namespace GYMProject
 {
     public partial class Payment : Form
     {
-        public int MemberID { get; set; } // MemberID'yi tutacak özellik
-        public decimal? MembershipAmount { get; set; } // MembershipAmount'u decimal olarak tutalım
-        public string FullName { get; set; } // Full Name özelliği
-        public string Email { get; set; } // Email özelliği
-        public string MembershipType { get; set; } // Membership Type özelliği
-        public DateTime PaymentDate { get; set; } // Bugünün tarihini tutacak özellik
+        public int MemberID { get; set; } // Property to hold MemberID
+        public decimal? MembershipAmount { get; set; } // Property to hold MembershipAmount as decimal
+        public string FullName { get; set; } // Property for Full Name
+        public string Email { get; set; } // Property for Email
+        public string MembershipType { get; set; } // Property for Membership Type
+        public DateTime PaymentDate { get; set; } // Property to hold today's date
 
-
-        // Yapıcı metot, MemberID'yi alacak
+        // Constructor that takes MemberID
         public Payment(int memberId, decimal? membershipAmount, string fullName, string email, string membershipType)
         {
             InitializeComponent();
@@ -36,8 +35,9 @@ namespace GYMProject
 
         private void Payment_Load(object sender, EventArgs e)
         {
-            
+
         }
+
         private void Payment_Load_1(object sender, EventArgs e)
         {
             fullNameLabel.Text = "Full Name:";
@@ -50,10 +50,10 @@ namespace GYMProject
             membershipTypeLabelValue.Text = MembershipType;
 
             paymentDateLabel.Text = "Date:";
-            string todayDate = DateTime.Now.ToString("dd/MM/yyyy"); 
+            string todayDate = DateTime.Now.ToString("dd/MM/yyyy");
             paymentDateLabelValue.Text = todayDate;
 
-            // Tüm label'ların yazılarını sola hizalamak için
+            // Align all labels' text to the left
             fullNameLabel.TextAlign = ContentAlignment.MiddleLeft;
             fullnameLabelValue.TextAlign = ContentAlignment.MiddleLeft;
             emailLabel.TextAlign = ContentAlignment.MiddleLeft;
@@ -62,9 +62,8 @@ namespace GYMProject
             membershipTypeLabelValue.TextAlign = ContentAlignment.MiddleLeft;
             amountLabel1.TextAlign = ContentAlignment.MiddleLeft;
             paymentDateLabelValue.TextAlign = ContentAlignment.MiddleLeft;
-        
 
-            // MembershipAmount değeri varsa label'a yazdır
+            // If MembershipAmount has a value, display it in the label
             if (MembershipAmount.HasValue)
             {
                 amountLabel1.Text = "Total Amount:";
@@ -72,7 +71,7 @@ namespace GYMProject
             }
             else
             {
-                amountLabel1.Text = "Total Amount:"; // Eğer değer yoksa, varsayılan bir değer göster
+                amountLabel1.Text = "Total Amount:"; // If no value, show a default value
                 amountLabelVaule1.Text = "0 TL";
             }
         }
@@ -81,32 +80,31 @@ namespace GYMProject
         {
             try
             {
-                // SQL bağlantısı ve komutları
+                // SQL connection and commands
                 using (var connection = new SqlConnection(GlobalVariables.ConnectionString))
                 {
                     connection.Open();
 
-                    // Payment tablosuna veri ekleme
+                    // Inserting data into the Payment table
                     string insertPaymentQuery = "INSERT INTO Payment (MemberID, Amount, PaymentDate, PaymentStatus) " +
                                                  "VALUES (@MemberID, @Amount, @PaymentDate, @PaymentStatus)";
 
                     using (var command = new SqlCommand(insertPaymentQuery, connection))
                     {
-                        // MemberID ve Amount değerlerini burada belirleyin
-                        int memberId = this.MemberID; // Payment formundan gelen MemberID
-                        decimal amount = this.MembershipAmount.HasValue ? this.MembershipAmount.Value : 0; // MembershipAmount varsa kullan, yoksa 0
+                        // Define MemberID and Amount values here
+                        int memberId = this.MemberID; // MemberID from Payment form
+                        decimal amount = this.MembershipAmount.HasValue ? this.MembershipAmount.Value : 0; // Use MembershipAmount if available, otherwise 0
 
                         command.Parameters.AddWithValue("@MemberID", memberId);
                         command.Parameters.AddWithValue("@Amount", amount);
                         command.Parameters.AddWithValue("@PaymentDate", DateTime.Now);
-                        command.Parameters.AddWithValue("@PaymentStatus", true); // Ödeme yapıldı
+                        command.Parameters.AddWithValue("@PaymentStatus", true); // Payment made
 
                         command.ExecuteNonQuery();
                     }
 
                     MessageBox.Show("Payment successfully recorded!");
-                    this.Close();
-
+                    this.Close(); // Close the form after successful payment
 
                 }
             }
@@ -115,7 +113,5 @@ namespace GYMProject
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
         }
-
-      
     }
 }

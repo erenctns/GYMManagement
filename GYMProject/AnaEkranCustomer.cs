@@ -13,12 +13,12 @@ namespace GYMProject
 {
     public partial class AnaEkranCustomer : Form
     {
-        private int memberId; // Kullanıcının MemberID'sini tutmak için
+        private int memberId; // To store the MemberID of the user
         private int currentMemberId;
         public AnaEkranCustomer(int memberId)
         {
             InitializeComponent();
-            this.memberId = memberId; // Constructor'dan gelen MemberID'yi sakla
+            this.memberId = memberId; // Store the MemberID coming from the constructor
             currentMemberId = memberId;
         }
 
@@ -40,7 +40,7 @@ namespace GYMProject
                 {
                     conn.Open();
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@MemberID", currentMemberId); // Giriş yapan üyenin ID'si
+                    cmd.Parameters.AddWithValue("@MemberID", currentMemberId); // ID of the logged-in member
                     SqlDataReader reader = cmd.ExecuteReader();
 
                     if (reader.Read())
@@ -48,17 +48,17 @@ namespace GYMProject
                         DateTime EndDate = reader.GetDateTime(0);
                         TimeSpan remainingDays = EndDate - DateTime.Now;
 
-                        // Eğer üyelik bitiş tarihi 7 gün veya daha yakınsa pop-up göster
+                        // If the membership expiration date is 7 days or closer, show a pop-up
                         if (remainingDays.Days <= 27)
                         {
-                            MessageBox.Show($"Üyeliğinizin bitmesine {remainingDays.Days} gün kaldı! Lütfen yenileyin.");
+                            MessageBox.Show($"Your membership will expire in {remainingDays.Days} days! Please renew it.");
                         }
                     }
                     reader.Close();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Bir hata oluştu: " + ex.Message);
+                    MessageBox.Show("An error occurred: " + ex.Message);
                 }
             }
         }
@@ -74,7 +74,7 @@ namespace GYMProject
                 {
                     conn.Open();
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@MemberID", currentMemberId); // Giriş yapan üyenin ID'si
+                    cmd.Parameters.AddWithValue("@MemberID", currentMemberId); // ID of the logged-in member
                     SqlDataReader reader = cmd.ExecuteReader();
 
                     if (reader.Read())
@@ -82,7 +82,7 @@ namespace GYMProject
                         string firstName = reader.GetString(0);
                         string lastName = reader.GetString(1);
 
-                        // Label'a "Welcome customer_name" yaz
+                        // Write "Welcome customer_name" on the label
                         welcomeLabel.Text = $"Welcome {firstName} {lastName}";
                     }
 
@@ -90,11 +90,10 @@ namespace GYMProject
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Bir hata oluştu: " + ex.Message);
+                    MessageBox.Show("An error occurred: " + ex.Message);
                 }
             }
         }
-
 
         private void customerInfo_Click(object sender, EventArgs e)
         {

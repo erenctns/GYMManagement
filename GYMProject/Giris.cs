@@ -8,6 +8,8 @@ namespace GYMProject
         public Giris()
         {
             InitializeComponent();
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(Giris_KeyDown);
         }
 
         private void userNameTextBox_TextChanged(object sender, EventArgs e)
@@ -17,21 +19,23 @@ namespace GYMProject
 
         private void loginButton_Click(object sender, EventArgs e)
         {
+            PerformLogin();
+
+        }
+
+        private void PerformLogin()
+        {
             string connectionString = GlobalVariables.ConnectionString;
-            // Kullanýcý adý ve þifreyi alýn
-            string username = userNameTextBox.Text;  // Kullanýcý adý textBox'ý
-            string password = passwordTextBox.Text;  // Þifre textBox'ý
+            // Retrieve username and password
+            string username = userNameTextBox.Text;
+            string password = passwordTextBox.Text;
 
-            // Veritabaný baðlantý dizesi
-            
-
-            // SQL sorgusu: Kullanýcýnýn rolünü al
+            // SQL query to retrieve user's role
             string query = @"
                 SELECT m.MemberID, m.Role
                 FROM UserAuth u
                 JOIN Member m ON u.MemberID = m.MemberID
                 WHERE u.Username = @username AND u.Password = @password";
-
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -47,12 +51,12 @@ namespace GYMProject
                     {
                         if (reader.Read())
                         {
-                            int memberId = reader.GetInt32(0); // Ýlk sütun MemberID
-                            string role = reader.GetString(1).Trim(); // Ýkinci sütun Role
+                            int memberId = reader.GetInt32(0); // MemberID from first column
+                            string role = reader.GetString(1).Trim(); // Role from second column
 
-                            MessageBox.Show("Giriþ baþarýlý!", "Baþarýlý", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            // Rolü kontrol et
+                            // Check role
                             if (role.Equals("Admin", StringComparison.OrdinalIgnoreCase))
                             {
                                 AnaEkranAdmin adminForm = new AnaEkranAdmin();
@@ -60,24 +64,31 @@ namespace GYMProject
                             }
                             else if (role.Equals("Customer", StringComparison.OrdinalIgnoreCase))
                             {
-                                AnaEkranCustomer customerForm = new AnaEkranCustomer(memberId); // MemberID'yi geçir
+                                AnaEkranCustomer customerForm = new AnaEkranCustomer(memberId); // Pass MemberID
                                 customerForm.Show();
                             }
 
-                            this.Hide(); // Giriþ ekranýný gizle
+                            this.Hide(); // Hide the login form
                         }
                         else
                         {
-                            MessageBox.Show("Kullanýcý adý veya þifre hatalý!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Invalid username or password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Bir hata oluþtu: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
 
+        private void Giris_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                PerformLogin();
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

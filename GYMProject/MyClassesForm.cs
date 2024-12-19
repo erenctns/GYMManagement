@@ -28,28 +28,16 @@ namespace GYMProject
         private void LoadMemberClasses(int memberId)
         {
             string connectionString = GlobalVariables.ConnectionString;
-            string query = @"
-        SELECT 
-            C.Name AS ClassName,
-            C.Schedule,
-            C.ClassType,
-            CONCAT(T.FirstName, ' ', T.LastName) AS TrainerFullName
-        FROM 
-            Attendance A
-        INNER JOIN 
-            Class C ON A.ClassID = C.ClassID
-        INNER JOIN 
-            Trainer T ON C.TrainerID = T.TrainerID
-        WHERE 
-            A.MemberID = @MemberID";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@MemberID", memberId); // Giriş yapan üyenin ID'si
+                    SqlCommand cmd = new SqlCommand("GetMemberClasses", conn);
+                    cmd.CommandType = CommandType.StoredProcedure; // Call hide prosedure
+                    cmd.Parameters.AddWithValue("@MemberID", memberId); // UserID that tries to log on
+
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
@@ -57,11 +45,11 @@ namespace GYMProject
                     // DataGridView'e verileri yükle
                     dataGridViewMemberClasses.DataSource = dt;
 
+                    // Sütun başlıklarını Türkçeleştir
                     dataGridViewMemberClasses.Columns["ClassName"].HeaderText = "Sınıf Adı";
                     dataGridViewMemberClasses.Columns["Schedule"].HeaderText = "Program";
                     dataGridViewMemberClasses.Columns["ClassType"].HeaderText = "Sınıf Türü";
                     dataGridViewMemberClasses.Columns["TrainerFullName"].HeaderText = "Eğitmen";
-
                 }
                 catch (Exception ex)
                 {
