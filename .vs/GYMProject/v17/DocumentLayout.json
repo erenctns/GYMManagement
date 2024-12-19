@@ -43,7 +43,7 @@
       "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\anaekranadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|c:\\users\\ensar\\desktop\\gityeni\\gymmanagement\\gymproject\\customerinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\gymproject\\customerinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{552086F3-D1D3-4FC2-968C-0E7FC734F4CC}|GYMProject\\GYMProject.csproj|solutionrelative:gymproject\\customerinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -252,7 +252,7 @@
               "RelativeDocumentMoniker": "GYMProject\\MemberList.cs",
               "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\MemberList.cs",
               "RelativeToolTip": "GYMProject\\MemberList.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-16T15:48:29.819Z",
               "EditorCaption": ""
@@ -331,8 +331,7 @@
               "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\CustomerInfo.cs [Tasar\u0131m]",
               "RelativeToolTip": "GYMProject\\CustomerInfo.cs [Tasar\u0131m]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T17:04:52.923Z",
-              "EditorCaption": " [Tasar\u0131m]"
+              "WhenOpened": "2024-12-18T17:04:52.923Z"
             },
             {
               "$type": "Document",
@@ -356,8 +355,7 @@
               "ToolTip": "C:\\Users\\ensar\\Desktop\\GitYeni\\GYMManagement\\GYMProject\\AnaEkranAdmin.cs [Tasar\u0131m]",
               "RelativeToolTip": "GYMProject\\AnaEkranAdmin.cs [Tasar\u0131m]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T13:49:30.325Z",
-              "EditorCaption": " [Tasar\u0131m]"
+              "WhenOpened": "2024-12-17T13:49:30.325Z"
             },
             {
               "$type": "Document",
