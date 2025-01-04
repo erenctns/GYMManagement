@@ -48,7 +48,7 @@ namespace GYMProject
                         DateTime EndDate = reader.GetDateTime(0);
                         TimeSpan remainingDays = EndDate - DateTime.Now;
 
-                        // If the membership expiration date is 7 days or closer, show a pop-up
+                        // If the membership expiration date is 27 days or closer, show a pop-up
                         if (remainingDays.Days <= 27)
                         {
                             MessageBox.Show($"Your membership will expire in {remainingDays.Days} days! Please renew it.");

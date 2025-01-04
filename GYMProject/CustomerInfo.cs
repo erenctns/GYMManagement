@@ -13,22 +13,22 @@ namespace GYMProject
 {
     public partial class CustomerInfo : Form
     {
-        private int currentMemberId; // Giriş yapan kullanıcının MemberID'si
+        private int currentMemberId; // MemberID of the logged-in user
 
         public CustomerInfo(int memberId)
         {
             InitializeComponent();
-            currentMemberId = memberId; // Giriş yapan kullanıcının MemberID'sini al
-            InitializeDataGridView(); // DataGridView'i başlat
-            LoadUserInfo(memberId); // Kullanıcı bilgilerini yükle
+            currentMemberId = memberId; // Get the MemberID of the logged-in user
+            InitializeDataGridView(); // Initialize the DataGridView
+            LoadUserInfo(memberId); // Load user information
         }
 
         private void InitializeDataGridView()
         {
-            // DataGridView'e sütunları programla ekliyoruz
-            dataGridViewUserInfo.Columns.Clear(); // Önceden tanımlı sütunları temizle
+            // Programmatically add columns to DataGridView
+            dataGridViewUserInfo.Columns.Clear(); // Clear pre-defined columns
 
-            // Yeni sütunlar ekleyelim
+            // Add new columns
             dataGridViewUserInfo.Columns.Add("FirstName", "First Name");
             dataGridViewUserInfo.Columns.Add("LastName", "Last Name");
             dataGridViewUserInfo.Columns.Add("StartDate", "Start Date");
@@ -37,15 +37,15 @@ namespace GYMProject
             dataGridViewUserInfo.Columns.Add("Username", "Username");
             dataGridViewUserInfo.Columns.Add("Password", "Password");
 
-            // Daha sonra verileri ekleyebiliriz
+            // Data can be added later
         }
 
         private void LoadUserInfo(int memberId)
         {
-            // Veritabanı bağlantı dizesi
+            // Database connection string
             string connectionString = GlobalVariables.ConnectionString;
 
-            // SQL sorgusu
+            // SQL query
             string query = @"
                 SELECT 
                     mem.FirstName, mem.LastName, m.StartDate, m.EndDate, m.Price, 
@@ -63,19 +63,19 @@ namespace GYMProject
             {
                 try
                 {
-                    // Bağlantıyı aç
+                    // Open the connection
                     conn.Open();
 
-                    // SQL komutunu oluştur
+                    // Create SQL command
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@MemberID", memberId);
 
-                    // Veriyi al
+                    // Retrieve data
                     SqlDataReader reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
-                        // DataGridView'e verileri ekle
-                        dataGridViewUserInfo.Rows.Clear(); // Var olanları temizle
+                        // Add data to DataGridView
+                        dataGridViewUserInfo.Rows.Clear(); // Clear existing data
                         dataGridViewUserInfo.Rows.Add(
                             reader["FirstName"],
                             reader["LastName"],
@@ -88,12 +88,12 @@ namespace GYMProject
                     }
                     else
                     {
-                        MessageBox.Show("Kullanıcı bilgileri bulunamadı.");
+                        MessageBox.Show("User information not found.");
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Bir hata oluştu: " + ex.Message);
+                    MessageBox.Show("An error occurred: " + ex.Message);
                 }
             }
         }

@@ -46,10 +46,10 @@ namespace GYMProject
                     dataGridViewMemberClasses.DataSource = dt;
 
                     // Sütun başlıklarını Türkçeleştir
-                    dataGridViewMemberClasses.Columns["ClassName"].HeaderText = "Sınıf Adı";
+                    dataGridViewMemberClasses.Columns["ClassName"].HeaderText = "Class Name";
                     dataGridViewMemberClasses.Columns["Schedule"].HeaderText = "Program";
-                    dataGridViewMemberClasses.Columns["ClassType"].HeaderText = "Sınıf Türü";
-                    dataGridViewMemberClasses.Columns["TrainerFullName"].HeaderText = "Eğitmen";
+                    dataGridViewMemberClasses.Columns["ClassType"].HeaderText = "Class Type";
+                    dataGridViewMemberClasses.Columns["TrainerFullName"].HeaderText = "Trainer";
                 }
                 catch (Exception ex)
                 {

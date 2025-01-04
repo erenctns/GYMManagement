@@ -42,19 +42,17 @@ namespace GYMProject
             string connectionString = GlobalVariables.ConnectionString;
 
             // Define SQL queries
-            string activeMembersQuery = "SELECT COUNT(*) AS ActiveMembers FROM Membership WHERE MONTH(StartDate) = MONTH(GETDATE()) AND YEAR(StartDate) = YEAR(GETDATE())";
+            string activeMembersQuery = "SELECT COUNT(*) AS ActiveMembers \r\nFROM Membership \r\nWHERE StartDate >= DATEADD(MONTH, -1, GETDATE());";
             string trainerCountQuery = "SELECT COUNT(*) AS TrainerCount FROM Trainer";
             string totalIncomeQuery = @"
-                SELECT 
-                    SUM(M.Price) AS TotalIncome,
-                    (SELECT SUM(P.Quantity * Pr.Price) 
-                     FROM Purchase P
-                     JOIN Product Pr ON P.ProductID = Pr.ProductID
-                     WHERE MONTH(P.PurchaseDate) = MONTH(GETDATE()) 
-                     AND YEAR(P.PurchaseDate) = YEAR(GETDATE())) AS TotalPurchaseIncome
-                FROM Membership M
-                WHERE MONTH(M.StartDate) = MONTH(GETDATE()) 
-                AND YEAR(M.StartDate) = YEAR(GETDATE())";
+                    SELECT 
+                     SUM(M.Price) AS TotalIncome,
+                     (SELECT SUM(P.Quantity * Pr.Price) 
+                    FROM Purchase P
+                    JOIN Product Pr ON P.ProductID = Pr.ProductID
+                    WHERE P.PurchaseDate >= DATEADD(YEAR, -1, GETDATE())) AS TotalPurchaseIncome
+                    FROM Membership M
+                    WHERE M.StartDate >= DATEADD(YEAR, -1, GETDATE());";
             string classCountQuery = "SELECT COUNT(*) AS ClassCount FROM Class";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
